@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Education - Rohingya Education School</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7f6;
+            color: #222;
+        }
+
+        header {
+            background: #075E54;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 8px 0 0;
+        }
+
+        nav {
+            background: #128C7E;
+            text-align: center;
+            padding: 14px 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 45px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            color: #075E54;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px 22px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .rohingya-script {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+
+        .card h2 {
+            color: #075E54;
+            font-size: 21px;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+        .levels {
+            margin-top: 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .levels h2 {
+            text-align: center;
+            color: #075E54;
+        }
+
+        .level {
+            padding: 15px;
+            margin: 12px 0;
+            border-left: 5px solid #128C7E;
+            background: #f5f7f6;
+        }
+
+        .level h3 {
+            margin: 0 0 7px;
+            color: #075E54;
+        }
+
+        footer {
+            background: #064c44;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 7px;
+        }
+
+        @media (max-width: 600px) {
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            .container {
+                padding: 35px 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Rohingya Education School</h1>
+
+        <p>
+            Education • Language • Knowledge • Community
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="education.html">Education</a>
+
+        <a href="courses.html">Courses</a>
+
+        <a href="verify.html">Certificate Verification</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <!-- EDUCATION -->
+
+    <main class="container">
+
+        <h1 class="page-title">
+            Our Education Programs
+        </h1>
+
+        <p class="intro">
+            We provide learning opportunities that support
+            Rohingya language, Script, basic education,
+            digital learning and the development of
+            knowledge and skills.
+        </p>
+
+
+        <!-- PROGRAM CARDS -->
+
+        <div class="cards">
+
+
+            <!-- ROHINGYA LANGUAGE -->
+
+            <div class="card">
+
+                <div class="icon">
+                    𐴌
+                </div>
+
+                <h2>
+                    Rohingya Language
+                </h2>
+
+                <p>
+                    Learn the Rohingya language,
+                    vocabulary, communication and
+                    language skills.
+                </p>
+
+            </div>
+
+
+            <!-- ROHINGYA SCRIPT -->
+
+            <div class="card">
+
+                <div class="icon rohingya-script">
+                    𐴀 𐴁 𐴂
+                </div>
+
+                <h2>
+                    Rohingya Script
+                </h2>
+
+                <p>
+                    Learn to read and write using
+                    the Rohingya Script.
+                </p>
+
+            </div>
+
+
+            <!-- READING AND WRITING -->
+
+            <div class="card">
+
+                <div class="icon">
+                    📖
+                </div>
+
+                <h2>
+                    Reading & Writing
+                </h2>
+
+                <p>
+                    Develop essential reading,
+                    writing and literacy skills.
+                </p>
+
+            </div>
+
+
+            <!-- BASIC EDUCATION -->
+
+            <div class="card">
+
+                <div class="icon">
+                    ✏️
+                </div>
+
+                <h2>
+                    Basic Education
+                </h2>
+
+                <p>
+                    Build foundational knowledge
+                    and essential educational skills.
+                </p>
+
+            </div>
+
+
+            <!-- DIGITAL LEARNING -->
+
+            <div class="card">
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h2>
+                    Digital Learning
+                </h2>
+
+                <p>
+                    Use digital tools and online
+                    resources to support modern
+                    learning.
+                </p>
+
+            </div>
+
+
+            <!-- ASSESSMENT -->
+
+            <div class="card">
+
+                <div class="icon">
+                    📝
+                </div>
+
+                <h2>
+                    Assessment
+                </h2>
+
+                <p>
+                    Support learning through
+                    assessments, activities and
+                    educational records.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- EDUCATION LEVELS -->
+
+        <div class="levels">
+
+            <h2>
+                Learning Levels
+            </h2>
+
+
+            <div class="level">
+
+                <h3>
+                    Level 1 — Basic
+                </h3>
+
+                <p>
+                    Introduction to Rohingya language,
+                    Script, reading and writing.
+                </p>
+
+            </div>
+
+
+            <div class="level">
+
+                <h3>
+                    Level 2 — Intermediate
+                </h3>
+
+                <p>
+                    Developing vocabulary, reading,
+                    writing and communication skills.
+                </p>
+
+            </div>
+
+
+            <div class="level">
+
+                <h3>
+                    Level 3 — Advanced
+                </h3>
+
+                <p>
+                    Advanced language learning,
+                    grammar and deeper knowledge.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            Rohingya Education School
+        </h3>
+
+        <p>
+            Education • Language • Knowledge • Community
+        </p>
+
+        <p>
+
+            <a href="index.html">Home</a> |
+
+            <a href="about.html">About</a> |
+
+            <a href="education.html">Education</a> |
+
+            <a href="courses.html">Courses</a> |
+
+            <a href="verify.html">Certificate Verification</a> |
+
+            <a href="contact.html">Contact</a>
+
+        </p>
+
+        <p>
+            © 2026 Rohingya Education School.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

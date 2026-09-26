@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Courses - Rohingya Education School</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7f6;
+            color: #222;
+        }
+
+
+        /* HEADER */
+
+        header {
+            background: #075E54;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            background: #128C7E;
+            text-align: center;
+            padding: 14px 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* MAIN */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 45px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            color: #075E54;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+
+        /* COURSES */
+
+        .courses {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-icon {
+            font-size: 45px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .course-card h2 {
+            text-align: center;
+            color: #075E54;
+            font-size: 21px;
+        }
+
+        .course-card p {
+            line-height: 1.7;
+        }
+
+        .course-info {
+            background: #f5f7f6;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .course-info strong {
+            color: #075E54;
+        }
+
+
+        /* ENROLL BUTTON */
+
+        .course-button {
+            display: block;
+            text-align: center;
+            background: #075E54;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .course-button:hover {
+            background: #128C7E;
+        }
+
+
+        /* COURSE ENROLLMENT */
+
+        .enrollment-section {
+            max-width: 700px;
+            margin: 60px auto 20px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .enrollment-section h2 {
+            text-align: center;
+            color: #075E54;
+            margin-bottom: 10px;
+        }
+
+        .enrollment-section p {
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .enrollment-form {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .enrollment-form iframe {
+            display: block;
+            width: 100%;
+            min-height: 1925px;
+            border: none;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #064c44;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 7px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            .container {
+                padding: 35px 15px;
+            }
+
+            .enrollment-section {
+                margin: 40px 5px 20px;
+                padding: 15px;
+            }
+
+            .enrollment-form iframe {
+                min-height: 1925px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>
+            Rohingya Education School
+        </h1>
+
+        <p>
+            Education • Language • Knowledge • Community
+        </p>
+
+    </header>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="education.html">
+            Education
+        </a>
+
+        <a href="courses.html">
+            Courses
+        </a>
+
+        <a href="verify.html">
+            Certificate Verification
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+
+
+    <!-- COURSES -->
+
+    <main class="container">
+
+        <h1 class="page-title">
+            Our Courses
+        </h1>
+
+        <p class="intro">
+            Explore our educational courses designed to
+            support Rohingya language learning, literacy,
+            knowledge and skills development.
+        </p>
+
+
+        <div class="courses">
+
+
+            <!-- COURSE 1 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    𐴀 𐴁 𐴂
+                </div>
+
+                <h2>
+                    Rohingya Script
+                </h2>
+
+                <p>
+                    Learn the Rohingya Script from basic
+                    letters to reading and writing.
+                </p>
+
+                <div class="course-info">
+
+                    <strong>Level:</strong>
+                    Basic
+
+                    <br><br>
+
+                    <strong>Duration:</strong>
+                    3 Months
+
+                </div>
+
+                <a class="course-button"
+                   href="#enrollment">
+
+                    Enroll Now
+
+                </a>
+
+            </div>
+
+
+
+            <!-- COURSE 2 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    📖
+                </div>
+
+                <h2>
+                    Rohingya Reading & Writing
+                </h2>
+
+                <p>
+                    Develop reading and writing skills
+                    through Rohingya language education.
+                </p>
+
+                <div class="course-info">
+
+                    <strong>Level:</strong>
+                    Basic
+
+                    <br><br>
+
+                    <strong>Duration:</strong>
+                    3 Months
+
+                </div>
+
+                <a class="course-button"
+                   href="#enrollment">
+
+                    Enroll Now
+
+                </a>
+
+            </div>
+
+
+
+            <!-- COURSE 3 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    📚
+                </div>
+
+                <h2>
+                    Rohingya Language
+                </h2>
+
+                <p>
+                    Learn vocabulary, communication,
+                    grammar and practical language skills.
+                </p>
+
+                <div class="course-info">
+
+                    <strong>Level:</strong>
+                    Intermediate
+
+                    <br><br>
+
+                    <strong>Duration:</strong>
+                    6 Months
+
+                </div>
+
+                <a class="course-button"
+                   href="#enrollment">
+
+                    Enroll Now
+
+                </a>
+
+            </div>
+
+
+
+            <!-- COURSE 4 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    💻
+                </div>
+
+                <h2>
+                    Digital Learning
+                </h2>
+
+                <p>
+                    Learn basic digital skills and use
+                    technology for education and learning.
+                </p>
+
+                <div class="course-info">
+
+                    <strong>Level:</strong>
+                    Basic
+
+                    <br><br>
+
+                    <strong>Duration:</strong>
+                    3 Months
+
+                </div>
+
+                <a class="course-button"
+                   href="#enrollment">
+
+                    Enroll Now
+
+                </a>
+
+            </div>
+
+
+
+            <!-- COURSE 5 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    📝
+                </div>
+
+                <h2>
+                    Grammar
+                </h2>
+
+                <p>
+                    Develop understanding of grammar,
+                    sentence structure and language usage.
+                </p>
+
+                <div class="course-info">
+
+                    <strong>Level:</strong>
+                    Advanced
+
+                    <br><br>
+
+                    <strong>Duration:</strong>
+                    6 Months
+
+                </div>
+
+                <a class="course-button"
+                   href="#enrollment">
+
+                    Enroll Now
+
+                </a>
+
+            </div>
+
+
+
+            <!-- COURSE 6 -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    🎓
+                </div>
+
+                <h2>
+                    Teacher Training
+                </h2>
+
+                <p>
+                    Support teachers with educational
+                    methods, classroom skills and
+                    language teaching.
+                </p>
+
+                <div class="course-info">
+
+                    <strong>Level:</strong>
+                    Professional
+
+                    <br><br>
+
+                    <strong>Duration:</strong>
+                    6 Months
+
+                </div>
+
+                <a class="course-button"
+                   href="#enrollment">
+
+                    Enroll Now
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- COURSE ENROLLMENT FORM -->
+
+        <section class="enrollment-section"
+                 id="enrollment">
+
+            <h2>
+                Course Enrollment
+            </h2>
+
+            <p>
+                Fill out the form below to enroll
+                in one of our courses.
+            </p>
+
+
+            <div class="enrollment-form">
+
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSca-8dTM1DS6LqCXNS_beWfoe-QlSAkk3wQ6Rk4ghhi35Bcrg/viewform?embedded=true"
+                    width="100%"
+                    height="1925"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0">
+                    Loading…
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            Rohingya Education School
+        </h3>
+
+        <p>
+            Education • Language • Knowledge • Community
+        </p>
+
+        <p>
+
+            <a href="index.html">Home</a> |
+
+            <a href="about.html">About</a> |
+
+            <a href="education.html">Education</a> |
+
+            <a href="courses.html">Courses</a> |
+
+            <a href="verify.html">Certificate Verification</a> |
+
+            <a href="contact.html">Contact</a>
+
+        </p>
+
+        <p>
+            © 2026 Rohingya Education School.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
