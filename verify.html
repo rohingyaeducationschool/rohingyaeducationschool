@@ -1,120 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Certificate Verification | Rohingya Education School</title>
+<title>Certificate Verification | Rohingya Education School</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f7f6;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7f6;
+}
 
-        header {
-            background: #075E54;
-            color: white;
-            text-align: center;
-            padding: 25px 15px;
-        }
+header {
+    background: #075E54;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
+header h1 {
+    margin: 0;
+}
 
-        header p {
-            margin: 8px 0 0;
-        }
+.container {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 15px;
+}
 
-        .container {
-            max-width: 650px;
-            margin: 30px auto;
-            padding: 15px;
-        }
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
 
-        .box {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-        }
+h2 {
+    text-align: center;
+    color: #075E54;
+}
 
-        .box h2 {
-            text-align: center;
-            color: #075E54;
-        }
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
 
-        input {
-            width: 100%;
-            padding: 14px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            margin: 10px 0;
-        }
+button {
+    width: 100%;
+    padding: 14px;
+    background: #075E54;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+}
 
-        button {
-            width: 100%;
-            padding: 14px;
-            background: #075E54;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 17px;
-            cursor: pointer;
-        }
+#result {
+    display: none;
+    margin-top: 25px;
+}
 
-        button:hover {
-            background: #064c44;
-        }
+.verified {
+    text-align: center;
+    color: #128C7E;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-        #result {
-            display: none;
-            margin-top: 25px;
-        }
+.profile {
+    text-align: center;
+}
 
-        .verified {
-            text-align: center;
-            color: #128C7E;
-            font-size: 23px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+.profile img {
+    width: 130px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #075E54;
+}
 
-        .profile {
-            text-align: center;
-        }
+.details {
+    margin-top: 20px;
+    line-height: 1.8;
+}
 
-        .profile img {
-            width: 130px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 3px solid #075E54;
-        }
+.details p {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
 
-        .details {
-            margin-top: 20px;
-            line-height: 1.8;
-        }
-
-        .details p {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
-        }
-
-        .error {
-            display: none;
-            color: #d32f2f;
-            text-align: center;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-    </style>
+.error {
+    display: none;
+    color: #d32f2f;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+</style>
 </head>
 
 <body>
@@ -126,91 +116,129 @@
 
 <div class="container">
 
-    <div class="box">
+<div class="box">
 
-        <h2>Verify Certificate</h2>
+<h2>Verify Certificate</h2>
+
+<p>Enter the Certificate Code:</p>
+
+<input
+    type="text"
+    id="certificateCode"
+    placeholder="Enter Certificate Code"
+>
+
+<button onclick="verifyCertificate()">
+    Verify Certificate
+</button>
+
+<div id="error" class="error">
+    Certificate Not Found
+</div>
+
+<div id="result">
+
+    <div class="verified">
+        ✓ Certificate Verified
+    </div>
+
+    <div class="profile">
+        <img id="studentPhoto" src="" alt="Student Photo">
+    </div>
+
+    <div class="details">
 
         <p>
-            Enter the certificate verification code below:
+            <strong>Certificate Code:</strong>
+            <span id="code"></span>
         </p>
 
-        <input
-            type="text"
-            id="certificateCode"
-            placeholder="Enter Certificate Code"
-        >
+        <p>
+            <strong>Name:</strong>
+            <span id="name"></span>
+        </p>
 
-        <button onclick="verifyCertificate()">
-            Verify Certificate
-        </button>
+        <p>
+            <strong>Age:</strong>
+            <span id="age"></span>
+        </p>
 
-        <div id="error" class="error">
-            Certificate Not Found
-        </div>
+        <p>
+            <strong>Father's Name:</strong>
+            <span id="father"></span>
+        </p>
 
-        <div id="result">
+        <p>
+            <strong>Current Address:</strong>
+            <span id="address"></span>
+        </p>
 
-            <div class="verified">
-                ✓ Certificate Verified
-            </div>
-
-            <div class="profile">
-                <img src="ziaul.jpg" alt="Student Photo">
-            </div>
-
-            <div class="details">
-
-                <p>
-                    <strong>Certificate Code:</strong>
-                    020250125
-                </p>
-
-                <p>
-                    <strong>Name:</strong>
-                    Ziaul Haque
-                </p>
-
-                <p>
-                    <strong>Age:</strong>
-                    30
-                </p>
-
-                <p>
-                    <strong>Father's Name:</strong>
-                    Nur Hasan
-                </p>
-
-                <p>
-                    <strong>Current Address:</strong>
-                    Camp 4 Extension, Para Gaduchara
-                </p>
-
-                <p>
-                    <strong>Status:</strong>
-                    Valid
-                </p>
-
-            </div>
-
-        </div>
+        <p>
+            <strong>Status:</strong>
+            Valid
+        </p>
 
     </div>
 
 </div>
 
+</div>
+</div>
+
 <script>
+
+const certificates = {
+
+    "020250125": {
+        name: "Ziaul Haque",
+        age: "30",
+        father: "Nur Hasan",
+        address: "Camp 4 Extension, Para Gaduchara",
+        photo: "ziaul.jpg"
+    },
+
+    "020250126": {
+        name: "Example Student 2",
+        age: "25",
+        father: "Example Father",
+        address: "Camp 4 Extension, Para Gaduchara",
+        photo: "student2.jpg"
+    },
+
+    "020250127": {
+        name: "Example Student 3",
+        age: "28",
+        father: "Example Father",
+        address: "Camp 4 Extension, Para Gaduchara",
+        photo: "student3.jpg"
+    }
+
+};
 
 function verifyCertificate() {
 
-    const code = document.getElementById("certificateCode").value.trim();
+    const code =
+        document.getElementById("certificateCode").value.trim();
 
-    const result = document.getElementById("result");
-    const error = document.getElementById("error");
+    const result =
+        document.getElementById("result");
+
+    const error =
+        document.getElementById("error");
 
     result.style.display = "none";
     error.style.display = "none";
 
-    if (code === "020250125") {
+    if (certificates[code]) {
+
+        const student = certificates[code];
+
+        document.getElementById("code").textContent = code;
+        document.getElementById("name").textContent = student.name;
+        document.getElementById("age").textContent = student.age;
+        document.getElementById("father").textContent = student.father;
+        document.getElementById("address").textContent = student.address;
+        document.getElementById("studentPhoto").src = student.photo;
 
         result.style.display = "block";
 
