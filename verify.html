@@ -1,94 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Certificate Verification</title>
+    <title>Certificate Verification | Rohingya Education School</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f5f5f5;
+            background: #f4f7f6;
         }
 
         header {
             background: #075E54;
             color: white;
             text-align: center;
-            padding: 25px;
+            padding: 25px 15px;
         }
 
-        .verification {
-            background: white;
-            max-width: 600px;
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+        }
+
+        .container {
+            max-width: 650px;
             margin: 30px auto;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            padding: 15px;
         }
 
-        .valid {
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+
+        .box h2 {
+            text-align: center;
+            color: #075E54;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #075E54;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #064c44;
+        }
+
+        #result {
+            display: none;
+            margin-top: 25px;
+        }
+
+        .verified {
+            text-align: center;
             color: #128C7E;
-            font-size: 24px;
+            font-size: 23px;
             font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile img {
+            width: 130px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #075E54;
         }
 
         .details {
-            text-align: left;
-            line-height: 1.8;
             margin-top: 20px;
+            line-height: 1.8;
+        }
+
+        .details p {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .error {
+            display: none;
+            color: #d32f2f;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Rohingya Education School</h1>
-        <h2>Certificate Verification</h2>
-    </header>
+<header>
+    <h1>Rohingya Education School</h1>
+    <p>Certificate Verification</p>
+</header>
 
-    <div class="verification">
+<div class="container">
 
-        <div class="valid">
-            ✓ Certificate Verified
+    <div class="box">
+
+        <h2>Verify Certificate</h2>
+
+        <p>
+            Enter the certificate verification code below:
+        </p>
+
+        <input
+            type="text"
+            id="certificateCode"
+            placeholder="Enter Certificate Code"
+        >
+
+        <button onclick="verifyCertificate()">
+            Verify Certificate
+        </button>
+
+        <div id="error" class="error">
+            Certificate Not Found
         </div>
 
-        <div class="details">
+        <div id="result">
 
-            <p>
-                <strong>Student Name:</strong>
-                Mohammed Ali
-            </p>
+            <div class="verified">
+                ✓ Certificate Verified
+            </div>
 
-            <p>
-                <strong>Certificate ID:</strong>
-                RES-CERT-2026-001
-            </p>
+            <div class="profile">
+                <img src="ziaul.jpg" alt="Student Photo">
+            </div>
 
-            <p>
-                <strong>Course:</strong>
-                FIDE EDU Preparation of Teachers Course
-            </p>
+            <div class="details">
 
-            <p>
-                <strong>Date of Completion:</strong>
-                27 August 2026
-            </p>
+                <p>
+                    <strong>Certificate Code:</strong>
+                    020250125
+                </p>
 
-            <p>
-                <strong>Status:</strong>
-                Valid
-            </p>
+                <p>
+                    <strong>Name:</strong>
+                    Ziaul Haque
+                </p>
+
+                <p>
+                    <strong>Age:</strong>
+                    30
+                </p>
+
+                <p>
+                    <strong>Father's Name:</strong>
+                    Nur Hasan
+                </p>
+
+                <p>
+                    <strong>Current Address:</strong>
+                    Camp 4 Extension, Para Gaduchara
+                </p>
+
+                <p>
+                    <strong>Status:</strong>
+                    Valid
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
-</body>
+</div>
 
+<script>
+
+function verifyCertificate() {
+
+    const code = document.getElementById("certificateCode").value.trim();
+
+    const result = document.getElementById("result");
+    const error = document.getElementById("error");
+
+    result.style.display = "none";
+    error.style.display = "none";
+
+    if (code === "020250125") {
+
+        result.style.display = "block";
+
+    } else {
+
+        error.style.display = "block";
+
+    }
+}
+
+</script>
+
+</body>
 </html>
