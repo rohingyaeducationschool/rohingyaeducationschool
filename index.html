@@ -27,10 +27,6 @@
             color: #222;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
-
         header {
             background: #075E54;
             color: white;
@@ -63,11 +59,6 @@
             font-size: 14px;
         }
 
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
         nav {
             background: #128C7E;
             text-align: center;
@@ -85,10 +76,20 @@
             text-decoration: underline;
         }
 
+        .bilingual {
+            display: block;
+            margin-top: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
 
-        /* =========================
-           HERO
-        ========================= */
+        .nav-rohingya {
+            display: block;
+            font-size: 15px;
+            margin-top: 3px;
+            font-weight: normal;
+        }
 
         .hero {
             background: white;
@@ -114,11 +115,6 @@
             line-height: 1.7;
         }
 
-
-        /* =========================
-           BUTTON
-        ========================= */
-
         .button {
             display: inline-block;
             background: #25D366;
@@ -134,11 +130,6 @@
             background: #075E54;
         }
 
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
         .section {
             max-width: 1100px;
             margin: auto;
@@ -152,22 +143,12 @@
             margin-bottom: 35px;
         }
 
-
-        /* =========================
-           ABOUT
-        ========================= */
-
         .about-text {
             background: white;
             padding: 30px;
             border-radius: 15px;
             line-height: 1.8;
         }
-
-
-        /* =========================
-           CARDS
-        ========================= */
 
         .cards {
             display: grid;
@@ -193,11 +174,6 @@
             font-size: 38px;
         }
 
-
-        /* =========================
-           STATISTICS
-        ========================= */
-
         .stats {
             background: #075E54;
             color: white;
@@ -211,11 +187,6 @@
             font-size: 35px;
             margin: 5px;
         }
-
-
-        /* =========================
-           CERTIFICATE VERIFICATION
-        ========================= */
 
         .verification {
             background: white;
@@ -234,11 +205,6 @@
             font-size: 16px;
         }
 
-
-        /* =========================
-           SOCIAL MEDIA
-        ========================= */
-
         .social-icons {
             margin: 25px 0;
         }
@@ -247,18 +213,12 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-
             width: 50px;
             height: 50px;
-
             margin: 6px;
-
             border-radius: 50%;
-
             background: white;
-
             text-decoration: none;
-
             font-size: 27px;
         }
 
@@ -274,11 +234,6 @@
             color: #000000;
         }
 
-
-        /* =========================
-           FOOTER
-        ========================= */
-
         footer {
             background: #064c44;
             color: white;
@@ -291,11 +246,6 @@
             text-decoration: none;
             margin: 0 8px;
         }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
 
         @media (max-width: 600px) {
 
@@ -327,548 +277,606 @@
 <body>
 
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+<!-- HEADER -->
 
-    <header>
+<header>
 
-        <div class="header-content">
+    <div class="header-content">
 
-            <img src="profile.jpg"
-                 class="logo"
-                 alt="School Logo">
+        <img src="profile.jpg"
+             class="logo"
+             alt="School Logo">
 
-            <div class="school-name">
+        <div class="school-name">
 
-                <h1>
-                    Rohingya Education School
-                </h1>
+            <h1>
+                Rohingya Education School
+            </h1>
+
+            <div class="rohingya">
+                𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+            </div>
+
+            <p>
+                Education • Language • Knowledge • Community
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="about.html">
+        About
+        <span class="nav-rohingya">
+            𐴁𐴝𐴁𐴡𐴃𐴠
+        </span>
+    </a>
+
+    <a href="#">
+        Education
+        <span class="nav-rohingya">
+            𐴉𐴡𐴕𐴧𐴝𐴤
+        </span>
+    </a>
+
+    <a href="#">
+        Courses
+        <span class="nav-rohingya">
+            𐴑𐴟𐴌𐴏𐴢 𐴀𐴡𐴑𐴧𐴡𐴓𐴢
+        </span>
+    </a>
+
+    <a href="verify.html">
+        Certificate Verification
+        <span class="nav-rohingya">
+            𐴐𐴡𐴕𐴡𐴊𐴢 𐴏𐴡𐴀𐴠𐴕𐴠 𐴏𐴠𐴑𐴒𐴡𐴌𐴡𐴕
+        </span>
+    </a>
+
+    <a href="contact.html">
+        Contact
+    </a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>
+        Rohingya Education School
+    </h1>
+
+    <div class="rohingya">
+
+        𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
+        𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
+        𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+
+    </div>
+
+    <p>
+
+        Empowering students through quality education,
+        Rohingya language learning and knowledge.
+
+    </p>
+
+
+    <a class="button dark"
+       href="about.html">
+
+        Learn More
+
+    </a>
+
+
+    <a class="button"
+       href="contact.html">
+
+        Contact Us
+
+    </a>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        About Our School
+
+        <span class="bilingual">
+            𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴡𐴌 𐴁𐴝𐴁𐴡𐴃𐴠𐴤
+        </span>
+
+    </h2>
+
+
+    <div class="about-text">
+
+        <p>
+
+            Rohingya Education School is committed
+            to providing quality education and
+            creating a supportive learning
+            environment for students.
+
+        </p>
+
+
+        <p>
+
+            Our goal is to support learning,
+            preserve the Rohingya language and
+            Script, and help students build
+            knowledge and skills for the future.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION PROGRAMS -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Our Education Programs
+
+        <span class="bilingual">
+            𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴡𐴕𐴧𐴝𐴤𐴌 𐴉𐴟𐴌𐴒𐴌𐴝𐴔
+        </span>
+
+    </h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icon">
+                📚
+            </div>
+
+            <h3>
+
+                Rohingya Language
+
+                <span class="bilingual">
+                    𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴎𐴟𐴁𐴝𐴕
+                </span>
+
+            </h3>
+
+            <p>
+                Learning the Rohingya language
+                and Script.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                ✏️
+            </div>
+
+            <h3>
+
+                Basic Education
+
+                <span class="bilingual">
+                    𐴐𐴟𐴤𐴌𐴟𐴌 𐴉𐴡𐴕𐴧𐴝𐴤
+                </span>
+
+            </h3>
+
+            <p>
+                Building essential reading
+                and writing skills.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🎓
+            </div>
+
+            <h3>
+
+                Courses
+
+                <span class="bilingual">
+                    𐴑𐴟𐴌𐴏𐴢 𐴀𐴡𐴑𐴧𐴡𐴓𐴢
+                </span>
+
+            </h3>
+
+            <p>
+                Educational courses and
+                learning programs.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                💻
+            </div>
+
+            <h3>
+                Digital Learning
+            </h3>
+
+            <p>
+                Supporting modern and
+                digital education.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- STATISTICS -->
+
+<section class="stats">
+
+    <div class="section">
+
+        <h2 class="section-title"
+            style="color:white;">
+
+            Our School at a Glance
+
+            <span class="bilingual">
+                𐴀𐴠𐴑 𐴕𐴡𐴎𐴡𐴌𐴠 𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+            </span>
+
+        </h2>
+
+
+        <div class="cards">
+
+
+            <div class="stat-box">
+
+                <h2>
+                    0
+                </h2>
 
                 <p>
-                    Education • Language • Knowledge • Community
+                    Students
+
+                    <span class="bilingual">
+                        𐴉𐴡𐴌𐴡𐴙𐴕𐴧𐴝𐴤 𐴉𐴟𐴖𐴝𐴙𐴕
+                    </span>
+
                 </p>
 
             </div>
 
+
+            <div class="stat-box">
+
+                <h2>
+                    0
+                </h2>
+
+                <p>
+                    Teachers
+
+                    <span class="bilingual">
+                        𐴔𐴝𐴐𐴄𐴡𐴌
+                    </span>
+
+                </p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <h2>
+                    0
+                </h2>
+
+                <p>
+                    Courses
+
+                    <span class="bilingual">
+                        𐴑𐴟𐴌𐴏𐴢 𐴀𐴡𐴑𐴧𐴡𐴓𐴢
+                    </span>
+
+                </p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <h2>
+                    0
+                </h2>
+
+                <p>
+                    Certificates
+
+                    <span class="bilingual">
+                        𐴐𐴡𐴕𐴡𐴊𐴢
+                    </span>
+
+                </p>
+
+            </div>
+
+
         </div>
 
-    </header>
+    </div>
+
+</section>
 
 
+<!-- CERTIFICATE VERIFICATION -->
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+<section class="section">
 
-    <nav>
+    <h2 class="section-title">
+
+        Certificate Verification
+
+        <span class="bilingual">
+            𐴐𐴡𐴕𐴡𐴊𐴢 𐴏𐴡𐴀𐴠𐴕𐴠 𐴏𐴠𐴑𐴒𐴡𐴌𐴡𐴕
+        </span>
+
+    </h2>
+
+
+    <div class="verification">
+
+        <p>
+            Verify a certificate using
+            its Certificate ID.
+        </p>
+
+
+        <input
+            type="text"
+            placeholder="Enter Certificate ID"
+        >
+
+
+        <br>
+
+
+        <a class="button dark"
+           href="verify.html">
+
+            Verify Certificate
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Connect With Us
+
+        <span class="bilingual">
+            𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴟𐴣𐴖𐴝𐴃𐴞 𐴃𐴝𐴦𐴓𐴧𐴟𐴑 𐴒𐴡𐴌𐴡𐴤
+        </span>
+
+    </h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icon">
+                📍
+            </div>
+
+            <h3>
+
+                Address
+
+                <span class="bilingual">
+                    𐴄𐴞𐴑𐴝𐴕𐴝
+                </span>
+
+            </h3>
+
+            <p>
+                Boroitoli, Camp 4,
+                Kutupalong, Ukhia
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                📧
+            </div>
+
+            <h3>
+
+                Email
+
+                <span class="bilingual">
+                    𐴀𐴞𐴔𐴠𐴙𐴓𐴢
+                </span>
+
+            </h3>
+
+            <p>
+                rohingyaeducations@gmail.com
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                📱
+            </div>
+
+            <h3>
+
+                WhatsApp
+
+                <span class="bilingual">
+                    𐴖𐴝𐴄𐴏𐴧𐴝𐴉𐴢
+                </span>
+
+            </h3>
+
+            <p>
+                Contact us through WhatsApp.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+
+    <h3>
+        Rohingya Education School
+
+        <span class="bilingual">
+            𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+        </span>
+
+    </h3>
+
+
+    <p>
+        Education • Language • Knowledge • Community
+    </p>
+
+
+    <p>
 
         <a href="index.html">
             Home
         </a>
 
+        |
+
         <a href="about.html">
             About
+            <span class="nav-rohingya">
+                𐴁𐴝𐴁𐴡𐴃𐴠
+            </span>
         </a>
 
-        <a href="#">
-            Education
-        </a>
-
-        <a href="#">
-            Courses
-        </a>
+        |
 
         <a href="verify.html">
             Certificate Verification
         </a>
 
+        |
+
         <a href="contact.html">
             Contact
         </a>
 
-    </nav>
+    </p>
 
 
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
-    <section class="hero">
-
-        <h1>
-            Rohingya Education School
-        </h1>
-
-        <div class="rohingya">
-
-            𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
-            𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
-            𐴀𐴠𐴏𐴑𐴟𐴓
-
-        </div>
-
-        <p>
-
-            Empowering students through quality education,
-            Rohingya language learning and knowledge.
-
-        </p>
+    <div class="social-icons">
 
 
-        <a class="button dark"
-           href="about.html">
+        <a href="https://www.facebook.com/share/19etkWCm1z/"
+           target="_blank"
+           aria-label="Facebook"
+           class="facebook">
 
-            Learn More
+            <i class="fa-brands fa-facebook-f"></i>
 
         </a>
 
 
-        <a class="button"
-           href="contact.html">
+        <a href="#"
+           target="_blank"
+           aria-label="YouTube"
+           class="youtube">
 
-            Contact Us
+            <i class="fa-brands fa-youtube"></i>
 
         </a>
 
-    </section>
 
+        <a href="#"
+           target="_blank"
+           aria-label="TikTok"
+           class="tiktok">
 
+            <i class="fa-brands fa-tiktok"></i>
 
-    <!-- =========================
-         ABOUT
-    ========================= -->
+        </a>
 
-    <section class="section">
 
-        <h2 class="section-title">
-            About Our School
-        </h2>
+    </div>
 
 
-        <div class="about-text">
+    <p>
+        © 2026 Rohingya Education School.
+        All rights reserved.
+    </p>
 
-            <p>
 
-                Rohingya Education School is committed
-                to providing quality education and
-                creating a supportive learning
-                environment for students.
-
-            </p>
-
-
-            <p>
-
-                Our goal is to support learning,
-                preserve the Rohingya language and
-                Script, and help students build
-                knowledge and skills for the future.
-
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         EDUCATION PROGRAMS
-    ========================= -->
-
-    <section class="section">
-
-        <h2 class="section-title">
-            Our Education Programs
-        </h2>
-
-
-        <div class="cards">
-
-
-            <div class="card">
-
-                <div class="icon">
-                    📚
-                </div>
-
-                <h3>
-                    Rohingya Language
-                </h3>
-
-                <p>
-                    Learning the Rohingya language
-                    and Script.
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <div class="icon">
-                    ✏️
-                </div>
-
-                <h3>
-                    Basic Education
-                </h3>
-
-                <p>
-                    Building essential reading
-                    and writing skills.
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <div class="icon">
-                    🎓
-                </div>
-
-                <h3>
-                    Courses
-                </h3>
-
-                <p>
-                    Educational courses and
-                    learning programs.
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <div class="icon">
-                    💻
-                </div>
-
-                <h3>
-                    Digital Learning
-                </h3>
-
-                <p>
-                    Supporting modern and
-                    digital education.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         STATISTICS
-    ========================= -->
-
-    <section class="stats">
-
-        <div class="section">
-
-            <h2 class="section-title"
-                style="color:white;">
-
-                Our School at a Glance
-
-            </h2>
-
-
-            <div class="cards">
-
-
-                <div class="stat-box">
-
-                    <h2>
-                        0
-                    </h2>
-
-                    <p>
-                        Students
-                    </p>
-
-                </div>
-
-
-
-                <div class="stat-box">
-
-                    <h2>
-                        0
-                    </h2>
-
-                    <p>
-                        Teachers
-                    </p>
-
-                </div>
-
-
-
-                <div class="stat-box">
-
-                    <h2>
-                        0
-                    </h2>
-
-                    <p>
-                        Courses
-                    </p>
-
-                </div>
-
-
-
-                <div class="stat-box">
-
-                    <h2>
-                        0
-                    </h2>
-
-                    <p>
-                        Certificates
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CERTIFICATE VERIFICATION
-    ========================= -->
-
-    <section class="section">
-
-        <h2 class="section-title">
-            Certificate Verification
-        </h2>
-
-
-        <div class="verification">
-
-            <p>
-                Verify a certificate using
-                its Certificate ID.
-            </p>
-
-
-            <input
-                type="text"
-                placeholder="Enter Certificate ID"
-            >
-
-
-            <br>
-
-
-            <a class="button dark"
-               href="verify.html">
-
-                Verify Certificate
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section class="section">
-
-        <h2 class="section-title">
-            Connect With Us
-        </h2>
-
-
-        <div class="cards">
-
-
-            <div class="card">
-
-                <div class="icon">
-                    📍
-                </div>
-
-                <h3>
-                    Address
-                </h3>
-
-                <p>
-                    Boroitoli, Camp 4,
-                    Kutupalong, Ukhia
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <div class="icon">
-                    📧
-                </div>
-
-                <h3>
-                    Email
-                </h3>
-
-                <p>
-                    rohingyaeducations@gmail.com
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <div class="icon">
-                    📱
-                </div>
-
-                <h3>
-                    WhatsApp
-                </h3>
-
-                <p>
-                    Contact us through WhatsApp.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
-
-
-        <h3>
-            Rohingya Education School
-        </h3>
-
-
-        <p>
-            Education • Language • Knowledge • Community
-        </p>
-
-
-
-        <!-- FOOTER LINKS -->
-
-        <p>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            |
-
-            <a href="about.html">
-                About
-            </a>
-
-            |
-
-            <a href="verify.html">
-                Certificate Verification
-            </a>
-
-            |
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </p>
-
-
-
-        <!-- SOCIAL MEDIA -->
-
-        <div class="social-icons">
-
-
-            <!-- FACEBOOK -->
-
-            <a href="https://www.facebook.com/share/19etkWCm1z/"
-               target="_blank"
-               aria-label="Facebook"
-               class="facebook">
-
-                <i class="fa-brands fa-facebook-f"></i>
-
-            </a>
-
-
-
-            <!-- YOUTUBE -->
-
-            <a href="#"
-               target="_blank"
-               aria-label="YouTube"
-               class="youtube">
-
-                <i class="fa-brands fa-youtube"></i>
-
-            </a>
-
-
-
-            <!-- TIKTOK -->
-
-            <a href="#"
-               target="_blank"
-               aria-label="TikTok"
-               class="tiktok">
-
-                <i class="fa-brands fa-tiktok"></i>
-
-            </a>
-
-
-        </div>
-
-
-
-        <p>
-            © 2026 Rohingya Education School.
-            All rights reserved.
-        </p>
-
-
-    </footer>
-
+</footer>
 
 
 </body>
