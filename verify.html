@@ -236,6 +236,27 @@ function verifyCertificate() {
     }
 }
 
+
+/* ================================
+   QR CODE AUTO VERIFICATION
+   ================================ */
+
+window.addEventListener("DOMContentLoaded", function () {
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const qrCode = urlParams.get("code");
+
+    if (qrCode) {
+
+        document.getElementById("certificateCode").value = qrCode;
+
+        verifyCertificate();
+
+    }
+
+});
+
 </script>
 
 </body>
