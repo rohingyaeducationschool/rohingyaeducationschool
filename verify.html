@@ -94,13 +94,24 @@ button:hover {
 
 .details p {
     border-bottom: 1px solid #eee;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-.rohingya {
+.rtl-row {
     direction: rtl;
     text-align: right;
     unicode-bidi: plaintext;
+}
+
+.rtl-label {
+    font-weight: bold;
+    display: inline;
+}
+
+.rtl-value {
+    display: inline;
+    margin-right: 8px;
 }
 
 .error {
@@ -125,7 +136,7 @@ placeholder="Enter Certificate Code"
 </button><div id="error" class="error">
     Certificate Not Found
 </div><div id="result"><div class="verified">
-    ✓ Certificate Verified
+    ✓ 𐴇𐴝𐴦𐴓𐴡𐴥𐴃𐴢
 </div>
 
 <div class="profile">
@@ -134,39 +145,55 @@ placeholder="Enter Certificate Code"
 
 <div class="details">
 
-    <p>
-        <strong>Certificate Code:</strong>
-        <span id="code"></span>
+    <p class="rtl-row">
+        <span class="rtl-label">
+            𐴏𐴡𐴤𐴕𐴡𐴃𐴢 𐴑𐴟𐴀𐴋
+        </span>
+        <span class="rtl-value" id="code"></span>
     </p>
 
-    <p>
-        <strong>Name:</strong>
-        <span id="name" class="rohingya"></span>
+    <p class="rtl-row">
+        <span class="rtl-label">
+            𐴕𐴝𐴔
+        </span>
+        <span class="rtl-value" id="name"></span>
     </p>
 
-    <p>
-        <strong>Father's Name:</strong>
-        <span id="father" class="rohingya"></span>
+    <p class="rtl-row">
+        <span class="rtl-label">
+            𐴁𐴝𐴉𐴡𐴌 𐴕𐴝𐴔
+        </span>
+        <span class="rtl-value" id="father"></span>
     </p>
 
-    <p>
-        <strong>Date of Birth:</strong>
-        <span id="dateOfBirth" class="rohingya"></span>
+    <p class="rtl-row">
+        <span class="rtl-label">
+            𐴎𐴡𐴌𐴔𐴡
+        </span>
+        <span class="rtl-value" id="dateOfBirth"></span>
     </p>
 
-    <p>
-        <strong>Present Address:</strong>
-        <span id="presentAddress" class="rohingya"></span>
+    <p class="rtl-row">
+        <span class="rtl-label">
+            𐴀𐴠𐴈𐴡𐴕𐴡𐴥𐴌 𐴄𐴞𐴑𐴝𐴕𐴝𐴤
+        </span>
+        <span class="rtl-value" id="presentAddress"></span>
     </p>
 
-    <p>
-        <strong>Address in Myanmar:</strong>
-        <span id="permanentAddress" class="rohingya"></span>
+    <p class="rtl-row">
+        <span class="rtl-label">
+            𐴇𐴠𐴏𐴃𐴝𐴘𐴀𐴞 𐴄𐴞𐴑𐴝𐴕𐴝𐴤
+        </span>
+        <span class="rtl-value" id="permanentAddress"></span>
     </p>
 
-    <p>
-        <strong>Status:</strong>
-        Valid
+    <p class="rtl-row">
+        <span class="rtl-label">
+            𐴇𐴝𐴦𐴓𐴡𐴥𐴃𐴢
+        </span>
+        <span class="rtl-value">
+            𐴇𐴝𐴦𐴓𐴡𐴥𐴃𐴢
+        </span>
     </p>
 
 </div>
@@ -192,7 +219,8 @@ function verifyCertificate() {
 
         const student = certificates[code];
 
-        document.getElementById("code").textContent = code;
+        document.getElementById("code").textContent =
+            code;
 
         document.getElementById("name").textContent =
             student.name || "";
