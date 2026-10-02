@@ -1,7 +1,14 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Certificate Verification | Rohingya Education School</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Certificate Verification | Rohingya Education School</title>
+
+<style>
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -121,85 +128,127 @@ button:hover {
     margin-top: 15px;
     font-weight: bold;
 }
-</style></head><body><header>
+
+</style>
+</head>
+
+<body>
+
+<header>
     <h1>Rohingya Education School</h1>
     <p>Certificate Verification</p>
-</header><div class="container"><div class="box"><h2>Verify Certificate</h2><p>Enter the Certificate Code:</p><input
-type="text"
-id="certificateCode"
-placeholder="Enter Certificate Code"
+</header>
 
-«»
+<div class="container">
+
+<div class="box">
+
+<h2>Verify Certificate</h2>
+
+<p>Enter the Certificate Code:</p>
+
+<input
+    type="text"
+    id="certificateCode"
+    placeholder="Enter Certificate Code"
+>
 
 <button onclick="verifyCertificate()">
     Verify Certificate
-</button><div id="error" class="error">
+</button>
+
+<div id="error" class="error">
     Certificate Not Found
-</div><div id="result"><div class="verified">
-    ✓ 𐴇𐴝𐴦𐴓𐴡𐴥𐴃𐴢
 </div>
 
-<div class="profile">
-    <img id="studentPhoto" src="" alt="Student Photo">
+<div id="result">
+
+    <!-- TEXT ABOVE PHOTO -->
+    <div class="verified">
+        𐴏𐴡𐴀𐴞
+    </div>
+
+    <div class="profile">
+        <img id="studentPhoto" src="" alt="Student Photo">
+    </div>
+
+    <div class="details">
+
+        <!-- CERTIFICATE NUMBER -->
+        <p class="rtl-row">
+            <span class="rtl-label">
+                𐴏𐴡𐴤𐴕𐴡𐴃𐴢 𐴑𐴟𐴀𐴋:
+            </span>
+
+            <span class="rtl-value" id="code"></span>
+        </p>
+
+        <!-- NAME -->
+        <p class="rtl-row">
+            <span class="rtl-label">
+                𐴕𐴝𐴔:
+            </span>
+
+            <span class="rtl-value" id="name"></span>
+        </p>
+
+        <!-- FATHER NAME -->
+        <p class="rtl-row">
+            <span class="rtl-label">
+                𐴁𐴝𐴉𐴡𐴌 𐴕𐴝𐴔:
+            </span>
+
+            <span class="rtl-value" id="father"></span>
+        </p>
+
+        <!-- DATE OF BIRTH / AGE -->
+        <p class="rtl-row">
+            <span class="rtl-label">
+                𐴎𐴡𐴌𐴔𐴡:
+            </span>
+
+            <span class="rtl-value" id="dateOfBirth"></span>
+        </p>
+
+        <!-- PRESENT ADDRESS -->
+        <p class="rtl-row">
+            <span class="rtl-label">
+                𐴀𐴠𐴈𐴡𐴕𐴡𐴥𐴌 𐴄𐴞𐴑𐴝𐴕𐴝𐴤:
+            </span>
+
+            <span class="rtl-value" id="presentAddress"></span>
+        </p>
+
+        <!-- PERMANENT ADDRESS -->
+        <p class="rtl-row">
+            <span class="rtl-label">
+                𐴇𐴠𐴏𐴃𐴝𐴘𐴀𐴞 𐴄𐴞𐴑𐴝𐴕𐴝𐴤:
+            </span>
+
+            <span class="rtl-value" id="permanentAddress"></span>
+        </p>
+
+        <!-- LEVEL -->
+        <p class="rtl-row">
+            <span class="rtl-label">
+                𐴇𐴝𐴦𐴓𐴡𐴥𐴃𐴢:
+            </span>
+
+            <span class="rtl-value">
+                𐴇𐴝𐴦𐴓𐴡𐴥𐴃𐴢
+            </span>
+        </p>
+
+    </div>
+
 </div>
 
-<div class="details">
-
-    <p class="rtl-row">
-        <span class="rtl-label">
-            𐴏𐴡𐴤𐴕𐴡𐴃𐴢 𐴑𐴟𐴀𐴋
-        </span>
-        <span class="rtl-value" id="code"></span>
-    </p>
-
-    <p class="rtl-row">
-        <span class="rtl-label">
-            𐴕𐴝𐴔
-        </span>
-        <span class="rtl-value" id="name"></span>
-    </p>
-
-    <p class="rtl-row">
-        <span class="rtl-label">
-            𐴁𐴝𐴉𐴡𐴌 𐴕𐴝𐴔
-        </span>
-        <span class="rtl-value" id="father"></span>
-    </p>
-
-    <p class="rtl-row">
-        <span class="rtl-label">
-            𐴎𐴡𐴌𐴔𐴡
-        </span>
-        <span class="rtl-value" id="dateOfBirth"></span>
-    </p>
-
-    <p class="rtl-row">
-        <span class="rtl-label">
-            𐴀𐴠𐴈𐴡𐴕𐴡𐴥𐴌 𐴄𐴞𐴑𐴝𐴕𐴝𐴤
-        </span>
-        <span class="rtl-value" id="presentAddress"></span>
-    </p>
-
-    <p class="rtl-row">
-        <span class="rtl-label">
-            𐴇𐴠𐴏𐴃𐴝𐴘𐴀𐴞 𐴄𐴞𐴑𐴝𐴕𐴝𐴤
-        </span>
-        <span class="rtl-value" id="permanentAddress"></span>
-    </p>
-
-    <p class="rtl-row">
-        <span class="rtl-label">
-            𐴇𐴝𐴦𐴓𐴡𐴥𐴃𐴢
-        </span>
-        <span class="rtl-value">
-            𐴇𐴝𐴦𐴓𐴡𐴥𐴃𐴢
-        </span>
-    </p>
-
+</div>
 </div>
 
-</div></div>
-</div><script src="certificates.js"></script><script>
+<script src="certificates.js"></script>
+
+<script>
 
 function verifyCertificate() {
 
@@ -219,8 +268,15 @@ function verifyCertificate() {
 
         const student = certificates[code];
 
+        /*
+         * The database still uses:
+         * 020250125
+         *
+         * Only the number DISPLAYED on the page
+         * is changed to Rohingya Script.
+         */
         document.getElementById("code").textContent =
-            code;
+            "𐴰𐴲𐴰𐴲𐴵𐴰𐴱𐴲𐴵";
 
         document.getElementById("name").textContent =
             student.name || "";
@@ -273,5 +329,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 });
 
-</script></body>
+</script>
+
+</body>
 </html>
