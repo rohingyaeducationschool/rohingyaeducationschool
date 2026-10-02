@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Certificate Verification | Rohingya Education School</title>
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Certificate Verification | Rohingya Education School</title><style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -102,6 +97,12 @@ button:hover {
     padding-bottom: 8px;
 }
 
+.rohingya {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: plaintext;
+}
+
 .error {
     display: none;
     color: #d32f2f;
@@ -109,95 +110,69 @@ button:hover {
     margin-top: 15px;
     font-weight: bold;
 }
-</style>
-</head>
-
-<body>
-
-<header>
+</style></head><body><header>
     <h1>Rohingya Education School</h1>
     <p>Certificate Verification</p>
-</header>
+</header><div class="container"><div class="box"><h2>Verify Certificate</h2><p>Enter the Certificate Code:</p><input
+type="text"
+id="certificateCode"
+placeholder="Enter Certificate Code"
 
-<div class="container">
-
-<div class="box">
-
-<h2>Verify Certificate</h2>
-
-<p>Enter the Certificate Code:</p>
-
-<input
-    type="text"
-    id="certificateCode"
-    placeholder="Enter Certificate Code"
->
+«»
 
 <button onclick="verifyCertificate()">
     Verify Certificate
-</button>
-
-<div id="error" class="error">
+</button><div id="error" class="error">
     Certificate Not Found
+</div><div id="result"><div class="verified">
+    ✓ Certificate Verified
 </div>
 
-<div id="result">
+<div class="profile">
+    <img id="studentPhoto" src="" alt="Student Photo">
+</div>
 
-    <div class="verified">
-        ✓ Certificate Verified
-    </div>
+<div class="details">
 
-    <div class="profile">
-        <img id="studentPhoto" src="" alt="Student Photo">
-    </div>
+    <p>
+        <strong>Certificate Code:</strong>
+        <span id="code"></span>
+    </p>
 
-    <div class="details">
+    <p>
+        <strong>Name:</strong>
+        <span id="name" class="rohingya"></span>
+    </p>
 
-        <p>
-            <strong>Certificate Code:</strong>
-            <span id="code"></span>
-        </p>
+    <p>
+        <strong>Father's Name:</strong>
+        <span id="father" class="rohingya"></span>
+    </p>
 
-        <p>
-            <strong>Name:</strong>
-            <span id="name"></span>
-        </p>
+    <p>
+        <strong>Date of Birth:</strong>
+        <span id="dateOfBirth" class="rohingya"></span>
+    </p>
 
-        <p>
-            <strong>Age:</strong>
-            <span id="age"></span>
-        </p>
+    <p>
+        <strong>Present Address:</strong>
+        <span id="presentAddress" class="rohingya"></span>
+    </p>
 
-        <p>
-            <strong>Father's Name:</strong>
-            <span id="father"></span>
-        </p>
+    <p>
+        <strong>Address in Myanmar:</strong>
+        <span id="permanentAddress" class="rohingya"></span>
+    </p>
 
-        <p>
-            <strong>Current Address:</strong>
-            <span id="address"></span>
-        </p>
-
-        <p>
-            <strong>Permanent Address:</strong>
-            <span id="permanentAddress"></span>
-        </p>
-
-        <p>
-            <strong>Status:</strong>
-            Valid
-        </p>
-
-    </div>
+    <p>
+        <strong>Status:</strong>
+        Valid
+    </p>
 
 </div>
 
-</div>
-</div>
-
-<script src="certificates.js"></script>
-
-<script>
+</div></div>
+</div><script src="certificates.js"></script><script>
 
 function verifyCertificate() {
 
@@ -218,14 +193,24 @@ function verifyCertificate() {
         const student = certificates[code];
 
         document.getElementById("code").textContent = code;
-        document.getElementById("name").textContent = student.name;
-        document.getElementById("age").textContent = student.age;
-        document.getElementById("father").textContent = student.father;
-        document.getElementById("address").textContent = student.address;
-        document.getElementById("permanentAddress").textContent =
-            student.permanentAddress;
 
-        document.getElementById("studentPhoto").src = student.photo;
+        document.getElementById("name").textContent =
+            student.name || "";
+
+        document.getElementById("father").textContent =
+            student.father || "";
+
+        document.getElementById("dateOfBirth").textContent =
+            student.dateOfBirth || "";
+
+        document.getElementById("presentAddress").textContent =
+            student.presentAddress || "";
+
+        document.getElementById("permanentAddress").textContent =
+            student.permanentAddress || "";
+
+        document.getElementById("studentPhoto").src =
+            student.photo || "";
 
         result.style.display = "block";
 
@@ -243,13 +228,16 @@ function verifyCertificate() {
 
 window.addEventListener("DOMContentLoaded", function () {
 
-    const urlParams = new URLSearchParams(window.location.search);
+    const urlParams =
+        new URLSearchParams(window.location.search);
 
-    const qrCode = urlParams.get("code");
+    const qrCode =
+        urlParams.get("code");
 
     if (qrCode) {
 
-        document.getElementById("certificateCode").value = qrCode;
+        document.getElementById("certificateCode").value =
+            qrCode;
 
         verifyCertificate();
 
@@ -257,7 +245,5 @@ window.addEventListener("DOMContentLoaded", function () {
 
 });
 
-</script>
-
-</body>
+</script></body>
 </html>
