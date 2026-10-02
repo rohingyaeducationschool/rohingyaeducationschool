@@ -256,9 +256,40 @@ button:hover {
 </div>
 </div>
 
+
 <script src="certificates.js"></script>
 
 <script>
+
+/* =========================================
+   ENGLISH NUMBERS → ROHINGYA SCRIPT NUMBERS
+   ========================================= */
+
+function toRohingyaNumbers(number) {
+
+    const rohNumbers = {
+        "0": "𐴰",
+        "1": "𐴱",
+        "2": "𐴲",
+        "3": "𐴳",
+        "4": "𐴴",
+        "5": "𐴵",
+        "6": "𐴶",
+        "7": "𐴷",
+        "8": "𐴸",
+        "9": "𐴹"
+    };
+
+    return String(number).replace(
+        /[0-9]/g,
+        digit => rohNumbers[digit]
+    );
+}
+
+
+/* =========================================
+   CERTIFICATE VERIFICATION
+   ========================================= */
 
 function verifyCertificate() {
 
@@ -274,40 +305,54 @@ function verifyCertificate() {
     result.style.display = "none";
     error.style.display = "none";
 
+
     if (certificates[code]) {
 
         const student = certificates[code];
 
+
         /*
-         * Database ID remains:
-         * 020250125
+         * The exact Certificate Code entered
+         * by the user is converted automatically
+         * into Rohingya Script numbers.
          *
-         * Displayed certificate number:
+         * Example:
+         * 020250125
+         * ↓
          * 𐴰𐴲𐴰𐴲𐴵𐴰𐴱𐴲𐴵
          */
+
         document.getElementById("code").textContent =
-            "𐴰𐴲𐴰𐴲𐴵𐴰𐴱𐴲𐴵";
+            toRohingyaNumbers(code);
+
 
         document.getElementById("name").textContent =
             student.name || "";
 
+
         document.getElementById("father").textContent =
             student.father || "";
+
 
         document.getElementById("dateOfBirth").textContent =
             student.dateOfBirth || "";
 
+
         document.getElementById("presentAddress").textContent =
             student.presentAddress || "";
+
 
         document.getElementById("permanentAddress").textContent =
             student.permanentAddress || "";
 
+
         document.getElementById("issueDate").textContent =
             student.issueDate || "";
 
+
         document.getElementById("studentPhoto").src =
             student.photo || "";
+
 
         result.style.display = "block";
 
@@ -316,12 +361,13 @@ function verifyCertificate() {
         error.style.display = "block";
 
     }
+
 }
 
 
-/* ================================
+/* =========================================
    QR CODE AUTO VERIFICATION
-   ================================ */
+   ========================================= */
 
 window.addEventListener("DOMContentLoaded", function () {
 
@@ -330,6 +376,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     const qrCode =
         urlParams.get("code");
+
 
     if (qrCode) {
 
