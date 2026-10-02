@@ -94,6 +94,15 @@ button:hover {
     border: 3px solid #075E54;
 }
 
+.issue-date {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    direction: rtl;
+    text-align: center;
+}
+
 .details {
     margin-top: 20px;
     line-height: 1.8;
@@ -168,8 +177,17 @@ button:hover {
         𐴏𐴡𐴀𐴞
     </div>
 
+    <!-- PHOTO -->
     <div class="profile">
+
         <img id="studentPhoto" src="" alt="Student Photo">
+
+        <!-- ISSUE DATE -->
+        <div class="issue-date">
+            𐴉𐴝𐴘𐴧𐴠𐴊𐴠 𐴃𐴝𐴌𐴞𐴑:
+            <span id="issueDate"></span>
+        </div>
+
     </div>
 
     <div class="details">
@@ -235,7 +253,7 @@ button:hover {
             </span>
 
             <span class="rtl-value">
-                𐴏𐴡𐴀𐴞
+                𐴇𐴝𐴦𐴓𐴡𐴥𐴃𐴢
             </span>
         </p>
 
@@ -269,11 +287,11 @@ function verifyCertificate() {
         const student = certificates[code];
 
         /*
-         * The database still uses:
+         * Certificate ID remains:
          * 020250125
          *
-         * Only the number DISPLAYED on the page
-         * is changed to Rohingya Script.
+         * Only the number displayed on the page
+         * is shown in Rohingya Script.
          */
         document.getElementById("code").textContent =
             "𐴰𐴲𐴰𐴲𐴵𐴰𐴱𐴲𐴵";
@@ -295,6 +313,14 @@ function verifyCertificate() {
 
         document.getElementById("studentPhoto").src =
             student.photo || "";
+
+        /*
+         * Issue Date
+         * If issueDate exists in certificates.js,
+         * it will be displayed here.
+         */
+        document.getElementById("issueDate").textContent =
+            student.issueDate || "";
 
         result.style.display = "block";
 
