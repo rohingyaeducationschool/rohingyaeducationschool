@@ -7,7 +7,7 @@ const certificates = {
     presentAddress: "𐴑𐴠𐴀𐴔 𐴴 𐴀𐴠𐴑𐴏𐴄𐴠𐴕𐴐𐴡𐴕",
     permanentAddress: "𐴒𐴡𐴊𐴟𐴏𐴡𐴧𐴌𐴝𐴤",
     photo: "ziaul.jpg",
-    issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
+    issueDate: "𐴲𐴰/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
 "020250417": {
@@ -16,7 +16,7 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴱𐴹𐴸𐴰",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "saad uddin.jpg",
+    photo: "Saad Uddin.jpg",
     issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
@@ -26,7 +26,7 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴱𐴹𐴸𐴵",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "abdu rahman.jpg",
+    photo: "Abdu Rahman.jpg",
     issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
@@ -36,7 +36,7 @@ const certificates = {
     dateOfBirth: "𐴱𐴰/𐴰𐴹/𐴲𐴰𐴱𐴵",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "mohammed shahat.jpg",
+    photo: "Mohammed Shahat.jpg",
     issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
@@ -46,7 +46,7 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴲𐴰𐴰𐴸",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "mohammed furkan.jpg",
+    photo: "Mohammed Furkan.jpg",
     issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
@@ -56,7 +56,7 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴲𐴰𐴰𐴶",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "abdul kuddus.jpg",
+    photo: "Abdul Kuddus.jpg",
     issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
@@ -66,7 +66,7 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴲𐴰𐴰𐴳",
     presentAddress: "𐴑𐴠𐴀𐴔 𐴴 𐴀𐴠𐴑𐴏𐴄𐴠𐴕𐴐𐴡𐴕",
     permanentAddress: " ",
-    photo: "nurul islam.jpg",
+    photo: "Nurul Islam.jpg",
     issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
@@ -76,7 +76,7 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴲𐴰𐴰𐴸",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "sayed alam.jpg",
+    photo: "Sayed Alam.jpg",
     issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
@@ -86,7 +86,7 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴲𐴰𐴰𐴹",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "mohammed nur.jpg",
+    photo: "Mohammed Nur.jpg",
     issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 }
 
