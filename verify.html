@@ -94,15 +94,6 @@ button:hover {
     border: 3px solid #075E54;
 }
 
-.issue-date {
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: 17px;
-    font-weight: bold;
-    direction: rtl;
-    text-align: center;
-}
-
 .details {
     margin-top: 20px;
     line-height: 1.8;
@@ -179,15 +170,7 @@ button:hover {
 
     <!-- PHOTO -->
     <div class="profile">
-
         <img id="studentPhoto" src="" alt="Student Photo">
-
-        <!-- ISSUE DATE -->
-        <div class="issue-date">
-            𐴉𐴝𐴘𐴧𐴠𐴊𐴠 𐴃𐴝𐴌𐴞𐴑:
-            <span id="issueDate"></span>
-        </div>
-
     </div>
 
     <div class="details">
@@ -246,6 +229,15 @@ button:hover {
             <span class="rtl-value" id="permanentAddress"></span>
         </p>
 
+        <!-- ISSUE DATE -->
+        <p class="rtl-row">
+            <span class="rtl-label">
+                𐴉𐴝𐴘𐴧𐴠𐴊𐴠 𐴃𐴝𐴌𐴞𐴑:
+            </span>
+
+            <span class="rtl-value" id="issueDate"></span>
+        </p>
+
         <!-- LEVEL -->
         <p class="rtl-row">
             <span class="rtl-label">
@@ -287,11 +279,11 @@ function verifyCertificate() {
         const student = certificates[code];
 
         /*
-         * Certificate ID remains:
+         * Database ID remains:
          * 020250125
          *
-         * Only the number displayed on the page
-         * is shown in Rohingya Script.
+         * Displayed certificate number:
+         * 𐴰𐴲𐴰𐴲𐴵𐴰𐴱𐴲𐴵
          */
         document.getElementById("code").textContent =
             "𐴰𐴲𐴰𐴲𐴵𐴰𐴱𐴲𐴵";
@@ -311,16 +303,11 @@ function verifyCertificate() {
         document.getElementById("permanentAddress").textContent =
             student.permanentAddress || "";
 
-        document.getElementById("studentPhoto").src =
-            student.photo || "";
-
-        /*
-         * Issue Date
-         * If issueDate exists in certificates.js,
-         * it will be displayed here.
-         */
         document.getElementById("issueDate").textContent =
             student.issueDate || "";
+
+        document.getElementById("studentPhoto").src =
+            student.photo || "";
 
         result.style.display = "block";
 
