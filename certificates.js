@@ -6,7 +6,8 @@ const certificates = {
     dateOfBirth: "𐴰𐴶/𐴰𐴲/𐴱𐴹𐴹𐴶",
     presentAddress: "𐴑𐴠𐴀𐴔 𐴴 𐴀𐴠𐴑𐴏𐴄𐴠𐴕𐴐𐴡𐴕",
     permanentAddress: "𐴒𐴡𐴊𐴟𐴏𐴡𐴧𐴌𐴝𐴤",
-    photo: "ziaul.jpg"
+    photo: "ziaul.jpg",
+    issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
 "020250417": {
@@ -15,7 +16,8 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴱𐴹𐴸𐴰",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "saad uddin.jpg"
+    photo: "saad uddin.jpg",
+    issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
 "020250418": {
@@ -24,7 +26,8 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴱𐴹𐴸𐴵",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "abdu rahman.jpg"
+    photo: "abdu rahman.jpg",
+    issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
 "020250419": {
@@ -33,7 +36,8 @@ const certificates = {
     dateOfBirth: "𐴱𐴰/𐴰𐴹/𐴲𐴰𐴱𐴵",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "mohammed shahat.jpg"
+    photo: "mohammed shahat.jpg",
+    issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
 "020250420": {
@@ -42,7 +46,8 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴲𐴰𐴰𐴸",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "mohammed furkan.jpg"
+    photo: "mohammed furkan.jpg",
+    issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
 "020250421": {
@@ -51,7 +56,8 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴲𐴰𐴰𐴶",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "abdul kuddus.jpg"
+    photo: "abdul kuddus.jpg",
+    issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
 "020250422": {
@@ -60,7 +66,8 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴲𐴰𐴰𐴳",
     presentAddress: "𐴑𐴠𐴀𐴔 𐴴 𐴀𐴠𐴑𐴏𐴄𐴠𐴕𐴐𐴡𐴕",
     permanentAddress: " ",
-    photo: "nurul islam.jpg"
+    photo: "nurul islam.jpg",
+    issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
 "020250423": {
@@ -69,7 +76,8 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴲𐴰𐴰𐴸",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "sayed alam.jpg"
+    photo: "sayed alam.jpg",
+    issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 },
 
 "020250424": {
@@ -78,7 +86,8 @@ const certificates = {
     dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴲𐴰𐴰𐴹",
     presentAddress: " ",
     permanentAddress: " ",
-    photo: "mohammed nur.jpg"
+    photo: "mohammed nur.jpg",
+    issueDate: "𐴲𐴹/𐴰𐴹/𐴲𐴰𐴲𐴶"
 }
 
 };
