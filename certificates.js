@@ -3,7 +3,7 @@ const certificates = {
 "020250125": {
     name: "𐴎𐴞𐴘𐴝𐴀𐴟𐴓𐴢 𐴇𐴡𐴥𐴑",
     father: "𐴕𐴟𐴌 𐴇𐴟𐴏𐴝𐴙𐴕",
-    dateOfBirth: "𐴳𐴰",
+    dateOfBirth: "𐴰𐴶/𐴰𐴲/𐴱𐴹𐴹𐴶",
     presentAddress: "𐴑𐴠𐴀𐴔 𐴴 𐴀𐴠𐴑𐴏𐴄𐴠𐴕𐴐𐴡𐴕",
     permanentAddress: "𐴒𐴡𐴊𐴟𐴏𐴡𐴧𐴌𐴝𐴤",
     photo: "ziaul.jpg"
@@ -12,9 +12,9 @@ const certificates = {
 "020250417": {
     name: "𐴏𐴝𐴦𐴣𐴊𐴢 𐴀𐴟𐴊𐴧𐴞𐴕",
     father: "𐴀𐴝𐴁𐴟𐴓𐴢 𐴑𐴝𐴏𐴞𐴥𐴔",
-    dateOfBirth: "𐴰𐴱",
-    presentAddress: "𐴑𐴠𐴀𐴔 𐴴 𐴀𐴠𐴑𐴏𐴄𐴠𐴕𐴐𐴡𐴕",
-    permanentAddress: "𐴇𐴠𐴥𐴏𐴃𐴝𐴗𐴀𐴞 𐴄𐴞𐴑𐴝𐴕𐴝𐴤",
+    dateOfBirth: "𐴰𐴱/𐴰𐴱/𐴱𐴹𐴸𐴰",
+    presentAddress: " ",
+    permanentAddress: " ",
     photo: "saad uddin.jpg"
 },
 
