@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teachers & Students - Rohingya Education School</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7f6;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #fff;
+            padding: 15px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box {
+            width: 45px;
+            height: 45px;
+            background: #176b4d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            color: #176b4d;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #176b4d;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .page-hero {
+            min-height: 300px;
+
+            background:
+                linear-gradient(rgba(0,70,45,0.72), rgba(0,70,45,0.72)),
+                url("school-photo.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-size: 46px;
+            margin-bottom: 10px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 60px 0 35px;
+        }
+
+        .intro h2 {
+            color: #176b4d;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+            color: #555;
+        }
+
+        .section {
+            padding: 25px 0 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #176b4d;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .person-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .person-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .person-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 18px;
+
+            background: #e5f3ed;
+            color: #176b4d;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 36px;
+        }
+
+        .person-card h3 {
+            color: #176b4d;
+            margin-bottom: 8px;
+        }
+
+        .person-card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .support {
+            background: #176b4d;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .support h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .support p {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        footer {
+            background: #123d30;
+            color: white;
+            padding: 45px 6% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #d5dfdc;
+        }
+
+        footer a {
+            display: block;
+            color: #d5dfdc;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            color: #cbd6d2;
+            font-size: 14px;
+        }
+
+        @media (max-width: 850px) {
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px 6%;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .people-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .page-hero {
+                min-height: 230px;
+            }
+
+            .page-hero h1 {
+                font-size: 35px;
+            }
+
+            .people-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo h2 {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-box">
+                RES
+            </div>
+
+            <h2>
+                Rohingya Education School
+            </h2>
+
+        </div>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <nav id="navMenu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="activities.html">
+                Activities
+            </a>
+
+            <a href="updates.html">
+                Updates
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="teachers-students.html" class="active">
+                Teachers & Students
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Hero -->
+
+    <section class="page-hero">
+
+        <div>
+
+            <h1>
+                Teachers & Students
+            </h1>
+
+            <p>
+                Learning and growing together
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Introduction -->
+
+    <section class="intro">
+
+        <div class="container">
+
+            <h2>
+                Our School Community
+            </h2>
+
+            <p>
+                Teachers and students are at the heart of
+                Rohingya Education School. Together, they create
+                a supportive environment for learning,
+                development and community participation.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Teachers -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Our Teachers
+            </h2>
+
+            <div class="people-grid">
+
+                <div class="person-card">
+
+                    <div class="person-icon">
+                        👨‍🏫
+                    </div>
+
+                    <h3>
+                        Dedicated Teachers
+                    </h3>
+
+                    <p>
+                        Teachers support students through
+                        classroom instruction, guidance and
+                        educational activities.
+                    </p>
+
+                </div>
+
+
+                <div class="person-card">
+
+                    <div class="person-icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        Learning Support
+                    </h3>
+
+                    <p>
+                        Teachers help students develop
+                        knowledge, skills and confidence
+                        through continuous learning.
+                    </p>
+
+                </div>
+
+
+                <div class="person-card">
+
+                    <div class="person-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Community Educators
+                    </h3>
+
+                    <p>
+                        Teachers can also contribute to
+                        community learning and educational
+                        awareness.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Students -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Our Students
+            </h2>
+
+            <div class="people-grid">
+
+                <div class="person-card">
+
+                    <div class="person-icon">
+                        👨‍🎓
+                    </div>
+
+                    <h3>
+                        Young Learners
+                    </h3>
+
+                    <p>
+                        Students develop academic knowledge
+                        and practical skills through
+                        classroom learning.
+                    </p>
+
+                </div>
+
+
+                <div class="person-card">
+
+                    <div class="person-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Student Development
+                    </h3>
+
+                    <p>
+                        Activities encourage creativity,
+                        cooperation, communication and
+                        personal development.
+                    </p>
+
+                </div>
+
+
+                <div class="person-card">
+
+                    <div class="person-icon">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Future Learning
+                    </h3>
+
+                    <p>
+                        Students are encouraged to continue
+                        learning and use their knowledge
+                        in their communities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Support -->
+
+    <section class="support">
+
+        <h2>
+            Learning Together
+        </h2>
+
+        <p>
+            We believe that teachers, students, families and
+            communities can work together to create meaningful
+            educational opportunities.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>
+                    Rohingya Education School
+                </h3>
+
+                <p>
+                    Supporting education, language, culture
+                    and community learning.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="activities.html">
+                    Activities
+                </a>
+
+                <a href="updates.html">
+                    Updates
+                </a>
+
+                <a href="courses.html">
+                    Courses
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Connect
+                </h3>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    YouTube
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Rohingya Education School.
+            All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navMenu")
+                .classList
+                .toggle("show");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
