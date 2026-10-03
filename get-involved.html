@@ -8,6 +8,7 @@
     <title>Get Involved - Rohingya Education School</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -29,6 +30,8 @@
             text-decoration: none;
             color: inherit;
         }
+
+        /* HEADER */
 
         header {
             background: #ffffff;
@@ -70,6 +73,8 @@
             color: #667085;
         }
 
+        /* NAVIGATION */
+
         nav ul {
             list-style: none;
             display: flex;
@@ -107,24 +112,26 @@
 
         .hero {
             position: relative;
-            min-height: 390px;
+            min-height: 480px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             overflow: hidden;
             background:
-                linear-gradient(rgba(8,45,25,0.82), rgba(8,45,25,0.82)),
-                url("school-photo.jpg") center/cover no-repeat;
+                linear-gradient(
+                    rgba(8,45,25,0.96),
+                    rgba(8,45,25,0.96)
+                );
             color: white;
         }
 
         .watermark {
             position: absolute;
-            width: 420px;
-            height: 420px;
-            object-fit: contain;
+            width: 500px;
+            max-width: 75%;
             opacity: 0.10;
+            object-fit: contain;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -135,17 +142,18 @@
             position: relative;
             z-index: 2;
             max-width: 850px;
-            padding: 40px 20px;
+            padding: 55px 20px;
         }
 
-        .small-logo {
-            width: 82px;
-            height: 82px;
+        .hero-logo {
+            width: 180px;
+            height: 180px;
             object-fit: contain;
             border-radius: 50%;
-            background: white;
-            padding: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
+            filter: drop-shadow(
+                0 8px 18px rgba(0,0,0,0.25)
+            );
         }
 
         .hero h2 {
@@ -205,7 +213,7 @@
             background: #f8faf9;
             border: 1px solid #e4ebe6;
             border-radius: 14px;
-            padding: 27px;
+            padding: 28px;
             transition: 0.25s;
         }
 
@@ -215,39 +223,19 @@
         }
 
         .icon {
-            width: 55px;
-            height: 55px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #e8f5e9;
-            color: #14532d;
-            border-radius: 50%;
-            font-size: 27px;
-            margin-bottom: 15px;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #166534;
         }
 
         .card p {
             margin-bottom: 0;
         }
 
-        /* FEATURE */
-
-        .feature {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .feature img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 14px;
-        }
-
-        /* LIST */
+        /* SUPPORT LIST */
 
         .support-list {
             padding-left: 22px;
@@ -389,7 +377,7 @@
             }
 
             .hero {
-                min-height: 350px;
+                min-height: 400px;
             }
 
             .hero h2 {
@@ -401,10 +389,6 @@
             }
 
             .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .feature {
                 grid-template-columns: 1fr;
             }
 
@@ -437,14 +421,13 @@
                 font-size: 28px;
             }
 
-            .small-logo {
-                width: 70px;
-                height: 70px;
+            .hero-logo {
+                width: 140px;
+                height: 140px;
             }
 
             .watermark {
                 width: 300px;
-                height: 300px;
             }
 
             main {
@@ -458,11 +441,8 @@
             .section h2 {
                 font-size: 24px;
             }
-
-            .feature img {
-                height: 240px;
-            }
         }
+
     </style>
 </head>
 
@@ -476,8 +456,10 @@
 
             <a href="index.html" class="brand">
 
-                <img src="profile.jpg"
-                     alt="Rohingya Education School Logo">
+                <img
+                    src="profile.jpg"
+                    alt="Rohingya Education School Logo"
+                >
 
                 <div class="brand-text">
 
@@ -491,12 +473,13 @@
 
             </a>
 
-
-            <button class="menu-btn"
-                    onclick="toggleMenu()">
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open menu"
+            >
                 ☰
             </button>
-
 
             <nav id="mainNav">
 
@@ -545,8 +528,7 @@
                     </li>
 
                     <li>
-                        <a href="get-involved.html"
-                           class="active">
+                        <a href="get-involved.html" class="active">
                             Get Involved
                         </a>
                     </li>
@@ -576,15 +558,19 @@
 
     <section class="hero">
 
-        <img src="profile.jpg"
-             alt=""
-             class="watermark">
+        <img
+            src="logo.png"
+            alt=""
+            class="watermark"
+        >
 
         <div class="hero-content">
 
-            <img src="profile.jpg"
-                 alt="Rohingya Education School Logo"
-                 class="small-logo">
+            <img
+                src="profile.jpg"
+                alt="Rohingya Education School Logo"
+                class="hero-logo"
+            >
 
             <h2>
                 Get Involved
@@ -603,7 +589,6 @@
     <!-- MAIN -->
 
     <main>
-
 
         <!-- INTRODUCTION -->
 
@@ -637,7 +622,6 @@
             </h2>
 
             <div class="cards">
-
 
                 <div class="card">
 
@@ -721,37 +705,21 @@
 
         <section class="section">
 
-            <div class="feature">
+            <h2>
+                Supporting Education Together
+            </h2>
 
-                <div>
+            <p>
+                A school is more than a place for lessons.
+                It is also a community where people can
+                learn, cooperate and support one another.
+            </p>
 
-                    <h2>
-                        Supporting Education Together
-                    </h2>
-
-                    <p>
-                        A school is more than a place for lessons.
-                        It is also a community where people can
-                        learn, cooperate and support one another.
-                    </p>
-
-                    <p>
-                        Community participation can help create
-                        more opportunities for learning and
-                        personal development.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <img src="school-photo.jpg"
-                         alt="Rohingya Education School">
-
-                </div>
-
-            </div>
+            <p>
+                Community participation can help create
+                more opportunities for learning and
+                personal development.
+            </p>
 
         </section>
 
@@ -817,7 +785,7 @@
         </section>
 
 
-        <!-- CONTACT CTA -->
+        <!-- CTA -->
 
         <section class="section cta">
 
@@ -830,8 +798,10 @@
                 involved, please visit our Contact page.
             </p>
 
-            <a href="contact.html"
-               class="btn">
+            <a
+                href="contact.html"
+                class="btn"
+            >
                 Contact School
             </a>
 
@@ -846,7 +816,6 @@
 
         <div class="footer-container">
 
-
             <div>
 
                 <h3>
@@ -858,9 +827,8 @@
                 </p>
 
                 <p style="margin-top:10px;">
-                    Supporting learning and educational
-                    development through a welcoming
-                    school community.
+                    Supporting learning and educational development
+                    through a welcoming school community.
                 </p>
 
             </div>
@@ -949,10 +917,7 @@
 
 
         <div class="copyright">
-
-            © 2026 Rohingya Education School.
-            All rights reserved.
-
+            © 2026 Rohingya Education School. All rights reserved.
         </div>
 
     </footer>
@@ -968,7 +933,6 @@
                 .toggle("show");
 
         }
-
 
         document
             .querySelectorAll("#mainNav a")
