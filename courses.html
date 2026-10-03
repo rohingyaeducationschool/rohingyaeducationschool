@@ -2,103 +2,180 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Courses - Rohingya Education School</title>
 
     <style>
 
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
             background: #f5f7f6;
             color: #222;
+            line-height: 1.6;
         }
 
-
-        /* HEADER */
+        /* Header */
 
         header {
-            background: #075E54;
+            background: #ffffff;
+            padding: 15px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box {
+            width: 45px;
+            height: 45px;
+
+            background: #176b4d;
             color: white;
-            text-align: center;
-            padding: 25px 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+            font-size: 18px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 28px;
+        .logo h2 {
+            font-size: 18px;
+            color: #176b4d;
         }
-
-        header p {
-            margin: 8px 0 0;
-        }
-
-
-        /* NAVIGATION */
 
         nav {
-            background: #128C7E;
-            text-align: center;
-            padding: 14px 10px;
+            display: flex;
+            gap: 25px;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
+            color: #333;
+            font-weight: 500;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        nav a:hover,
+        nav a.active {
+            color: #176b4d;
         }
 
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
 
-        /* MAIN */
+        /* Hero */
+
+        .page-hero {
+            min-height: 300px;
+
+            background:
+                linear-gradient(
+                    rgba(0,70,45,0.72),
+                    rgba(0,70,45,0.72)
+                ),
+                url("school-photo.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+        }
+
+        /* Container */
 
         .container {
-            max-width: 1100px;
+            width: 88%;
+            max-width: 1150px;
             margin: auto;
-            padding: 45px 20px;
         }
 
-        .page-title {
-            text-align: center;
-            color: #075E54;
-            margin-bottom: 15px;
-        }
+        /* Intro */
 
         .intro {
             text-align: center;
-            max-width: 750px;
-            margin: 0 auto 40px;
-            line-height: 1.8;
+            padding: 60px 0 35px;
         }
 
+        .intro h2 {
+            color: #176b4d;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
 
-        /* COURSES */
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+            color: #555;
+        }
+
+        /* Courses */
 
         .courses {
+            padding: 20px 0 70px;
+        }
+
+        .courses-grid {
             display: grid;
+
             grid-template-columns:
-                repeat(auto-fit, minmax(260px, 1fr));
+                repeat(3, 1fr);
+
             gap: 25px;
         }
 
         .course-card {
             background: white;
+
+            border-radius: 12px;
+
             padding: 30px 25px;
-            border-radius: 15px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.08);
+
             transition: 0.3s;
         }
 
@@ -107,131 +184,193 @@
         }
 
         .course-icon {
-            font-size: 45px;
-            text-align: center;
-            margin-bottom: 15px;
+            width: 65px;
+            height: 65px;
+
+            background: #e5f3ed;
+            color: #176b4d;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
         }
 
-        .course-card h2 {
-            text-align: center;
-            color: #075E54;
+        .course-card h3 {
+            color: #176b4d;
+            margin-bottom: 12px;
             font-size: 21px;
         }
 
         .course-card p {
-            line-height: 1.7;
+            color: #666;
+            font-size: 15px;
         }
-
-        .course-info {
-            background: #f5f7f6;
-            padding: 12px;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
-
-        .course-info strong {
-            color: #075E54;
-        }
-
-
-        /* ENROLL BUTTON */
 
         .course-button {
-            display: block;
-            text-align: center;
-            background: #075E54;
+            display: inline-block;
+
+            margin-top: 18px;
+
+            padding: 8px 16px;
+
+            background: #176b4d;
             color: white;
+
             text-decoration: none;
-            padding: 12px;
-            border-radius: 25px;
-            margin-top: 20px;
-            font-weight: bold;
+
+            border-radius: 6px;
+
+            font-size: 14px;
         }
 
         .course-button:hover {
-            background: #128C7E;
+            background: #105139;
         }
 
+        /* Learning Section */
 
-        /* COURSE ENROLLMENT */
+        .learning {
+            background: #176b4d;
+            color: white;
 
-        .enrollment-section {
-            max-width: 700px;
-            margin: 60px auto 20px;
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
+            padding: 60px 20px;
 
-        .enrollment-section h2 {
             text-align: center;
-            color: #075E54;
-            margin-bottom: 10px;
         }
 
-        .enrollment-section p {
-            text-align: center;
-            line-height: 1.6;
-            margin-bottom: 20px;
+        .learning h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
         }
 
-        .enrollment-form {
-            width: 100%;
-            overflow: hidden;
+        .learning p {
+            max-width: 800px;
+            margin: auto;
         }
 
-        .enrollment-form iframe {
-            display: block;
-            width: 100%;
-            min-height: 1925px;
-            border: none;
-        }
-
-
-        /* FOOTER */
+        /* Footer */
 
         footer {
-            background: #064c44;
+            background: #123d30;
             color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 30px;
+
+            padding: 45px 6% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr;
+
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #d5dfdc;
         }
 
         footer a {
-            color: white;
+            display: block;
+
+            color: #d5dfdc;
+
             text-decoration: none;
-            margin: 0 7px;
+
+            margin-bottom: 8px;
         }
 
+        footer a:hover {
+            color: white;
+        }
 
-        /* MOBILE */
+        .copyright {
+            border-top:
+                1px solid rgba(255,255,255,0.2);
 
-        @media (max-width: 600px) {
+            margin-top: 30px;
 
-            header h1 {
-                font-size: 23px;
+            padding-top: 20px;
+
+            text-align: center;
+
+            color: #cbd6d2;
+
+            font-size: 14px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 850px) {
+
+            nav {
+                display: none;
+
+                position: absolute;
+
+                top: 75px;
+                left: 0;
+
+                width: 100%;
+
+                background: white;
+
+                flex-direction: column;
+
+                padding: 20px 6%;
+
+                box-shadow:
+                    0 5px 10px rgba(0,0,0,0.1);
             }
 
-            nav a {
-                display: inline-block;
-                margin: 6px;
+            nav.show {
+                display: flex;
             }
 
-            .container {
-                padding: 35px 15px;
+            .menu-btn {
+                display: block;
             }
 
-            .enrollment-section {
-                margin: 40px 5px 20px;
-                padding: 15px;
+            .courses-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
-            .enrollment-form iframe {
-                min-height: 1925px;
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .page-hero {
+                min-height: 230px;
             }
 
+            .page-hero h1 {
+                font-size: 36px;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo h2 {
+                font-size: 15px;
+            }
         }
 
     </style>
@@ -242,273 +381,370 @@
 <body>
 
 
-    <!-- HEADER -->
+    <!-- Header -->
 
     <header>
 
-        <h1>
-            Rohingya Education School
-        </h1>
+        <div class="logo">
 
-        <p>
-            Education • Language • Knowledge • Community
-        </p>
+            <div class="logo-box">
+                RES
+            </div>
+
+            <h2>
+                Rohingya Education School
+            </h2>
+
+        </div>
+
+
+        <div
+            class="menu-btn"
+            onclick="toggleMenu()">
+
+            ☰
+
+        </div>
+
+
+        <nav id="navMenu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="activities.html">
+                Activities
+            </a>
+
+            <a href="updates.html">
+                Updates
+            </a>
+
+            <a href="courses.html"
+               class="active">
+                Courses
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
 
     </header>
 
-    <!-- COURSES -->
 
-    <main class="container">
+    <!-- Hero -->
 
-        <h1 class="page-title">
-            Our Courses
-        </h1>
+    <section class="page-hero">
 
-        <p class="intro">
-            Explore our educational courses designed to
-            support Rohingya language learning, literacy,
-            knowledge and skills development.
+        <div>
+
+            <h1>
+                Courses
+            </h1>
+
+            <p>
+                Learning opportunities for students and the community
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Introduction -->
+
+    <section class="intro">
+
+        <div class="container">
+
+            <h2>
+                Our Courses
+            </h2>
+
+            <p>
+                Rohingya Education School provides learning
+                opportunities in different subjects and areas
+                to support students' educational development.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Courses -->
+
+    <section class="courses">
+
+        <div class="container">
+
+            <div class="courses-grid">
+
+
+                <!-- English -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        🔤
+                    </div>
+
+                    <h3>
+                        English
+                    </h3>
+
+                    <p>
+                        Develop English reading, writing,
+                        listening and speaking skills through
+                        structured learning.
+                    </p>
+
+                    <a href="#"
+                       class="course-button">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
+
+                <!-- Mathematics -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        ➗
+                    </div>
+
+                    <h3>
+                        Mathematics
+                    </h3>
+
+                    <p>
+                        Learn basic mathematics, numbers,
+                        algebra and problem-solving skills.
+                    </p>
+
+                    <a href="#"
+                       class="course-button">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
+
+                <!-- Science -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        🔬
+                    </div>
+
+                    <h3>
+                        Science
+                    </h3>
+
+                    <p>
+                        Explore science and understand the
+                        world through observation, learning
+                        and practical activities.
+                    </p>
+
+                    <a href="#"
+                       class="course-button">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
+
+                <!-- Rohingya Language -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        📖
+                    </div>
+
+                    <h3>
+                        Rohingya Language
+                    </h3>
+
+                    <p>
+                        Support learning and preservation of
+                        the Rohingya language through reading,
+                        writing and educational materials.
+                    </p>
+
+                    <a href="#"
+                       class="course-button">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
+
+                <!-- Culture -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        🌏
+                    </div>
+
+                    <h3>
+                        Language & Culture
+                    </h3>
+
+                    <p>
+                        Learn about Rohingya language, culture,
+                        history and traditions through
+                        educational activities.
+                    </p>
+
+                    <a href="#"
+                       class="course-button">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
+
+                <!-- Digital Learning -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Digital Learning
+                    </h3>
+
+                    <p>
+                        Develop basic digital skills and use
+                        technology as a tool for education
+                        and learning.
+                    </p>
+
+                    <a href="#"
+                       class="course-button">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Learning Section -->
+
+    <section class="learning">
+
+        <h2>
+            Learning for Everyone
+        </h2>
+
+        <p>
+            Our goal is to make education accessible and
+            meaningful for students and communities while
+            supporting language, culture and lifelong learning.
         </p>
 
+    </section>
 
-        <div class="courses">
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-grid">
 
 
-            <!-- COURSE 1 -->
+            <div>
 
-            <div class="course-card">
-
-                <div class="course-icon">
-                    𐴀 𐴁 𐴂
-                </div>
-
-                <h2>
-                    Rohingya Script
-                </h2>
+                <h3>
+                    Rohingya Education School
+                </h3>
 
                 <p>
-                    Learn the Rohingya Script from basic
-                    letters to reading and writing.
+                    Supporting education, language, culture
+                    and community learning.
                 </p>
 
-                <div class="course-info">
+            </div>
 
-                    <strong>Level:</strong>
-                    Basic
 
-                    <br><br>
+            <div>
 
-                    <strong>Duration:</strong>
-                    3 Months
+                <h3>
+                    Quick Links
+                </h3>
 
-                </div>
+                <a href="index.html">
+                    Home
+                </a>
 
-                <a class="course-button"
-                   href="#enrollment">
+                <a href="about.html">
+                    About
+                </a>
 
-                    Enroll Now
+                <a href="activities.html">
+                    Activities
+                </a>
 
+                <a href="updates.html">
+                    Updates
+                </a>
+
+                <a href="courses.html">
+                    Courses
                 </a>
 
             </div>
 
 
+            <div>
 
-            <!-- COURSE 2 -->
+                <h3>
+                    Connect
+                </h3>
 
-            <div class="course-card">
-
-                <div class="course-icon">
-                    📖
-                </div>
-
-                <h2>
-                    Rohingya Reading & Writing
-                </h2>
-
-                <p>
-                    Develop reading and writing skills
-                    through Rohingya language education.
-                </p>
-
-                <div class="course-info">
-
-                    <strong>Level:</strong>
-                    Basic
-
-                    <br><br>
-
-                    <strong>Duration:</strong>
-                    3 Months
-
-                </div>
-
-                <a class="course-button"
-                   href="#enrollment">
-
-                    Enroll Now
-
+                <a href="contact.html">
+                    Contact
                 </a>
 
-            </div>
-
-
-
-            <!-- COURSE 3 -->
-
-            <div class="course-card">
-
-                <div class="course-icon">
-                    📚
-                </div>
-
-                <h2>
-                    Rohingya Language
-                </h2>
-
-                <p>
-                    Learn vocabulary, communication,
-                    grammar and practical language skills.
-                </p>
-
-                <div class="course-info">
-
-                    <strong>Level:</strong>
-                    Intermediate
-
-                    <br><br>
-
-                    <strong>Duration:</strong>
-                    6 Months
-
-                </div>
-
-                <a class="course-button"
-                   href="#enrollment">
-
-                    Enroll Now
-
+                <a href="#">
+                    Facebook
                 </a>
 
-            </div>
-
-
-
-            <!-- COURSE 4 -->
-
-            <div class="course-card">
-
-                <div class="course-icon">
-                    💻
-                </div>
-
-                <h2>
-                    Digital Learning
-                </h2>
-
-                <p>
-                    Learn basic digital skills and use
-                    technology for education and learning.
-                </p>
-
-                <div class="course-info">
-
-                    <strong>Level:</strong>
-                    Basic
-
-                    <br><br>
-
-                    <strong>Duration:</strong>
-                    3 Months
-
-                </div>
-
-                <a class="course-button"
-                   href="#enrollment">
-
-                    Enroll Now
-
-                </a>
-
-            </div>
-
-
-
-            <!-- COURSE 5 -->
-
-            <div class="course-card">
-
-                <div class="course-icon">
-                    📝
-                </div>
-
-                <h2>
-                    Grammar
-                </h2>
-
-                <p>
-                    Develop understanding of grammar,
-                    sentence structure and language usage.
-                </p>
-
-                <div class="course-info">
-
-                    <strong>Level:</strong>
-                    Advanced
-
-                    <br><br>
-
-                    <strong>Duration:</strong>
-                    6 Months
-
-                </div>
-
-                <a class="course-button"
-                   href="#enrollment">
-
-                    Enroll Now
-
-                </a>
-
-            </div>
-
-
-
-            <!-- COURSE 6 -->
-
-            <div class="course-card">
-
-                <div class="course-icon">
-                    🎓
-                </div>
-
-                <h2>
-                    Teacher Training
-                </h2>
-
-                <p>
-                    Support teachers with educational
-                    methods, classroom skills and
-                    language teaching.
-                </p>
-
-                <div class="course-info">
-
-                    <strong>Level:</strong>
-                    Professional
-
-                    <br><br>
-
-                    <strong>Duration:</strong>
-                    6 Months
-
-                </div>
-
-                <a class="course-button"
-                   href="#enrollment">
-
-                    Enroll Now
-
+                <a href="#">
+                    YouTube
                 </a>
 
             </div>
@@ -517,77 +753,28 @@
         </div>
 
 
+        <div class="copyright">
 
-        <!-- COURSE ENROLLMENT FORM -->
-
-        <section class="enrollment-section"
-                 id="enrollment">
-
-            <h2>
-                Course Enrollment
-            </h2>
-
-            <p>
-                Fill out the form below to enroll
-                in one of our courses.
-            </p>
-
-
-            <div class="enrollment-form">
-
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSca-8dTM1DS6LqCXNS_beWfoe-QlSAkk3wQ6Rk4ghhi35Bcrg/viewform?embedded=true"
-                    width="100%"
-                    height="1925"
-                    frameborder="0"
-                    marginheight="0"
-                    marginwidth="0">
-                    Loading…
-                </iframe>
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <h3>
-            Rohingya Education School
-        </h3>
-
-        <p>
-            Education • Language • Knowledge • Community
-        </p>
-
-        <p>
-
-            <a href="index.html">Home</a> |
-
-            <a href="about.html">About</a> |
-
-            <a href="education.html">Education</a> |
-
-            <a href="courses.html">Courses</a> |
-
-            <a href="verify.html">Certificate Verification</a> |
-
-            <a href="contact.html">Contact</a>
-
-        </p>
-
-        <p>
             © 2026 Rohingya Education School.
             All rights reserved.
-        </p>
+
+        </div>
 
     </footer>
+
+
+    <script>
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navMenu")
+                .classList
+                .toggle("show");
+
+        }
+
+    </script>
 
 
 </body>
