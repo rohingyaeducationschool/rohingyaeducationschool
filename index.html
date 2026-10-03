@@ -59,6 +59,7 @@
         .brand img {
             width: 58px;
             height: 58px;
+            border-radius: 50%;
             object-fit: contain;
         }
 
@@ -133,12 +134,15 @@
             color: white;
         }
 
+        /* PNG LOGO WATERMARK */
+
         .watermark {
             position: absolute;
             width: 500px;
             max-width: 75%;
-            opacity: 0.08;
+            opacity: 0.10;
             pointer-events: none;
+            object-fit: contain;
         }
 
         .hero-content {
@@ -147,10 +151,13 @@
             padding: 55px 20px;
         }
 
+        /* JPG LOGO IN THE CENTER */
+
         .hero-logo {
             width: 180px;
             height: 180px;
             object-fit: contain;
+            border-radius: 50%;
             margin-bottom: 25px;
             filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
         }
@@ -458,7 +465,7 @@
             <a href="index.html" class="brand">
 
                 <img
-                    src="logo.png"
+                    src="profile.jpg"
                     alt="Rohingya Education School Logo"
                 >
 
@@ -561,16 +568,21 @@
 
     <section class="hero">
 
+        <!-- PNG LOGO AS WATERMARK -->
+
         <img
             src="logo.png"
             class="watermark"
             alt=""
         >
 
+
         <div class="hero-content">
 
+            <!-- JPG LOGO IN CENTER -->
+
             <img
-                src="logo.png"
+                src="profile.jpg"
                 class="hero-logo"
                 alt="Rohingya Education School Logo"
             >
