@@ -26,7 +26,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 html{
     scroll-behavior:smooth;
-    scroll-padding-top:20px;
 }
 
 body{
@@ -105,7 +104,7 @@ header{
 }
 
 
-/* Menu button */
+/* Menu + Search */
 
 .menu-button,
 .search-button{
@@ -170,7 +169,7 @@ header{
 
 
 /* =========================
-   SEARCH AREA
+   SEARCH
 ========================= */
 
 .search-area{
@@ -516,6 +515,40 @@ header{
 
 
 /* =========================
+   CONTACT CARDS
+========================= */
+
+.contact-card{
+    text-align:center;
+    cursor:pointer;
+}
+
+.contact-card h3{
+    margin-bottom:12px;
+}
+
+.contact-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    color:#555;
+    font-size:14px;
+    line-height:1.6;
+    transition:.2s;
+}
+
+.contact-link:hover{
+    color:#075E54;
+}
+
+.contact-link i{
+    color:#075E54;
+    font-size:17px;
+}
+
+
+/* =========================
    STATISTICS
 ========================= */
 
@@ -593,28 +626,6 @@ header{
 .verify-button{
     background:#075E54;
     color:white;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-card{
-    text-align:left;
-}
-
-.contact-card .contact-line{
-    display:flex;
-    align-items:flex-start;
-    gap:13px;
-    margin:12px 0;
-}
-
-.contact-line i{
-    width:22px;
-    color:#075E54;
-    margin-top:4px;
 }
 
 
@@ -963,52 +974,31 @@ onclick="closeMenu()">
 <div class="menu-links">
 
 <a href="index.html">
-
 <i class="fa-solid fa-house"></i>
-
 <span>Home</span>
-
 </a>
-
 
 <a href="about.html">
-
 <i class="fa-solid fa-circle-info"></i>
-
 <span>About</span>
-
 </a>
-
 
 <a href="education.html">
-
 <i class="fa-solid fa-graduation-cap"></i>
-
 <span>Education</span>
-
 </a>
-
 
 <a href="courses.html">
-
 <i class="fa-solid fa-book-open"></i>
-
 <span>Courses</span>
-
 </a>
-
 
 <a href="verify.html">
-
 <i class="fa-solid fa-certificate"></i>
-
 <span>Certificate Verification</span>
-
 </a>
 
-
-<!-- CONTACT NOW SCROLLS TO CONTACT SECTION -->
-
+<!-- CONTACT NOW GOES TO CONTACT SECTION -->
 <a href="#contact"
 onclick="closeMenu()">
 
@@ -1060,7 +1050,7 @@ Learn More
 </a>
 
 
-<!-- CONTACT NOW SCROLLS DOWN -->
+<!-- CONTACT BUTTON GOES TO CONTACT SECTION -->
 
 <a class="button white"
 href="#contact">
@@ -1093,7 +1083,6 @@ About Our School
 </span>
 
 </h2>
-
 
 <div class="about-box">
 
@@ -1131,7 +1120,6 @@ Our Education Programs
 </span>
 
 </h2>
-
 
 <div class="cards">
 
@@ -1249,7 +1237,6 @@ Our School at a Glance
 
 </h2>
 
-
 <div class="stats-grid">
 
 
@@ -1320,7 +1307,6 @@ Certificate Verification
 
 </h2>
 
-
 <div class="verification">
 
 <div class="verification-icon">
@@ -1350,7 +1336,6 @@ Verify Certificate
 
 <!-- =========================
      CONTACT
-     CONTACT IS ON SAME PAGE
 ========================= -->
 
 <section class="section" id="contact">
@@ -1369,6 +1354,8 @@ Connect With Us
 <div class="cards">
 
 
+<!-- ADDRESS -->
+
 <div class="card contact-card">
 
 <div class="card-icon">
@@ -1381,19 +1368,24 @@ Connect With Us
 Address
 </h3>
 
-<div class="contact-line">
+<a
+class="contact-link"
+href="https://www.google.com/maps/search/?api=1&query=Boroitoli%2C%20Camp%204%2C%20Kutupalong%2C%20Ukhia"
+target="_blank">
 
 <i class="fa-solid fa-location-dot"></i>
 
 <span>
-Boroitoli, Camp 4,
+Boroitoli, Camp 4,<br>
 Kutupalong, Ukhia
 </span>
 
-</div>
+</a>
 
 </div>
 
+
+<!-- GMAIL -->
 
 <div class="card contact-card">
 
@@ -1404,10 +1396,12 @@ Kutupalong, Ukhia
 </div>
 
 <h3>
-Email
+Gmail
 </h3>
 
-<div class="contact-line">
+<a
+class="contact-link"
+href="mailto:rohingyaeducations@gmail.com">
 
 <i class="fa-solid fa-envelope"></i>
 
@@ -1415,10 +1409,12 @@ Email
 rohingyaeducations@gmail.com
 </span>
 
-</div>
+</a>
 
 </div>
 
+
+<!-- WHATSAPP -->
 
 <div class="card contact-card">
 
@@ -1432,15 +1428,18 @@ rohingyaeducations@gmail.com
 WhatsApp
 </h3>
 
-<div class="contact-line">
+<a
+class="contact-link"
+href="https://wa.me/8801719035941"
+target="_blank">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 <span>
-Contact us through WhatsApp.
+Contact on WhatsApp
 </span>
 
-</div>
+</a>
 
 </div>
 
@@ -1492,8 +1491,6 @@ Certificate Verification
 
 |
 
-<!-- FOOTER CONTACT ALSO SCROLLS DOWN -->
-
 <a href="#contact">
 Contact
 </a>
@@ -1503,7 +1500,8 @@ Contact
 
 <div class="social-icons">
 
-<a href="https://www.facebook.com/share/19etkWCm1z/"
+<a
+href="https://www.facebook.com/share/19etkWCm1z/"
 target="_blank"
 class="facebook"
 aria-label="Facebook">
@@ -1513,7 +1511,8 @@ aria-label="Facebook">
 </a>
 
 
-<a href="https://youtube.com/@rohingyaeducationschool941?si=95gzgbQmte1wCif4"
+<a
+href="https://youtube.com/@rohingyaeducationschool941?si=95gzgbQmte1wCif4"
 target="_blank"
 class="youtube"
 aria-label="YouTube">
@@ -1523,7 +1522,8 @@ aria-label="YouTube">
 </a>
 
 
-<a href="https://www.tiktok.com/@rohingyaeducationschool?_r=1&_t=ZS-9AC3xcZvBjw"
+<a
+href="https://www.tiktok.com/@rohingyaeducationschool?_r=1&_t=ZS-9AC3xcZvBjw"
 target="_blank"
 class="tiktok"
 aria-label="TikTok">
@@ -1551,7 +1551,7 @@ aria-label="TikTok">
 <script>
 
 /* =========================
-   SIDE MENU
+   OPEN MENU
 ========================= */
 
 function openMenu(){
@@ -1561,9 +1561,12 @@ function openMenu(){
 
     document.getElementById("overlay")
     .classList.add("active");
-
 }
 
+
+/* =========================
+   CLOSE MENU
+========================= */
 
 function closeMenu(){
 
@@ -1572,12 +1575,11 @@ function closeMenu(){
 
     document.getElementById("overlay")
     .classList.remove("active");
-
 }
 
 
 /* =========================
-   SEARCH
+   SEARCH TOGGLE
 ========================= */
 
 function toggleSearch(){
@@ -1596,34 +1598,45 @@ function toggleSearch(){
 }
 
 
+/* =========================
+   SEARCH PAGE
+========================= */
+
 function searchPage(){
 
     const input =
-    document.getElementById("searchInput")
-    .value
-    .toLowerCase()
-    .trim();
+    document.getElementById("searchInput");
+
+    const searchText =
+    input.value.toLowerCase().trim();
 
     const sections =
-    document.querySelectorAll("section");
+    document.querySelectorAll(
+        "section, .card, .about-box"
+    );
 
-    sections.forEach(function(section){
+    sections.forEach(function(item){
 
-        if(input === ""){
+        if(searchText === ""){
 
-            section.style.display = "";
+            item.style.display = "";
 
             return;
 
         }
 
         const text =
-        section.innerText.toLowerCase();
+        item.innerText.toLowerCase();
 
-        section.style.display =
-        text.includes(input)
-        ? ""
-        : "none";
+        if(text.includes(searchText)){
+
+            item.style.display = "";
+
+        }else{
+
+            item.style.display = "";
+
+        }
 
     });
 
@@ -1631,7 +1644,7 @@ function searchPage(){
 
 
 /* =========================
-   LANGUAGE
+   LANGUAGE SELECT
 ========================= */
 
 function changeLanguage(){
@@ -1641,13 +1654,62 @@ function changeLanguage(){
 
     if(language === "rh"){
 
-        alert("Rohingya language version will be available soon.");
+        alert(
+            "Rohingya language version is being prepared."
+        );
+
+        document.getElementById("languageSelect").value = "en";
 
     }
 
 }
 
+
+/* =========================
+   CLOSE MENU WHEN CONTACT
+========================= */
+
+document.querySelectorAll(
+    '.menu-links a[href="#contact"]'
+).forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        closeMenu();
+
+    });
+
+});
+
+
+/* =========================
+   CONTACT SCROLL
+========================= */
+
+document.querySelectorAll(
+    'a[href="#contact"]'
+).forEach(function(link){
+
+    link.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        const contact =
+        document.getElementById("contact");
+
+        contact.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+        closeMenu();
+
+    });
+
+});
+
 </script>
+
 
 </body>
 
