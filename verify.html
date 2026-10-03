@@ -2,383 +2,1159 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Certificate Verification | Rohingya Education School</title>
+    <title>Verify Certificate - Rohingya Education School</title>
 
-<style>
+    <style>
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f7f6;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header {
-    background: #075E54;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-header h1 {
-    margin: 0;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7f6;
+            color: #1f2937;
+            line-height: 1.6;
+        }
 
-.container {
-    max-width: 650px;
-    margin: 30px auto;
-    padding: 15px;
-}
+        /* =========================
+           HEADER
+        ========================= */
 
-.box {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-}
+        header {
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
 
-h2 {
-    text-align: center;
-    color: #075E54;
-}
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 14px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-}
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #14532d;
+        }
 
-button {
-    width: 100%;
-    padding: 14px;
-    background: #075E54;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 17px;
-    cursor: pointer;
-}
+        .brand img {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            object-fit: contain;
+        }
 
-button:hover {
-    background: #128C7E;
-}
+        .brand-text h1 {
+            font-size: 21px;
+            margin: 0;
+        }
 
-#result {
-    display: none;
-    margin-top: 25px;
-}
+        .brand-text p {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 2px;
+        }
 
-.verified {
-    text-align: center;
-    color: #128C7E;
-    font-size: 23px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+        /* =========================
+           NAVIGATION
+        ========================= */
 
-.profile {
-    text-align: center;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
 
-.profile img {
-    width: 130px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid #075E54;
-}
+        nav a {
+            text-decoration: none;
+            color: #334155;
+            padding: 9px 10px;
+            border-radius: 7px;
+            font-size: 14px;
+            display: block;
+        }
 
-.details {
-    margin-top: 20px;
-    line-height: 1.8;
-}
+        nav a:hover,
+        nav a.active {
+            background: #e8f5e9;
+            color: #14532d;
+        }
 
-.details p {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 12px;
-}
+        .menu-btn {
+            display: none;
+            background: #14532d;
+            color: white;
+            border: none;
+            padding: 9px 12px;
+            border-radius: 7px;
+            font-size: 22px;
+            cursor: pointer;
+        }
 
-.rtl-row {
-    direction: rtl;
-    text-align: right;
-    unicode-bidi: plaintext;
-}
+        /* =========================
+           HERO
+        ========================= */
 
-.rtl-label {
-    font-weight: bold;
-    display: inline;
-}
+        .hero {
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
 
-.rtl-value {
-    display: inline;
-    margin-right: 8px;
-}
+            background:
+                linear-gradient(
+                    rgba(8,45,25,0.82),
+                    rgba(8,45,25,0.82)
+                ),
+                url("school-photo.jpg") center/cover no-repeat;
 
-.error {
-    display: none;
-    color: #d32f2f;
-    text-align: center;
-    margin-top: 15px;
-    font-weight: bold;
-}
+            color: white;
+        }
 
-</style>
+        .watermark {
+            position: absolute;
+            width: 420px;
+            max-width: 70%;
+            opacity: 0.10;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 40px 20px;
+        }
+
+        .hero-content img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            opacity: 0.95;
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #14532d;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            max-width: 720px;
+            margin: 0 auto 30px;
+            text-align: center;
+            color: #64748b;
+        }
+
+        /* =========================
+           VERIFY BOX
+        ========================= */
+
+        .verify-box {
+            background: #ffffff;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 22px rgba(0,0,0,0.09);
+            border: 1px solid #e5e7eb;
+        }
+
+        .verify-box h3 {
+            text-align: center;
+            color: #14532d;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .verify-box > p {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        #certificateCode {
+            flex: 1;
+            padding: 14px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 9px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #certificateCode:focus {
+            border-color: #14532d;
+            box-shadow: 0 0 0 3px rgba(20,83,45,0.10);
+        }
+
+        .verify-btn {
+            padding: 14px 22px;
+            background: #14532d;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 16px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .verify-btn:hover {
+            background: #166534;
+        }
+
+        .error {
+            display: none;
+            margin-top: 18px;
+            padding: 13px;
+            border-radius: 8px;
+            background: #fef2f2;
+            color: #b91c1c;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* =========================
+           RESULT
+        ========================= */
+
+        #result {
+            display: none;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .verified {
+            text-align: center;
+            color: #15803d;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 22px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .profile img {
+            width: 140px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #14532d;
+            background: #f8fafc;
+        }
+
+        .details {
+            margin-top: 10px;
+        }
+
+        .details p {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 13px 0;
+            border-bottom: 1px solid #edf0ef;
+        }
+
+        .details p:last-child {
+            border-bottom: none;
+        }
+
+        .rtl-row {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .rtl-label {
+            font-weight: bold;
+            color: #14532d;
+        }
+
+        .rtl-value {
+            color: #334155;
+            word-break: break-word;
+        }
+
+        /* =========================
+           INFORMATION
+        ========================= */
+
+        .info-section {
+            margin-top: 45px;
+            background: #e8f5e9;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .info-section h3 {
+            color: #14532d;
+            margin-bottom: 10px;
+        }
+
+        .info-section p {
+            color: #475569;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #102a1b;
+            color: #dbeafe;
+            margin-top: 20px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px 20px 25px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 7px;
+        }
+
+        footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding: 18px 20px;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+            }
+
+            nav.show {
+                display: block;
+            }
+
+            .header-inner {
+                flex-wrap: wrap;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: stretch;
+                padding-top: 10px;
+            }
+
+            nav a {
+                width: 100%;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .brand-text h1 {
+                font-size: 17px;
+            }
+
+            .brand-text p {
+                font-size: 10px;
+            }
+
+            .brand img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .hero {
+                min-height: 270px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .watermark {
+                width: 300px;
+            }
+
+            .container {
+                padding: 45px 15px;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            .verify-box {
+                padding: 25px 18px;
+            }
+
+            .input-group {
+                flex-direction: column;
+            }
+
+            .verify-btn {
+                width: 100%;
+            }
+
+            .details p {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<header>
-    <h1>Rohingya Education School</h1>
-    <p>Certificate Verification</p>
-</header>
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-<div class="container">
+    <header>
 
-<div class="box">
+        <div class="header-inner">
 
-<h2>Verify Certificate</h2>
+            <a href="index.html" class="brand">
 
-<p>Enter the Certificate Code:</p>
+                <img
+                    src="profile.jpg"
+                    alt="Rohingya Education School Logo"
+                >
 
-<input
-    type="text"
-    id="certificateCode"
-    placeholder="Enter Certificate Code"
->
+                <div class="brand-text">
 
-<button onclick="verifyCertificate()">
-    Verify Certificate
-</button>
+                    <h1>Rohingya Education School</h1>
 
-<div id="error" class="error">
-    Certificate Not Found
-</div>
+                    <p>Education • Language • Community</p>
 
-<div id="result">
+                </div>
 
-    <!-- TEXT ABOVE PHOTO -->
-    <div class="verified">
-        𐴏𐴡𐴀𐴞
-    </div>
+            </a>
 
-    <!-- PHOTO -->
-    <div class="profile">
-        <img id="studentPhoto" src="" alt="Student Photo">
-    </div>
 
-    <div class="details">
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
 
-        <!-- CERTIFICATE NUMBER -->
-        <p class="rtl-row">
-            <span class="rtl-label">
-                𐴏𐴡𐴤𐴕𐴡𐴃𐴢 𐴑𐴟𐴀𐴋:
-            </span>
 
-            <span class="rtl-value" id="code"></span>
+            <nav id="mainNav">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="activities.html">Activities</a>
+                    </li>
+
+                    <li>
+                        <a href="updates.html">Updates</a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">Courses</a>
+                    </li>
+
+                    <li>
+                        <a href="education.html">Education</a>
+                    </li>
+
+                    <li>
+                        <a href="teachers-students.html">
+                            Teachers & Students
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="get-involved.html">
+                            Get Involved
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="verify.html" class="active">
+                            Verify Certificate
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <img
+            src="profile.jpg"
+            class="watermark"
+            alt=""
+        >
+
+        <div class="hero-content">
+
+            <img
+                src="profile.jpg"
+                alt="Rohingya Education School Logo"
+            >
+
+            <h2>Certificate Verification</h2>
+
+            <p>
+                Verify an issued certificate using its certificate code.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <main class="container">
+
+        <h2 class="section-title">
+            Verify Certificate
+        </h2>
+
+        <p class="section-intro">
+            Enter the certificate code below to view the available
+            certificate information.
         </p>
 
-        <!-- NAME -->
-        <p class="rtl-row">
-            <span class="rtl-label">
-                𐴕𐴝𐴔:
-            </span>
 
-            <span class="rtl-value" id="name"></span>
-        </p>
+        <div class="verify-box">
 
-        <!-- FATHER NAME -->
-        <p class="rtl-row">
-            <span class="rtl-label">
-                𐴁𐴝𐴉𐴡𐴌 𐴕𐴝𐴔:
-            </span>
+            <h3>
+                Certificate Verification
+            </h3>
 
-            <span class="rtl-value" id="father"></span>
-        </p>
+            <p>
+                Enter the Certificate Code
+            </p>
 
-        <!-- DATE OF BIRTH / AGE -->
-        <p class="rtl-row">
-            <span class="rtl-label">
-                𐴎𐴡𐴌𐴔𐴡:
-            </span>
 
-            <span class="rtl-value" id="dateOfBirth"></span>
-        </p>
+            <div class="input-group">
 
-        <!-- PRESENT ADDRESS -->
-        <p class="rtl-row">
-            <span class="rtl-label">
-                𐴀𐴠𐴈𐴡𐴕𐴡𐴥𐴌 𐴄𐴞𐴑𐴝𐴕𐴝𐴤:
-            </span>
+                <input
+                    type="text"
+                    id="certificateCode"
+                    placeholder="Enter Certificate Code"
+                    autocomplete="off"
+                >
 
-            <span class="rtl-value" id="presentAddress"></span>
-        </p>
+                <button
+                    class="verify-btn"
+                    onclick="verifyCertificate()"
+                >
+                    Verify
+                </button>
 
-        <!-- PERMANENT ADDRESS -->
-        <p class="rtl-row">
-            <span class="rtl-label">
-                𐴇𐴠𐴏𐴃𐴝𐴘𐴀𐴞 𐴄𐴞𐴑𐴝𐴕𐴝𐴤:
-            </span>
+            </div>
 
-            <span class="rtl-value" id="permanentAddress"></span>
-        </p>
 
-        <!-- ISSUE DATE -->
-        <p class="rtl-row">
-            <span class="rtl-label">
-                𐴉𐴝𐴘𐴧𐴠𐴊𐴠 𐴃𐴝𐴌𐴞𐴑:
-            </span>
+            <div
+                id="error"
+                class="error"
+            >
+                Certificate Not Found
+            </div>
 
-            <span class="rtl-value" id="issueDate"></span>
-        </p>
 
-    </div>
+            <!-- =========================
+                 RESULT
+            ========================= -->
 
-</div>
+            <div id="result">
 
-</div>
-</div>
+                <div class="verified">
+                    𐴏𐴡𐴀𐴞
+                </div>
 
 
-<script src="certificates.js"></script>
+                <div class="profile">
 
-<script>
+                    <img
+                        id="studentPhoto"
+                        src=""
+                        alt="Student Photo"
+                    >
 
-/* =========================================
-   ENGLISH NUMBERS → ROHINGYA SCRIPT NUMBERS
-   ========================================= */
+                </div>
 
-function toRohingyaNumbers(number) {
 
-    const rohNumbers = {
-        "0": "𐴰",
-        "1": "𐴱",
-        "2": "𐴲",
-        "3": "𐴳",
-        "4": "𐴴",
-        "5": "𐴵",
-        "6": "𐴶",
-        "7": "𐴷",
-        "8": "𐴸",
-        "9": "𐴹"
-    };
+                <div class="details">
 
-    return String(number).replace(
-        /[0-9]/g,
-        digit => rohNumbers[digit]
-    );
-}
+                    <!-- Certificate Number -->
 
+                    <p class="rtl-row">
 
-/* =========================================
-   CERTIFICATE VERIFICATION
-   ========================================= */
+                        <span class="rtl-label">
+                            𐴏𐴡𐴤𐴕𐴡𐴃𐴢 𐴑𐴟𐴀𐴋:
+                        </span>
 
-function verifyCertificate() {
+                        <span
+                            class="rtl-value"
+                            id="code"
+                        ></span>
 
-    const code =
-        document.getElementById("certificateCode").value.trim();
+                    </p>
 
-    const result =
-        document.getElementById("result");
 
-    const error =
-        document.getElementById("error");
+                    <!-- Name -->
 
-    result.style.display = "none";
-    error.style.display = "none";
+                    <p class="rtl-row">
 
+                        <span class="rtl-label">
+                            𐴕𐴝𐴔:
+                        </span>
 
-    if (certificates[code]) {
+                        <span
+                            class="rtl-value"
+                            id="name"
+                        ></span>
 
-        const student = certificates[code];
+                    </p>
 
 
-        /*
-         * The exact Certificate Code entered
-         * by the user is converted automatically
-         * into Rohingya Script numbers.
-         *
-         * Example:
-         * 020250125
-         * ↓
-         * 𐴰𐴲𐴰𐴲𐴵𐴰𐴱𐴲𐴵
-         */
+                    <!-- Father Name -->
 
-        document.getElementById("code").textContent =
-            toRohingyaNumbers(code);
+                    <p class="rtl-row">
 
+                        <span class="rtl-label">
+                            𐴁𐴝𐴉𐴡𐴌 𐴕𐴝𐴔:
+                        </span>
 
-        document.getElementById("name").textContent =
-            student.name || "";
+                        <span
+                            class="rtl-value"
+                            id="father"
+                        ></span>
 
+                    </p>
 
-        document.getElementById("father").textContent =
-            student.father || "";
 
+                    <!-- Date of Birth -->
 
-        document.getElementById("dateOfBirth").textContent =
-            student.dateOfBirth || "";
+                    <p class="rtl-row">
 
+                        <span class="rtl-label">
+                            𐴎𐴡𐴌𐴔𐴡:
+                        </span>
 
-        document.getElementById("presentAddress").textContent =
-            student.presentAddress || "";
+                        <span
+                            class="rtl-value"
+                            id="dateOfBirth"
+                        ></span>
 
+                    </p>
 
-        document.getElementById("permanentAddress").textContent =
-            student.permanentAddress || "";
 
+                    <!-- Present Address -->
 
-        document.getElementById("issueDate").textContent =
-            student.issueDate || "";
+                    <p class="rtl-row">
 
+                        <span class="rtl-label">
+                            𐴀𐴠𐴈𐴡𐴕𐴡𐴥𐴌 𐴄𐴞𐴑𐴝𐴕𐴝𐴤:
+                        </span>
 
-        document.getElementById("studentPhoto").src =
-            student.photo || "";
+                        <span
+                            class="rtl-value"
+                            id="presentAddress"
+                        ></span>
 
+                    </p>
 
-        result.style.display = "block";
 
-    } else {
+                    <!-- Permanent Address -->
 
-        error.style.display = "block";
+                    <p class="rtl-row">
 
-    }
+                        <span class="rtl-label">
+                            𐴇𐴠𐴏𐴃𐴝𐴘𐴀𐴞 𐴄𐴞𐴑𐴝𐴕𐴝𐴤:
+                        </span>
 
-}
+                        <span
+                            class="rtl-value"
+                            id="permanentAddress"
+                        ></span>
 
+                    </p>
 
-/* =========================================
-   QR CODE AUTO VERIFICATION
-   ========================================= */
 
-window.addEventListener("DOMContentLoaded", function () {
+                    <!-- Issue Date -->
 
-    const urlParams =
-        new URLSearchParams(window.location.search);
+                    <p class="rtl-row">
 
-    const qrCode =
-        urlParams.get("code");
+                        <span class="rtl-label">
+                            𐴉𐴝𐴘𐴧𐴠𐴊𐴠 𐴃𐴝𐴌𐴞𐴑:
+                        </span>
 
+                        <span
+                            class="rtl-value"
+                            id="issueDate"
+                        ></span>
 
-    if (qrCode) {
+                    </p>
 
-        document.getElementById("certificateCode").value =
-            qrCode;
+                </div>
 
-        verifyCertificate();
+            </div>
 
-    }
+        </div>
 
-});
 
-</script>
+        <!-- =========================
+             INFORMATION
+        ========================= -->
+
+        <section class="info-section">
+
+            <h3>
+                About Certificate Verification
+            </h3>
+
+            <p>
+                This page allows certificate information to be checked
+                using a certificate code. The information displayed
+                depends on the certificate records available in the
+                school's verification system.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div>
+
+                <h3>
+                    Rohingya Education School
+                </h3>
+
+                <p>
+                    Education, language development and learning
+                    opportunities for the community.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="education.html">
+                            Education
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="verify.html">
+                            Verify Certificate
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Important
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="teachers-students.html">
+                            Teachers & Students
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="get-involved.html">
+                            Get Involved
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Rohingya Education School.
+            All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         CERTIFICATE DATA
+    ========================= -->
+
+    <script src="certificates.js"></script>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* Mobile Menu */
+
+        function toggleMenu() {
+
+            const nav =
+                document.getElementById("mainNav");
+
+            nav.classList.toggle("show");
+
+        }
+
+
+        /* Close mobile menu after clicking a link */
+
+        document.querySelectorAll("#mainNav a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                document
+                    .getElementById("mainNav")
+                    .classList.remove("show");
+
+            });
+
+        });
+
+
+        /* =========================
+           ENGLISH NUMBERS →
+           ROHINGYA SCRIPT NUMBERS
+        ========================= */
+
+        function toRohingyaNumbers(number) {
+
+            const rohNumbers = {
+
+                "0": "𐴰",
+                "1": "𐴱",
+                "2": "𐴲",
+                "3": "𐴳",
+                "4": "𐴴",
+                "5": "𐴵",
+                "6": "𐴶",
+                "7": "𐴷",
+                "8": "𐴸",
+                "9": "𐴹"
+
+            };
+
+            return String(number).replace(
+                /[0-9]/g,
+                digit => rohNumbers[digit]
+            );
+
+        }
+
+
+        /* =========================
+           CERTIFICATE VERIFICATION
+        ========================= */
+
+        function verifyCertificate() {
+
+            const code =
+                document
+                    .getElementById("certificateCode")
+                    .value
+                    .trim();
+
+            const result =
+                document.getElementById("result");
+
+            const error =
+                document.getElementById("error");
+
+
+            result.style.display = "none";
+            error.style.display = "none";
+
+
+            if (certificates[code]) {
+
+                const student =
+                    certificates[code];
+
+
+                document.getElementById("code").textContent =
+                    toRohingyaNumbers(code);
+
+
+                document.getElementById("name").textContent =
+                    student.name || "";
+
+
+                document.getElementById("father").textContent =
+                    student.father || "";
+
+
+                document.getElementById("dateOfBirth").textContent =
+                    student.dateOfBirth || "";
+
+
+                document.getElementById("presentAddress").textContent =
+                    student.presentAddress || "";
+
+
+                document.getElementById("permanentAddress").textContent =
+                    student.permanentAddress || "";
+
+
+                document.getElementById("issueDate").textContent =
+                    student.issueDate || "";
+
+
+                document.getElementById("studentPhoto").src =
+                    student.photo || "";
+
+
+                result.style.display = "block";
+
+            } else {
+
+                error.style.display = "block";
+
+            }
+
+        }
+
+
+        /* Enter key also verifies */
+
+        document
+            .getElementById("certificateCode")
+            .addEventListener("keydown", function(event) {
+
+                if (event.key === "Enter") {
+
+                    verifyCertificate();
+
+                }
+
+            });
+
+
+        /* =========================
+           QR CODE AUTO VERIFICATION
+        ========================= */
+
+        window.addEventListener(
+            "DOMContentLoaded",
+            function() {
+
+                const urlParams =
+                    new URLSearchParams(
+                        window.location.search
+                    );
+
+                const qrCode =
+                    urlParams.get("code");
+
+
+                if (qrCode) {
+
+                    document
+                        .getElementById("certificateCode")
+                        .value = qrCode;
+
+                    verifyCertificate();
+
+                }
+
+            }
+        );
+
+    </script>
 
 </body>
+
 </html>
