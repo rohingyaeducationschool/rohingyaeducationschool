@@ -8,7 +8,6 @@
     <title>Activities - Rohingya Education School</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -22,216 +21,301 @@
         body {
             font-family: Arial, sans-serif;
             background: #f5f7f6;
-            color: #222;
-            line-height: 1.6;
+            color: #263238;
+            line-height: 1.7;
         }
 
-        /* Header */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
+        /* HEADER */
         header {
             background: #ffffff;
-            padding: 15px 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .logo {
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: space-between;
         }
 
-        .logo-box {
-            width: 45px;
-            height: 45px;
-            background: #176b4d;
-            color: white;
+        .brand {
             display: flex;
             align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 18px;
+            gap: 12px;
         }
 
-        .logo h2 {
-            font-size: 18px;
-            color: #176b4d;
+        .brand img {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+            border-radius: 50%;
         }
 
-        nav {
+        .brand-text h1 {
+            font-size: 21px;
+            color: #14532d;
+            margin-bottom: 1px;
+        }
+
+        .brand-text p {
+            font-size: 12px;
+            color: #667085;
+        }
+
+        /* NAVIGATION */
+        nav ul {
+            list-style: none;
             display: flex;
-            gap: 25px;
+            align-items: center;
+            gap: 4px;
         }
 
         nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
+            display: block;
+            padding: 9px 10px;
+            border-radius: 7px;
+            font-size: 14px;
+            color: #344054;
+            transition: 0.2s;
         }
 
         nav a:hover,
         nav a.active {
-            color: #176b4d;
+            background: #e8f5e9;
+            color: #14532d;
         }
 
         .menu-btn {
             display: none;
-            font-size: 28px;
+            border: none;
+            background: #14532d;
+            color: white;
+            font-size: 24px;
+            padding: 6px 11px;
+            border-radius: 7px;
             cursor: pointer;
         }
 
-        /* Hero */
-
-        .page-hero {
-            min-height: 300px;
-            background:
-                linear-gradient(rgba(0,70,45,0.72), rgba(0,70,45,0.72)),
-                url("school-photo.jpg");
-
-            background-size: cover;
-            background-position: center;
-
+        /* HERO */
+        .hero {
+            position: relative;
+            min-height: 390px;
             display: flex;
             align-items: center;
             justify-content: center;
-
             text-align: center;
+            overflow: hidden;
+            background:
+                linear-gradient(rgba(8, 45, 25, 0.82), rgba(8, 45, 25, 0.82)),
+                url("school-photo.jpg") center/cover no-repeat;
             color: white;
         }
 
-        .page-hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+        .watermark {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            object-fit: contain;
+            opacity: 0.10;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
         }
 
-        .page-hero p {
-            font-size: 18px;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            padding: 40px 20px;
         }
 
-        /* Main */
-
-        .container {
-            width: 88%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .intro {
-            text-align: center;
-            padding: 60px 0 35px;
-        }
-
-        .intro h2 {
-            color: #176b4d;
-            font-size: 32px;
+        .small-logo {
+            width: 82px;
+            height: 82px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
             margin-bottom: 15px;
         }
 
-        .intro p {
-            max-width: 800px;
-            margin: auto;
-            color: #555;
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 12px;
         }
 
-        /* Activity Cards */
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            color: #eef7f0;
+        }
 
-        .activities-grid {
+        /* MAIN */
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 20px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 28px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .section h2 {
+            color: #14532d;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            color: #475467;
+            margin-bottom: 12px;
+        }
+
+        /* ACTIVITY CARDS */
+        .activities {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            padding: 20px 0 70px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
         }
 
         .activity-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: 0.3s;
+            background: #f8faf9;
+            border: 1px solid #e4ebe6;
+            border-radius: 14px;
+            padding: 27px;
+            transition: 0.25s;
         }
 
         .activity-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
 
         .activity-icon {
-            width: 60px;
-            height: 60px;
-            background: #e5f3ed;
-            color: #176b4d;
-            border-radius: 50%;
-
+            width: 52px;
+            height: 52px;
             display: flex;
             align-items: center;
             justify-content: center;
-
-            font-size: 28px;
-            margin-bottom: 20px;
+            background: #e8f5e9;
+            color: #14532d;
+            border-radius: 50%;
+            font-size: 25px;
+            margin-bottom: 15px;
         }
 
         .activity-card h3 {
-            color: #176b4d;
-            margin-bottom: 12px;
+            color: #166534;
             font-size: 21px;
+            margin-bottom: 9px;
         }
 
         .activity-card p {
-            color: #666;
-            font-size: 15px;
+            margin-bottom: 0;
         }
 
-        /* Highlight Section */
-
-        .highlight {
-            background: #176b4d;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
+        /* FEATURE */
+        .feature {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
         }
 
-        .highlight h2 {
-            font-size: 32px;
+        .feature img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+
+        .feature h2 {
             margin-bottom: 15px;
         }
 
-        .highlight p {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        /* Footer */
-
-        footer {
-            background: #123d30;
+        /* CTA */
+        .cta {
+            text-align: center;
+            background: #14532d;
             color: white;
-            padding: 45px 6% 20px;
         }
 
-        .footer-grid {
+        .cta h2 {
+            color: white;
+        }
+
+        .cta p {
+            color: #e5f2e8;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 12px;
+            background: white;
+            color: #14532d;
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #e8f5e9;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #102a1b;
+            color: #d9e8dd;
+            margin-top: 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px 20px 25px;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
-            gap: 40px;
+            gap: 35px;
         }
 
         footer h3 {
-            margin-bottom: 15px;
+            color: white;
+            margin-bottom: 12px;
         }
 
         footer p {
-            color: #d5dfdc;
+            color: #bfd0c4;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 8px;
         }
 
         footer a {
-            display: block;
-            color: #d5dfdc;
-            text-decoration: none;
-            margin-bottom: 8px;
+            color: #bfd0c4;
+            font-size: 14px;
         }
 
         footer a:hover {
@@ -239,126 +323,211 @@
         }
 
         .copyright {
-            border-top: 1px solid rgba(255,255,255,0.2);
-            margin-top: 30px;
-            padding-top: 20px;
             text-align: center;
-            color: #cbd6d2;
-            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding: 18px 20px;
+            font-size: 13px;
+            color: #aebfb4;
         }
 
-        /* Mobile */
-
-        @media (max-width: 850px) {
-
-            nav {
-                display: none;
-                position: absolute;
-                top: 75px;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                padding: 20px 6%;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            }
-
-            nav.show {
-                display: flex;
-            }
+        /* MOBILE */
+        @media (max-width: 900px) {
 
             .menu-btn {
                 display: block;
             }
 
-            .activities-grid {
-                grid-template-columns: 1fr 1fr;
+            nav {
+                display: none;
+                position: absolute;
+                top: 82px;
+                left: 0;
+                right: 0;
+                background: white;
+                box-shadow: 0 8px 15px rgba(0,0,0,0.08);
             }
 
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 550px) {
-
-            .page-hero {
-                min-height: 230px;
+            nav.show {
+                display: block;
             }
 
-            .page-hero h1 {
-                font-size: 36px;
+            nav ul {
+                display: block;
+                padding: 10px 15px;
             }
 
-            .activities-grid {
+            nav li {
+                margin-bottom: 3px;
+            }
+
+            nav a {
+                padding: 11px 12px;
+            }
+
+            .hero {
+                min-height: 350px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .activities {
                 grid-template-columns: 1fr;
             }
 
-            .footer-grid {
+            .feature {
                 grid-template-columns: 1fr;
             }
 
-            .logo h2 {
-                font-size: 15px;
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
             }
         }
 
+        @media (max-width: 600px) {
+
+            .header-container {
+                padding: 10px 14px;
+            }
+
+            .brand img {
+                width: 48px;
+                height: 48px;
+            }
+
+            .brand-text h1 {
+                font-size: 17px;
+            }
+
+            .brand-text p {
+                font-size: 10px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .small-logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .watermark {
+                width: 300px;
+                height: 300px;
+            }
+
+            main {
+                padding: 35px 14px;
+            }
+
+            .section {
+                padding: 25px 20px;
+            }
+
+            .section h2 {
+                font-size: 24px;
+            }
+
+            .feature img {
+                height: 240px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-
+    <!-- HEADER -->
     <header>
 
-        <div class="logo">
+        <div class="header-container">
 
-            <div class="logo-box">
-                RES
-            </div>
+            <a href="index.html" class="brand">
 
-            <h2>Rohingya Education School</h2>
+                <img src="profile.jpg"
+                     alt="Rohingya Education School Logo">
+
+                <div class="brand-text">
+                    <h1>Rohingya Education School</h1>
+                    <p>Education • Language • Community</p>
+                </div>
+
+            </a>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            <nav id="mainNav">
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="activities.html" class="active">
+                        Activities
+                    </a></li>
+
+                    <li><a href="updates.html">Updates</a></li>
+
+                    <li><a href="courses.html">Courses</a></li>
+
+                    <li><a href="education.html">Education</a></li>
+
+                    <li>
+                        <a href="teachers-students.html">
+                            Teachers & Students
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="get-involved.html">
+                            Get Involved
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="verify.html">
+                            Verify Certificate
+                        </a>
+                    </li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </nav>
 
         </div>
-
-        <div class="menu-btn" onclick="toggleMenu()">
-            ☰
-        </div>
-
-        <nav id="navMenu">
-
-            <a href="index.html">Home</a>
-
-            <a href="about.html">About</a>
-
-            <a href="activities.html" class="active">
-                Activities
-            </a>
-
-            <a href="updates.html">
-                Updates
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </nav>
 
     </header>
 
 
-    <!-- Hero -->
+    <!-- HERO -->
+    <section class="hero">
 
-    <section class="page-hero">
+        <img src="profile.jpg"
+             alt=""
+             class="watermark">
 
-        <div>
+        <div class="hero-content">
 
-            <h1>Activities</h1>
+            <img src="profile.jpg"
+                 alt="Rohingya Education School Logo"
+                 class="small-logo">
+
+            <h2>School Activities</h2>
 
             <p>
-                Learning, community and cultural activities
+                Learning, participation, creativity and community
+                activities that support students' development.
             </p>
 
         </div>
@@ -366,48 +535,46 @@
     </section>
 
 
-    <!-- Introduction -->
+    <!-- MAIN -->
+    <main>
 
-    <section class="intro">
-
-        <div class="container">
+        <!-- INTRODUCTION -->
+        <section class="section">
 
             <h2>Our Activities</h2>
 
             <p>
-                Rohingya Education School organizes educational,
-                cultural and community-based activities to support
-                students, teachers and the wider community.
+                Activities are an important part of the learning
+                experience at Rohingya Education School. They help
+                students develop knowledge, confidence, communication
+                skills and cooperation.
             </p>
 
-        </div>
+            <p>
+                Our activities are connected with education and the
+                development of a positive and supportive learning
+                environment.
+            </p>
 
-    </section>
+        </section>
 
 
-    <!-- Activities -->
+        <!-- ACTIVITIES -->
+        <section class="section">
 
-    <section>
+            <h2>Learning & Community Activities</h2>
 
-        <div class="container">
-
-            <div class="activities-grid">
-
+            <div class="activities">
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">
-                        📚
-                    </div>
+                    <div class="activity-icon">📚</div>
 
-                    <h3>
-                        Educational Programs
-                    </h3>
+                    <h3>Educational Learning</h3>
 
                     <p>
-                        Learning programs designed to support
-                        students in developing knowledge, skills
-                        and confidence.
+                        Supporting students through lessons, study
+                        activities and educational practice.
                     </p>
 
                 </div>
@@ -415,18 +582,13 @@
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">
-                        ⚽
-                    </div>
+                    <div class="activity-icon">🗣️</div>
 
-                    <h3>
-                        Student Activities
-                    </h3>
+                    <h3>Language Practice</h3>
 
                     <p>
-                        Educational, sports and recreational
-                        activities that encourage students to
-                        learn and work together.
+                        Encouraging students to improve communication,
+                        reading, writing and language skills.
                     </p>
 
                 </div>
@@ -434,18 +596,13 @@
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">
-                        👩‍🏫
-                    </div>
+                    <div class="activity-icon">✏️</div>
 
-                    <h3>
-                        Teacher Training
-                    </h3>
+                    <h3>Study & Practice</h3>
 
                     <p>
-                        Training and learning opportunities for
-                        teachers to improve teaching methods and
-                        classroom practices.
+                        Helping learners strengthen their understanding
+                        through regular practice and revision.
                     </p>
 
                 </div>
@@ -453,17 +610,14 @@
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">
-                        🤝
-                    </div>
+                    <div class="activity-icon">🤝</div>
 
-                    <h3>
-                        Community Learning
-                    </h3>
+                    <h3>Community Participation</h3>
 
                     <p>
-                        Community-based learning activities that
-                        encourage participation and cooperation.
+                        Encouraging cooperation, participation and
+                        positive relationships within the learning
+                        community.
                     </p>
 
                 </div>
@@ -471,18 +625,13 @@
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">
-                        📝
-                    </div>
+                    <div class="activity-icon">🎨</div>
 
-                    <h3>
-                        Language & Culture
-                    </h3>
+                    <h3>Creative Activities</h3>
 
                     <p>
-                        Activities that support Rohingya language,
-                        culture, history and identity through
-                        education.
+                        Providing opportunities for students to express
+                        ideas and develop creativity.
                     </p>
 
                 </div>
@@ -490,63 +639,107 @@
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">
-                        🎓
-                    </div>
+                    <div class="activity-icon">⚽</div>
 
-                    <h3>
-                        Events & Workshops
-                    </h3>
+                    <h3>Recreation & Teamwork</h3>
 
                     <p>
-                        Workshops, educational events and community
-                        programs that create opportunities for
-                        learning and sharing.
+                        Encouraging healthy participation, teamwork and
+                        positive interaction among students.
                     </p>
 
                 </div>
-
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- Highlight -->
+        <!-- SCHOOL COMMUNITY -->
+        <section class="section">
 
-    <section class="highlight">
+            <div class="feature">
 
-        <h2>
-            Learning Beyond the Classroom
-        </h2>
+                <div>
 
-        <p>
-            Our activities aim to create meaningful learning
-            opportunities for students, teachers and the community.
-            Education is not limited to the classroom; it also grows
-            through participation, cooperation and cultural learning.
-        </p>
+                    <h2>Building a Learning Community</h2>
 
-    </section>
+                    <p>
+                        Education is more than classroom learning.
+                        Students also learn through participation,
+                        cooperation and interaction with others.
+                    </p>
+
+                    <p>
+                        Our activities aim to create a welcoming
+                        environment where learners can participate,
+                        share ideas and develop useful skills.
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <img src="school-photo.jpg"
+                         alt="Rohingya Education School">
+
+                </div>
+
+            </div>
+
+        </section>
 
 
-    <!-- Footer -->
+        <!-- FUTURE ACTIVITIES -->
+        <section class="section">
 
+            <h2>Future Activities</h2>
+
+            <p>
+                As the school develops, additional educational,
+                cultural, language, sports and community activities
+                may be introduced according to students' needs and
+                available opportunities.
+            </p>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="section cta">
+
+            <h2>Explore Our Courses</h2>
+
+            <p>
+                Learn more about the educational courses available
+                through Rohingya Education School.
+            </p>
+
+            <a href="courses.html" class="btn">
+                View Courses
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
     <footer>
 
-        <div class="footer-grid">
+        <div class="footer-container">
 
             <div>
 
-                <h3>
-                    Rohingya Education School
-                </h3>
+                <h3>Rohingya Education School</h3>
 
                 <p>
-                    Supporting education, language, culture and
-                    community learning.
+                    Education • Language • Community
+                </p>
+
+                <p style="margin-top:10px;">
+                    Supporting learning and educational development
+                    through a welcoming school community.
                 </p>
 
             </div>
@@ -554,46 +747,66 @@
 
             <div>
 
-                <h3>
-                    Quick Links
-                </h3>
+                <h3>Quick Links</h3>
 
-                <a href="index.html">
-                    Home
-                </a>
+                <ul>
 
-                <a href="about.html">
-                    About
-                </a>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
 
-                <a href="activities.html">
-                    Activities
-                </a>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
 
-                <a href="updates.html">
-                    Updates
-                </a>
+                    <li>
+                        <a href="activities.html">Activities</a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">Courses</a>
+                    </li>
+
+                    <li>
+                        <a href="education.html">Education</a>
+                    </li>
+
+                </ul>
 
             </div>
 
 
             <div>
 
-                <h3>
-                    Connect
-                </h3>
+                <h3>Important</h3>
 
-                <a href="contact.html">
-                    Contact
-                </a>
+                <ul>
 
-                <a href="#">
-                    Facebook
-                </a>
+                    <li>
+                        <a href="teachers-students.html">
+                            Teachers & Students
+                        </a>
+                    </li>
 
-                <a href="#">
-                    YouTube
-                </a>
+                    <li>
+                        <a href="get-involved.html">
+                            Get Involved
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="verify.html">
+                            Verify Certificate
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
 
             </div>
 
@@ -601,10 +814,7 @@
 
 
         <div class="copyright">
-
-            © 2026 Rohingya Education School.
-            All rights reserved.
-
+            © 2026 Rohingya Education School. All rights reserved.
         </div>
 
     </footer>
@@ -613,13 +823,26 @@
     <script>
 
         function toggleMenu() {
-
             document
-                .getElementById("navMenu")
+                .getElementById("mainNav")
                 .classList
                 .toggle("show");
-
         }
+
+        document
+            .querySelectorAll("#mainNav a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    document
+                        .getElementById("mainNav")
+                        .classList
+                        .remove("show");
+
+                });
+
+            });
 
     </script>
 
