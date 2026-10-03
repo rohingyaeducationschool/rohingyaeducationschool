@@ -134,8 +134,6 @@
             color: white;
         }
 
-        /* PNG LOGO WATERMARK */
-
         .watermark {
             position: absolute;
             width: 500px;
@@ -150,8 +148,6 @@
             z-index: 2;
             padding: 55px 20px;
         }
-
-        /* JPG LOGO IN THE CENTER */
 
         .hero-logo {
             width: 180px;
@@ -245,7 +241,20 @@
         .welcome-box h3 {
             color: #14532d;
             font-size: 25px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* HOME PAGE PHOTO */
+
+        .welcome-photo {
+            width: 100%;
+            max-width: 850px;
+            height: 430px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
         }
 
         .welcome-box p {
@@ -386,7 +395,6 @@
             .footer-inner {
                 grid-template-columns: 1fr 1fr;
             }
-
         }
 
         @media (max-width: 600px) {
@@ -441,11 +449,15 @@
                 padding: 25px 18px;
             }
 
+            .welcome-photo {
+                height: 300px;
+                border-radius: 12px;
+            }
+
             .footer-inner {
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
-
         }
 
     </style>
@@ -473,7 +485,9 @@
 
                     <h1>Rohingya Education School</h1>
 
-                    <p>Education • Language • Community</p>
+                    <p>
+                        Education • Language • Community
+                    </p>
 
                 </div>
 
@@ -568,8 +582,6 @@
 
     <section class="hero">
 
-        <!-- PNG LOGO AS WATERMARK -->
-
         <img
             src="logo.png"
             class="watermark"
@@ -579,17 +591,17 @@
 
         <div class="hero-content">
 
-            <!-- JPG LOGO IN CENTER -->
-
             <img
                 src="profile.jpg"
                 class="hero-logo"
                 alt="Rohingya Education School Logo"
             >
 
+
             <h2>
                 Rohingya Education School
             </h2>
+
 
             <p>
                 Education • Language • Community
@@ -617,6 +629,16 @@
                     Welcome to Rohingya Education School
                 </h3>
 
+
+                <!-- WATER.JPG ONLY ON HOME PAGE -->
+
+                <img
+                    src="water.jpg"
+                    class="welcome-photo"
+                    alt="Rohingya Education School"
+                >
+
+
                 <p>
                     Rohingya Education School is committed to
                     supporting learning, language development,
@@ -638,6 +660,7 @@
             <h2 class="section-title">
                 Our Mission
             </h2>
+
 
             <p class="section-intro">
                 We focus on creating meaningful learning
@@ -703,6 +726,7 @@
                 School Activities
             </h2>
 
+
             <p class="section-intro">
                 Learning can happen through classroom study,
                 practice, creative activities and community
@@ -765,6 +789,7 @@
             <h2 class="section-title">
                 Latest Updates
             </h2>
+
 
             <p class="section-intro">
                 Information about school activities,
@@ -831,11 +856,13 @@
                     Get Involved
                 </h2>
 
+
                 <p>
                     Join and support our learning community
                     through educational participation,
                     learning support and community involvement.
                 </p>
+
 
                 <a href="get-involved.html">
                     Learn More
@@ -854,10 +881,12 @@
                 Contact Us
             </h2>
 
+
             <p class="section-intro">
                 For general enquiries and information,
                 please visit our Contact page.
             </p>
+
 
             <div style="text-align:center;">
 
@@ -912,6 +941,7 @@
                     Quick Links
                 </h3>
 
+
                 <ul>
 
                     <li>
@@ -954,6 +984,7 @@
                 <h3>
                     Important
                 </h3>
+
 
                 <ul>
 
