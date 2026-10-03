@@ -1,334 +1,707 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact Us | Rohingya Education School</title><link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><style>
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7f6;
-    color:#222;
-    line-height:1.6;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-    background:#075E54;
-    color:white;
-    min-height:105px;
-    padding:15px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    box-shadow:0 2px 10px rgba(0,0,0,.15);
-}
-
-.header-content{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:14px;
-}
-
-.logo{
-    width:62px;
-    height:62px;
-    border-radius:50%;
-    object-fit:cover;
-    border:2px solid white;
-}
-
-.school-name{
-    text-align:center;
-}
-
-.school-name h1{
-    font-size:23px;
-    line-height:1.25;
-    margin:0;
-}
-
-.school-name .rohingya{
-    display:block;
-    margin-top:4px;
-    font-size:19px;
-    font-weight:bold;
-    direction:rtl;
-    unicode-bidi:plaintext;
-}
-
-
-/* =========================
-   MAIN
-========================= */
-
-.section{
-    max-width:900px;
-    margin:auto;
-    padding:55px 20px;
-}
-
-.section-title{
-    text-align:center;
-    color:#075E54;
-    font-size:30px;
-    margin-bottom:12px;
-}
-
-.section-title-rohingya{
-    display:block;
-    text-align:center;
-    direction:rtl;
-    unicode-bidi:plaintext;
-    color:#075E54;
-    font-size:19px;
-    font-weight:bold;
-    margin-bottom:35px;
-}
-
-
-/* =========================
-   CONTACT GRID
-========================= */
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-
-/* =========================
-   CONTACT CARD
-========================= */
-
-.contact-card{
-    background:white;
-    border-radius:18px;
-    padding:30px 18px;
-    text-align:center;
-    border:1px solid #edf1ef;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
-    transition:.25s;
-}
-
-.contact-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 9px 25px rgba(0,0,0,.10);
-}
-
-
-/* ICON */
-
-.contact-card-icon{
-    width:62px;
-    height:62px;
-    margin:0 auto 15px;
-    border-radius:50%;
-    background:#eaf7f4;
-    color:#075E54;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:27px;
-}
-
-
-/* TITLE */
-
-.contact-card h3{
-    color:#075E54;
-    font-size:19px;
-    margin-bottom:4px;
-}
-
-
-/* ROHINGYA LABEL */
-
-.rohingya-label{
-    display:block;
-    direction:rtl;
-    unicode-bidi:plaintext;
-    color:#075E54;
-    font-size:17px;
-    font-weight:bold;
-    line-height:1.7;
-    margin-bottom:12px;
-}
-
-
-/* TEXT */
-
-.contact-card p{
-    color:#555;
-    font-size:14px;
-    line-height:1.8;
-}
-
-.contact-card a{
-    color:#075E54;
-    text-decoration:none;
-    word-break:break-word;
-}
-
-.contact-card a:hover{
-    text-decoration:underline;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#064c44;
-    color:white;
-    text-align:center;
-    padding:30px 20px;
-    margin-top:20px;
-}
-
-.footer-name{
-    font-size:20px;
-    font-weight:bold;
-}
-
-.footer-rohingya{
-    display:block;
-    margin-top:5px;
-    font-size:17px;
-    direction:rtl;
-    unicode-bidi:plaintext;
-}
-
-.copyright{
-    margin-top:18px;
-    padding-top:15px;
-    border-top:1px solid rgba(255,255,255,.15);
-    font-size:12px;
-    color:rgba(255,255,255,.75);
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:700px){
-
-    header{
-        min-height:95px;
-        padding:12px 15px;
-    }
-
-    .logo{
-        width:52px;
-        height:52px;
-    }
-
-    .school-name h1{
-        font-size:17px;
-    }
-
-    .school-name .rohingya{
-        font-size:15px;
-    }
-
-    .section{
-        padding:45px 15px;
-    }
-
-    .section-title{
-        font-size:26px;
-    }
-
-    .section-title-rohingya{
-        font-size:17px;
-        margin-bottom:28px;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-
-    .contact-card{
-        padding:25px 18px;
-    }
-
-}
-
-</style></head><body><!-- =========================
-     HEADER
-========================= --><header><div class="header-content"><img
-src="profile.jpg"
-class="logo"
-alt="Rohingya Education School">
-
-<div class="school-name"><h1>
-Rohingya Education School
-</h1><span class="rohingya">
-𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-</span></div></div></header><!-- =========================
-     CONTACT
-========================= --><section class="section"><h2 class="section-title">
-Contact Us
-</h2><span class="section-title-rohingya">
-𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴟𐴣𐴖𐴝𐴃𐴞 𐴃𐴝𐴦𐴓𐴧𐴟𐴑 𐴒𐴡𐴌𐴡𐴤
-</span><div class="contact-grid"><!-- =========================
-     ADDRESS
-========================= --><div class="contact-card"><div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i>
-
-</div><h3>
-Address
-</h3><span class="rohingya-label">
-𐴄𐴞𐴥𐴑𐴝𐴕𐴝
-</span><p>
-Boroitoli, Camp 4,<br>
-Kutupalong, Ukhia
-</p></div><!-- =========================
-     GMAIL
-========================= --><div class="contact-card"><div class="contact-card-icon"><i class="fa-solid fa-envelope"></i>
-
-</div><h3>
-Gmail
-</h3><span class="rohingya-label">
-𐴅𐴞𐴔𐴠𐴀𐴙𐴓𐴢
-</span><p><a href="mailto:rohingyaeducations@gmail.com">rohingyaeducations@gmail.com
-
-</a></p></div><!-- =========================
-     WHATSAPP
-========================= --><div class="contact-card"><div class="contact-card-icon"><i class="fa-brands fa-whatsapp"></i>
-
-</div><h3>
-WhatsApp
-</h3><span class="rohingya-label">
-𐴇𐴟𐴖𐴝𐴏𐴧𐴝𐴉𐴢
-</span><p><a
-href="https://wa.me/8801719035941"
-target="_blank"
-rel="noopener noreferrer">
-
-Contact on WhatsApp
-
-</a></p></div></div></section><!-- =========================
-     FOOTER
-========================= --><footer><div class="footer-name">
-Rohingya Education School
-</div><span class="footer-rohingya">
-𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-</span><div class="copyright">
-© 2026 Rohingya Education School. All rights reserved.
-</div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Rohingya Education School</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7f6;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 15px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box {
+            width: 45px;
+            height: 45px;
+            background: #176b4d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            color: #176b4d;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #176b4d;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .page-hero {
+            min-height: 300px;
+
+            background:
+                linear-gradient(
+                    rgba(0,70,45,0.72),
+                    rgba(0,70,45,0.72)
+                ),
+                url("school-photo.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-size: 46px;
+            margin-bottom: 10px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 60px 0 35px;
+        }
+
+        .intro h2 {
+            color: #176b4d;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+            color: #555;
+        }
+
+        .contact-section {
+            padding: 20px 0 70px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact-card h3 {
+            color: #176b4d;
+            margin-bottom: 20px;
+            font-size: 23px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #176b4d;
+            margin-bottom: 5px;
+        }
+
+        .contact-item p {
+            color: #666;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 13px 15px;
+
+            border: 1px solid #ddd;
+            border-radius: 7px;
+
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #176b4d;
+        }
+
+        .contact-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            border: none;
+
+            background: #176b4d;
+            color: white;
+
+            padding: 13px 20px;
+
+            border-radius: 7px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #105139;
+        }
+
+        .note {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #777;
+        }
+
+        .map-section {
+            background: #e5f3ed;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .map-section h2 {
+            color: #176b4d;
+            margin-bottom: 12px;
+        }
+
+        .map-section p {
+            color: #555;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        footer {
+            background: #123d30;
+            color: white;
+            padding: 45px 6% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #d5dfdc;
+        }
+
+        footer a {
+            display: block;
+            color: #d5dfdc;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            color: #cbd6d2;
+            font-size: 14px;
+        }
+
+        @media (max-width: 850px) {
+
+            nav {
+                display: none;
+
+                position: absolute;
+                top: 75px;
+                left: 0;
+
+                width: 100%;
+
+                background: white;
+
+                flex-direction: column;
+                align-items: flex-start;
+
+                padding: 20px 6%;
+
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .page-hero {
+                min-height: 230px;
+            }
+
+            .page-hero h1 {
+                font-size: 35px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo h2 {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-box">
+                RES
+            </div>
+
+            <h2>
+                Rohingya Education School
+            </h2>
+
+        </div>
+
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </div>
+
+
+        <nav id="navMenu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="activities.html">
+                Activities
+            </a>
+
+            <a href="updates.html">
+                Updates
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="teachers-students.html">
+                Teachers & Students
+            </a>
+
+            <a href="get-involved.html">
+                Get Involved
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Hero -->
+
+    <section class="page-hero">
+
+        <div>
+
+            <h1>
+                Contact Us
+            </h1>
+
+            <p>
+                Get in touch with Rohingya Education School
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Introduction -->
+
+    <section class="intro">
+
+        <div class="container">
+
+            <h2>
+                We Would Like to Hear From You
+            </h2>
+
+            <p>
+                If you have questions, suggestions or would like
+                to learn more about our educational activities,
+                please contact us.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section class="contact-section">
+
+        <div class="container">
+
+            <div class="contact-grid">
+
+
+                <!-- Contact Information -->
+
+                <div class="contact-card">
+
+                    <h3>
+                        Contact Information
+                    </h3>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            School
+                        </strong>
+
+                        <p>
+                            Rohingya Education School
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <p>
+                            Cox's Bazar, Bangladesh
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <p>
+                            Your school email will be added here.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <p>
+                            Your school phone number will be added here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact Form -->
+
+                <div class="contact-card">
+
+                    <h3>
+                        Send a Message
+                    </h3>
+
+                    <form
+                        class="contact-form"
+                        onsubmit="sendMessage(event)">
+
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            required>
+
+
+                        <input
+                            type="email"
+                            placeholder="Your Email"
+                            required>
+
+
+                        <textarea
+                            placeholder="Your Message"
+                            required></textarea>
+
+
+                        <button type="submit">
+                            Send Message
+                        </button>
+
+                    </form>
+
+                    <p class="note">
+                        Note: This form is currently a demo.
+                        We will connect it to your email later.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Location -->
+
+    <section class="map-section">
+
+        <h2>
+            Our Location
+        </h2>
+
+        <p>
+            More location information and an interactive map
+            can be added here later.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>
+                    Rohingya Education School
+                </h3>
+
+                <p>
+                    Supporting education, language, culture
+                    and community learning.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="activities.html">
+                    Activities
+                </a>
+
+                <a href="updates.html">
+                    Updates
+                </a>
+
+                <a href="courses.html">
+                    Courses
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Connect
+                </h3>
+
+                <a href="get-involved.html">
+                    Get Involved
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    YouTube
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Rohingya Education School.
+            All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navMenu")
+                .classList
+                .toggle("show");
+
+        }
+
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Thank you for contacting Rohingya Education School. " +
+                "The message form will be connected to email later."
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
