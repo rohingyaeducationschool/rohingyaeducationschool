@@ -8,6 +8,7 @@
     <title>About - Rohingya Education School</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -30,7 +31,10 @@
             color: inherit;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             background: #ffffff;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
@@ -72,7 +76,10 @@
             color: #667085;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
+
         nav ul {
             list-style: none;
             display: flex;
@@ -106,27 +113,36 @@
             cursor: pointer;
         }
 
-        /* HERO */
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
             position: relative;
-            min-height: 390px;
+            min-height: 480px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             overflow: hidden;
+
             background:
-                linear-gradient(rgba(8, 45, 25, 0.82), rgba(8, 45, 25, 0.82)),
-                url("school-photo.jpg") center/cover no-repeat;
+                linear-gradient(
+                    rgba(8, 45, 25, 0.96),
+                    rgba(8, 45, 25, 0.96)
+                );
+
             color: white;
         }
 
+        /* LOGO WATERMARK */
+
         .watermark {
             position: absolute;
-            width: 420px;
-            height: 420px;
-            object-fit: contain;
+            width: 500px;
+            max-width: 75%;
             opacity: 0.10;
+            object-fit: contain;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -137,17 +153,18 @@
             position: relative;
             z-index: 2;
             max-width: 850px;
-            padding: 40px 20px;
+            padding: 55px 20px;
         }
 
-        .hero-content .small-logo {
-            width: 82px;
-            height: 82px;
+        /* CENTER LOGO */
+
+        .hero-logo {
+            width: 180px;
+            height: 180px;
             object-fit: contain;
             border-radius: 50%;
-            background: white;
-            padding: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
         }
 
         .hero h2 {
@@ -162,7 +179,10 @@
             color: #eef7f0;
         }
 
-        /* MAIN */
+        /* =========================
+           MAIN
+        ========================= */
+
         main {
             max-width: 1100px;
             margin: auto;
@@ -194,7 +214,10 @@
             margin-bottom: 12px;
         }
 
-        /* CARDS */
+        /* =========================
+           CARDS
+        ========================= */
+
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -218,16 +241,10 @@
             margin-bottom: 10px;
         }
 
-        /* IMAGE SECTION */
-        .about-image {
-            width: 100%;
-            max-height: 430px;
-            object-fit: cover;
-            border-radius: 14px;
-            margin-top: 15px;
-        }
+        /* =========================
+           CTA
+        ========================= */
 
-        /* CTA */
         .cta {
             text-align: center;
             background: #14532d;
@@ -256,7 +273,10 @@
             background: #e8f5e9;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             background: #102a1b;
             color: #d9e8dd;
@@ -307,7 +327,10 @@
             color: #aebfb4;
         }
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 900px) {
 
             .menu-btn {
@@ -342,7 +365,7 @@
             }
 
             .hero {
-                min-height: 350px;
+                min-height: 430px;
             }
 
             .hero h2 {
@@ -361,6 +384,7 @@
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
+
         }
 
         @media (max-width: 600px) {
@@ -382,18 +406,21 @@
                 font-size: 10px;
             }
 
+            .hero {
+                min-height: 400px;
+            }
+
             .hero h2 {
                 font-size: 28px;
             }
 
-            .hero-content .small-logo {
-                width: 70px;
-                height: 70px;
+            .hero-logo {
+                width: 145px;
+                height: 145px;
             }
 
             .watermark {
-                width: 300px;
-                height: 300px;
+                width: 330px;
             }
 
             main {
@@ -407,60 +434,155 @@
             .section h2 {
                 font-size: 24px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- HEADER -->
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
     <header>
+
         <div class="header-container">
 
             <a href="index.html" class="brand">
-                <img src="profile.jpg" alt="Rohingya Education School Logo">
+
+                <img
+                    src="profile.jpg"
+                    alt="Rohingya Education School Logo"
+                >
 
                 <div class="brand-text">
-                    <h1>Rohingya Education School</h1>
-                    <p>Education • Language • Community</p>
+
+                    <h1>
+                        Rohingya Education School
+                    </h1>
+
+                    <p>
+                        Education • Language • Community
+                    </p>
+
                 </div>
+
             </a>
 
-            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
 
             <nav id="mainNav">
+
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="activities.html">Activities</a></li>
-                    <li><a href="updates.html">Updates</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="teachers-students.html">Teachers & Students</a></li>
-                    <li><a href="get-involved.html">Get Involved</a></li>
-                    <li><a href="verify.html">Verify Certificate</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="active">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="activities.html">
+                            Activities
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="updates.html">
+                            Updates
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="education.html">
+                            Education
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="teachers-students.html">
+                            Teachers & Students
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="get-involved.html">
+                            Get Involved
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="verify.html">
+                            Verify Certificate
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
                 </ul>
+
             </nav>
 
         </div>
+
     </header>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
+
     <section class="hero">
 
-        <img src="profile.jpg"
-             alt=""
-             class="watermark">
+        <img
+            src="logo.png"
+            class="watermark"
+            alt=""
+        >
+
 
         <div class="hero-content">
 
-            <img src="profile.jpg"
-                 alt="Rohingya Education School Logo"
-                 class="small-logo">
+            <img
+                src="profile.jpg"
+                class="hero-logo"
+                alt="Rohingya Education School Logo"
+            >
 
-            <h2>About Rohingya Education School</h2>
+
+            <h2>
+                About Rohingya Education School
+            </h2>
+
 
             <p>
                 A learning community dedicated to education,
@@ -472,82 +594,115 @@
     </section>
 
 
-    <!-- MAIN CONTENT -->
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
     <main>
 
+
         <!-- WHO WE ARE -->
+
         <section class="section">
 
-            <h2>Who We Are</h2>
+            <h2>
+                Who We Are
+            </h2>
+
 
             <p>
-                Rohingya Education School is an educational initiative
-                focused on creating opportunities for learning,
-                developing knowledge and supporting students in their
-                educational journey.
+                Rohingya Education School is an educational
+                initiative focused on creating opportunities
+                for learning, developing knowledge and
+                supporting students in their educational
+                journey.
             </p>
+
 
             <p>
-                We aim to provide a supportive learning environment
-                where students can develop their academic knowledge,
-                language skills, confidence and values.
+                We aim to provide a supportive learning
+                environment where students can develop
+                their academic knowledge, language skills,
+                confidence and values.
             </p>
-
-            <img src="school-photo.jpg"
-                 alt="Rohingya Education School"
-                 class="about-image">
 
         </section>
 
 
         <!-- VISION -->
+
         <section class="section">
 
-            <h2>Our Vision</h2>
+            <h2>
+                Our Vision
+            </h2>
+
 
             <p>
-                Our vision is to contribute to a future where every
-                learner has access to meaningful education and the
-                opportunity to develop their knowledge, skills and
-                potential.
+                Our vision is to contribute to a future where
+                every learner has access to meaningful
+                education and the opportunity to develop
+                their knowledge, skills and potential.
             </p>
 
         </section>
 
 
         <!-- MISSION -->
+
         <section class="section">
 
-            <h2>Our Mission</h2>
+            <h2>
+                Our Mission
+            </h2>
+
 
             <div class="cards">
 
-                <div class="card">
-                    <h3>Quality Education</h3>
-
-                    <p>
-                        To support students through structured learning
-                        and educational activities.
-                    </p>
-                </div>
 
                 <div class="card">
-                    <h3>Language & Learning</h3>
+
+                    <h3>
+                        Quality Education
+                    </h3>
 
                     <p>
-                        To encourage language development, communication
-                        and a strong learning culture.
+                        To support students through structured
+                        learning and educational activities.
                     </p>
+
                 </div>
+
 
                 <div class="card">
-                    <h3>Community</h3>
+
+                    <h3>
+                        Language & Learning
+                    </h3>
 
                     <p>
-                        To build a supportive educational community
-                        where learners and educators can grow together.
+                        To encourage language development,
+                        communication and a strong learning
+                        culture.
                     </p>
+
                 </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Community
+                    </h3>
+
+                    <p>
+                        To build a supportive educational
+                        community where learners and
+                        educators can grow together.
+                    </p>
+
+                </div>
+
 
             </div>
 
@@ -555,38 +710,61 @@
 
 
         <!-- VALUES -->
+
         <section class="section">
 
-            <h2>Our Values</h2>
+            <h2>
+                Our Values
+            </h2>
+
 
             <div class="cards">
 
-                <div class="card">
-                    <h3>Respect</h3>
-
-                    <p>
-                        We value respect for students, teachers,
-                        families and the wider community.
-                    </p>
-                </div>
 
                 <div class="card">
-                    <h3>Learning</h3>
+
+                    <h3>
+                        Respect
+                    </h3>
 
                     <p>
-                        We encourage curiosity, continuous learning
-                        and the development of useful skills.
+                        We value respect for students,
+                        teachers, families and the wider
+                        community.
                     </p>
+
                 </div>
+
 
                 <div class="card">
-                    <h3>Responsibility</h3>
+
+                    <h3>
+                        Learning
+                    </h3>
 
                     <p>
-                        We encourage learners to become responsible,
-                        active and constructive members of society.
+                        We encourage curiosity, continuous
+                        learning and the development of
+                        useful skills.
                     </p>
+
                 </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Responsibility
+                    </h3>
+
+                    <p>
+                        We encourage learners to become
+                        responsible, active and constructive
+                        members of society.
+                    </p>
+
+                </div>
+
 
             </div>
 
@@ -594,104 +772,221 @@
 
 
         <!-- EDUCATIONAL FOCUS -->
+
         <section class="section">
 
-            <h2>Educational Focus</h2>
+            <h2>
+                Educational Focus
+            </h2>
+
 
             <p>
-                Our educational activities are designed to support
-                students in their studies and personal development.
-                The school website also provides information about
-                courses, educational activities, updates and
-                certificate verification.
+                Our educational activities are designed
+                to support students in their studies and
+                personal development.
+            </p>
+
+
+            <p>
+                The school website also provides information
+                about courses, educational activities,
+                updates and certificate verification.
             </p>
 
         </section>
 
 
         <!-- CTA -->
+
         <section class="section cta">
 
-            <h2>Learn More About Our School</h2>
+            <h2>
+                Learn More About Our School
+            </h2>
+
 
             <p>
-                Explore our courses, activities and educational
-                resources.
+                Explore our courses, activities and
+                educational resources.
             </p>
 
-            <a href="courses.html" class="btn">
+
+            <a
+                href="courses.html"
+                class="btn"
+            >
                 Explore Courses
             </a>
 
         </section>
 
+
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
 
         <div class="footer-container">
 
+
             <div>
-                <h3>Rohingya Education School</h3>
+
+                <h3>
+                    Rohingya Education School
+                </h3>
+
 
                 <p>
                     Education • Language • Community
                 </p>
 
+
                 <p style="margin-top:10px;">
-                    Supporting learning and educational development
-                    through a welcoming school community.
+
+                    Supporting learning and educational
+                    development through a welcoming
+                    school community.
+
                 </p>
+
             </div>
 
 
             <div>
-                <h3>Quick Links</h3>
+
+                <h3>
+                    Quick Links
+                </h3>
+
 
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="activities.html">Activities</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="education.html">Education</a></li>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="activities.html">
+                            Activities
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="education.html">
+                            Education
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
 
 
             <div>
-                <h3>Important</h3>
+
+                <h3>
+                    Important
+                </h3>
+
 
                 <ul>
-                    <li><a href="teachers-students.html">Teachers & Students</a></li>
-                    <li><a href="get-involved.html">Get Involved</a></li>
-                    <li><a href="verify.html">Verify Certificate</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+
+                    <li>
+                        <a href="teachers-students.html">
+                            Teachers & Students
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="get-involved.html">
+                            Get Involved
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="verify.html">
+                            Verify Certificate
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
 
         </div>
 
 
         <div class="copyright">
-            © 2026 Rohingya Education School. All rights reserved.
+
+            © 2026 Rohingya Education School.
+            All rights reserved.
+
         </div>
 
     </footer>
 
 
+    <!-- =========================
+         MOBILE MENU
+    ========================= -->
+
     <script>
+
         function toggleMenu() {
-            document.getElementById("mainNav").classList.toggle("show");
+
+            document
+                .getElementById("mainNav")
+                .classList
+                .toggle("show");
+
         }
 
-        document.querySelectorAll("#mainNav a").forEach(function(link) {
-            link.addEventListener("click", function() {
-                document.getElementById("mainNav").classList.remove("show");
+
+        document
+            .querySelectorAll("#mainNav a")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        document
+                            .getElementById("mainNav")
+                            .classList
+                            .remove("show");
+
+                    }
+                );
+
             });
-        });
+
     </script>
+
 
 </body>
 
