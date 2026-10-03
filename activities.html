@@ -8,6 +8,7 @@
     <title>Activities - Rohingya Education School</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -31,9 +32,10 @@
         }
 
         /* HEADER */
+
         header {
             background: #ffffff;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -73,6 +75,7 @@
         }
 
         /* NAVIGATION */
+
         nav ul {
             list-style: none;
             display: flex;
@@ -107,26 +110,31 @@
         }
 
         /* HERO */
+
         .hero {
             position: relative;
-            min-height: 390px;
+            min-height: 480px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             overflow: hidden;
+
             background:
-                linear-gradient(rgba(8, 45, 25, 0.82), rgba(8, 45, 25, 0.82)),
-                url("school-photo.jpg") center/cover no-repeat;
+                linear-gradient(
+                    rgba(8,45,25,0.96),
+                    rgba(8,45,25,0.96)
+                );
+
             color: white;
         }
 
         .watermark {
             position: absolute;
-            width: 420px;
-            height: 420px;
-            object-fit: contain;
+            width: 500px;
+            max-width: 75%;
             opacity: 0.10;
+            object-fit: contain;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -137,17 +145,16 @@
             position: relative;
             z-index: 2;
             max-width: 850px;
-            padding: 40px 20px;
+            padding: 55px 20px;
         }
 
-        .small-logo {
-            width: 82px;
-            height: 82px;
+        .hero-logo {
+            width: 180px;
+            height: 180px;
             object-fit: contain;
             border-radius: 50%;
-            background: white;
-            padding: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
         }
 
         .hero h2 {
@@ -163,6 +170,7 @@
         }
 
         /* MAIN */
+
         main {
             max-width: 1100px;
             margin: auto;
@@ -174,7 +182,7 @@
             border-radius: 16px;
             padding: 35px;
             margin-bottom: 28px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
         }
 
         .section h2 {
@@ -189,6 +197,7 @@
         }
 
         /* ACTIVITY CARDS */
+
         .activities {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -205,7 +214,7 @@
 
         .activity-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
         .activity-icon {
@@ -232,6 +241,7 @@
         }
 
         /* FEATURE */
+
         .feature {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -239,18 +249,12 @@
             align-items: center;
         }
 
-        .feature img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 14px;
-        }
-
         .feature h2 {
             margin-bottom: 15px;
         }
 
         /* CTA */
+
         .cta {
             text-align: center;
             background: #14532d;
@@ -280,6 +284,7 @@
         }
 
         /* FOOTER */
+
         footer {
             background: #102a1b;
             color: #d9e8dd;
@@ -331,6 +336,7 @@
         }
 
         /* MOBILE */
+
         @media (max-width: 900px) {
 
             .menu-btn {
@@ -365,7 +371,7 @@
             }
 
             .hero {
-                min-height: 350px;
+                min-height: 430px;
             }
 
             .hero h2 {
@@ -409,18 +415,21 @@
                 font-size: 10px;
             }
 
+            .hero {
+                min-height: 400px;
+            }
+
             .hero h2 {
                 font-size: 28px;
             }
 
-            .small-logo {
-                width: 70px;
-                height: 70px;
+            .hero-logo {
+                width: 145px;
+                height: 145px;
             }
 
             .watermark {
-                width: 300px;
-                height: 300px;
+                width: 330px;
             }
 
             main {
@@ -434,52 +443,92 @@
             .section h2 {
                 font-size: 24px;
             }
-
-            .feature img {
-                height: 240px;
-            }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
     <!-- HEADER -->
+
     <header>
 
         <div class="header-container">
 
             <a href="index.html" class="brand">
 
-                <img src="profile.jpg"
-                     alt="Rohingya Education School Logo">
+                <img
+                    src="profile.jpg"
+                    alt="Rohingya Education School Logo"
+                >
 
                 <div class="brand-text">
-                    <h1>Rohingya Education School</h1>
-                    <p>Education • Language • Community</p>
+
+                    <h1>
+                        Rohingya Education School
+                    </h1>
+
+                    <p>
+                        Education • Language • Community
+                    </p>
+
                 </div>
 
             </a>
 
-            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
 
             <nav id="mainNav">
 
                 <ul>
 
-                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
 
-                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
 
-                    <li><a href="activities.html" class="active">
-                        Activities
-                    </a></li>
+                    <li>
+                        <a href="activities.html" class="active">
+                            Activities
+                        </a>
+                    </li>
 
-                    <li><a href="updates.html">Updates</a></li>
+                    <li>
+                        <a href="updates.html">
+                            Updates
+                        </a>
+                    </li>
 
-                    <li><a href="courses.html">Courses</a></li>
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                        </a>
+                    </li>
 
-                    <li><a href="education.html">Education</a></li>
+                    <li>
+                        <a href="education.html">
+                            Education
+                        </a>
+                    </li>
 
                     <li>
                         <a href="teachers-students.html">
@@ -499,7 +548,11 @@
                         </a>
                     </li>
 
-                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
 
                 </ul>
 
@@ -511,19 +564,29 @@
 
 
     <!-- HERO -->
+
     <section class="hero">
 
-        <img src="profile.jpg"
-             alt=""
-             class="watermark">
+        <img
+            src="logo.png"
+            alt=""
+            class="watermark"
+        >
+
 
         <div class="hero-content">
 
-            <img src="profile.jpg"
-                 alt="Rohingya Education School Logo"
-                 class="small-logo">
+            <img
+                src="profile.jpg"
+                alt="Rohingya Education School Logo"
+                class="hero-logo"
+            >
 
-            <h2>School Activities</h2>
+
+            <h2>
+                School Activities
+            </h2>
+
 
             <p>
                 Learning, participation, creativity and community
@@ -536,12 +599,18 @@
 
 
     <!-- MAIN -->
+
     <main>
 
+
         <!-- INTRODUCTION -->
+
         <section class="section">
 
-            <h2>Our Activities</h2>
+            <h2>
+                Our Activities
+            </h2>
+
 
             <p>
                 Activities are an important part of the learning
@@ -549,6 +618,7 @@
                 students develop knowledge, confidence, communication
                 skills and cooperation.
             </p>
+
 
             <p>
                 Our activities are connected with education and the
@@ -560,17 +630,26 @@
 
 
         <!-- ACTIVITIES -->
+
         <section class="section">
 
-            <h2>Learning & Community Activities</h2>
+            <h2>
+                Learning & Community Activities
+            </h2>
+
 
             <div class="activities">
 
+
                 <div class="activity-card">
 
-                    <div class="activity-icon">📚</div>
+                    <div class="activity-icon">
+                        📚
+                    </div>
 
-                    <h3>Educational Learning</h3>
+                    <h3>
+                        Educational Learning
+                    </h3>
 
                     <p>
                         Supporting students through lessons, study
@@ -582,9 +661,13 @@
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">🗣️</div>
+                    <div class="activity-icon">
+                        🗣️
+                    </div>
 
-                    <h3>Language Practice</h3>
+                    <h3>
+                        Language Practice
+                    </h3>
 
                     <p>
                         Encouraging students to improve communication,
@@ -596,9 +679,13 @@
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">✏️</div>
+                    <div class="activity-icon">
+                        ✏️
+                    </div>
 
-                    <h3>Study & Practice</h3>
+                    <h3>
+                        Study & Practice
+                    </h3>
 
                     <p>
                         Helping learners strengthen their understanding
@@ -610,9 +697,13 @@
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">🤝</div>
+                    <div class="activity-icon">
+                        🤝
+                    </div>
 
-                    <h3>Community Participation</h3>
+                    <h3>
+                        Community Participation
+                    </h3>
 
                     <p>
                         Encouraging cooperation, participation and
@@ -625,9 +716,13 @@
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">🎨</div>
+                    <div class="activity-icon">
+                        🎨
+                    </div>
 
-                    <h3>Creative Activities</h3>
+                    <h3>
+                        Creative Activities
+                    </h3>
 
                     <p>
                         Providing opportunities for students to express
@@ -639,9 +734,13 @@
 
                 <div class="activity-card">
 
-                    <div class="activity-icon">⚽</div>
+                    <div class="activity-icon">
+                        ⚽
+                    </div>
 
-                    <h3>Recreation & Teamwork</h3>
+                    <h3>
+                        Recreation & Teamwork
+                    </h3>
 
                     <p>
                         Encouraging healthy participation, teamwork and
@@ -650,25 +749,31 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
 
         <!-- SCHOOL COMMUNITY -->
+
         <section class="section">
 
             <div class="feature">
 
                 <div>
 
-                    <h2>Building a Learning Community</h2>
+                    <h2>
+                        Building a Learning Community
+                    </h2>
+
 
                     <p>
                         Education is more than classroom learning.
                         Students also learn through participation,
                         cooperation and interaction with others.
                     </p>
+
 
                     <p>
                         Our activities aim to create a welcoming
@@ -678,10 +783,27 @@
 
                 </div>
 
+
                 <div>
 
-                    <img src="school-photo.jpg"
-                         alt="Rohingya Education School">
+                    <div
+                        style="
+                            width:100%;
+                            height:320px;
+                            border-radius:14px;
+                            background:#e8f5e9;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            text-align:center;
+                            color:#14532d;
+                            font-size:24px;
+                            font-weight:bold;
+                            padding:20px;
+                        "
+                    >
+                        Rohingya Education School
+                    </div>
 
                 </div>
 
@@ -691,9 +813,13 @@
 
 
         <!-- FUTURE ACTIVITIES -->
+
         <section class="section">
 
-            <h2>Future Activities</h2>
+            <h2>
+                Future Activities
+            </h2>
+
 
             <p>
                 As the school develops, additional educational,
@@ -706,40 +832,55 @@
 
 
         <!-- CTA -->
+
         <section class="section cta">
 
-            <h2>Explore Our Courses</h2>
+            <h2>
+                Explore Our Courses
+            </h2>
+
 
             <p>
                 Learn more about the educational courses available
                 through Rohingya Education School.
             </p>
 
-            <a href="courses.html" class="btn">
+
+            <a
+                href="courses.html"
+                class="btn"
+            >
                 View Courses
             </a>
 
         </section>
 
+
     </main>
 
 
     <!-- FOOTER -->
+
     <footer>
 
         <div class="footer-container">
 
+
             <div>
 
-                <h3>Rohingya Education School</h3>
+                <h3>
+                    Rohingya Education School
+                </h3>
 
                 <p>
                     Education • Language • Community
                 </p>
 
                 <p style="margin-top:10px;">
+
                     Supporting learning and educational development
                     through a welcoming school community.
+
                 </p>
 
             </div>
@@ -747,28 +888,40 @@
 
             <div>
 
-                <h3>Quick Links</h3>
+                <h3>
+                    Quick Links
+                </h3>
 
                 <ul>
 
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.html">
+                            Home
+                        </a>
                     </li>
 
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.html">
+                            About
+                        </a>
                     </li>
 
                     <li>
-                        <a href="activities.html">Activities</a>
+                        <a href="activities.html">
+                            Activities
+                        </a>
                     </li>
 
                     <li>
-                        <a href="courses.html">Courses</a>
+                        <a href="courses.html">
+                            Courses
+                        </a>
                     </li>
 
                     <li>
-                        <a href="education.html">Education</a>
+                        <a href="education.html">
+                            Education
+                        </a>
                     </li>
 
                 </ul>
@@ -778,7 +931,9 @@
 
             <div>
 
-                <h3>Important</h3>
+                <h3>
+                    Important
+                </h3>
 
                 <ul>
 
@@ -810,41 +965,54 @@
 
             </div>
 
+
         </div>
 
 
         <div class="copyright">
-            © 2026 Rohingya Education School. All rights reserved.
+
+            © 2026 Rohingya Education School.
+            All rights reserved.
+
         </div>
 
     </footer>
 
 
+    <!-- MOBILE MENU -->
+
     <script>
 
         function toggleMenu() {
+
             document
                 .getElementById("mainNav")
                 .classList
                 .toggle("show");
+
         }
+
 
         document
             .querySelectorAll("#mainNav a")
             .forEach(function(link) {
 
-                link.addEventListener("click", function() {
+                link.addEventListener(
+                    "click",
+                    function() {
 
-                    document
-                        .getElementById("mainNav")
-                        .classList
-                        .remove("show");
+                        document
+                            .getElementById("mainNav")
+                            .classList
+                            .remove("show");
 
-                });
+                    }
+                );
 
             });
 
     </script>
+
 
 </body>
 
