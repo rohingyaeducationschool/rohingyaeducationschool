@@ -26,6 +26,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:20px;
 }
 
 body{
@@ -1006,7 +1007,10 @@ onclick="closeMenu()">
 </a>
 
 
-<a href="contact.html">
+<!-- CONTACT NOW SCROLLS TO CONTACT SECTION -->
+
+<a href="#contact"
+onclick="closeMenu()">
 
 <i class="fa-solid fa-envelope"></i>
 
@@ -1056,8 +1060,10 @@ Learn More
 </a>
 
 
+<!-- CONTACT NOW SCROLLS DOWN -->
+
 <a class="button white"
-href="contact.html">
+href="#contact">
 
 <i class="fa-solid fa-envelope"></i>
 
@@ -1344,6 +1350,7 @@ Verify Certificate
 
 <!-- =========================
      CONTACT
+     CONTACT IS ON SAME PAGE
 ========================= -->
 
 <section class="section" id="contact">
@@ -1485,7 +1492,9 @@ Certificate Verification
 
 |
 
-<a href="contact.html">
+<!-- FOOTER CONTACT ALSO SCROLLS DOWN -->
+
+<a href="#contact">
 Contact
 </a>
 
@@ -1493,7 +1502,6 @@ Contact
 
 
 <div class="social-icons">
-
 
 <a href="https://www.facebook.com/share/19etkWCm1z/"
 target="_blank"
@@ -1524,7 +1532,6 @@ aria-label="TikTok">
 
 </a>
 
-
 </div>
 
 
@@ -1542,6 +1549,10 @@ aria-label="TikTok">
 ========================= -->
 
 <script>
+
+/* =========================
+   SIDE MENU
+========================= */
 
 function openMenu(){
 
@@ -1564,6 +1575,10 @@ function closeMenu(){
 
 }
 
+
+/* =========================
+   SEARCH
+========================= */
 
 function toggleSearch(){
 
@@ -1605,20 +1620,19 @@ function searchPage(){
         const text =
         section.innerText.toLowerCase();
 
-        if(text.includes(input)){
-
-            section.style.display = "";
-
-        }else{
-
-            section.style.display = "none";
-
-        }
+        section.style.display =
+        text.includes(input)
+        ? ""
+        : "none";
 
     });
 
 }
 
+
+/* =========================
+   LANGUAGE
+========================= */
 
 function changeLanguage(){
 
@@ -1627,16 +1641,13 @@ function changeLanguage(){
 
     if(language === "rh"){
 
-        alert("Rohingya language version is coming soon.");
-
-        document.getElementById("languageSelect").value = "en";
+        alert("Rohingya language version will be available soon.");
 
     }
 
 }
 
 </script>
-
 
 </body>
 
