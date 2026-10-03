@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Rohingya Education School</title>
-
-    <meta name="description"
-          content="Rohingya Education School - Education, learning, language, culture and community development.">
 
     <style>
 
@@ -22,9 +20,9 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             background: #f5f7f6;
-            color: #222;
+            color: #1f2937;
             line-height: 1.6;
         }
 
@@ -33,103 +31,84 @@
         ========================= */
 
         header {
-            width: 100%;
-            background: rgba(255,255,255,0.98);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            background: #ffffff;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
 
-        .navbar {
-            max-width: 1250px;
+        .header-inner {
+            max-width: 1200px;
             margin: auto;
-            padding: 10px 20px;
+            padding: 14px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 20px;
         }
 
-        .logo-area {
+        .brand {
             display: flex;
             align-items: center;
             gap: 12px;
-            flex-shrink: 0;
+            text-decoration: none;
+            color: #14532d;
         }
 
-        .logo {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            overflow: hidden;
-            background: #ffffff;
-            border: 2px solid #0b6b4f;
+        .brand img {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+        }
+
+        .brand-text h1 {
+            font-size: 21px;
+            margin: 0;
+        }
+
+        .brand-text p {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav ul {
+            list-style: none;
             display: flex;
             align-items: center;
-            justify-content: center;
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .school-name {
-            font-size: 18px;
-            font-weight: bold;
-            color: #0b6b4f;
-            line-height: 1.2;
-        }
-
-        .school-name small {
-            display: block;
-            color: #777;
-            font-size: 11px;
-            font-weight: normal;
-            margin-top: 3px;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
             gap: 4px;
+            flex-wrap: wrap;
         }
 
         nav a {
             text-decoration: none;
-            color: #333;
-            font-size: 13px;
-            font-weight: 600;
-            padding: 9px 8px;
-            border-radius: 5px;
-            transition: 0.3s;
-            white-space: nowrap;
+            color: #334155;
+            padding: 9px 10px;
+            border-radius: 7px;
+            font-size: 14px;
+            display: block;
         }
 
-        nav a:hover {
-            background: #eef6f2;
-            color: #0b6b4f;
-        }
-
-        nav a.verify-link {
-            background: #0b6b4f;
-            color: white;
-        }
-
-        nav a.verify-link:hover {
-            background: #084f3b;
-            color: white;
+        nav a:hover,
+        nav a.active {
+            background: #e8f5e9;
+            color: #14532d;
         }
 
         .menu-btn {
             display: none;
-            font-size: 29px;
+            background: #14532d;
+            color: white;
+            border: none;
+            padding: 9px 12px;
+            border-radius: 7px;
+            font-size: 22px;
             cursor: pointer;
-            color: #0b6b4f;
-            user-select: none;
         }
 
         /* =========================
@@ -138,339 +117,171 @@
 
         .hero {
             position: relative;
-            min-height: 680px;
+            min-height: 480px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 90px 20px;
             overflow: hidden;
 
             background:
                 linear-gradient(
-                    rgba(4,67,48,0.78),
-                    rgba(4,67,48,0.78)
-                ),
-                url("school-photo.jpg");
+                    rgba(8,45,25,0.96),
+                    rgba(8,45,25,0.96)
+                );
 
-            background-size: cover;
-            background-position: center;
+            color: white;
         }
 
-        /* Large watermark logo */
-
-        .hero-watermark {
+        .watermark {
             position: absolute;
-            width: min(650px, 85vw);
-            height: min(650px, 85vw);
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-image: url("profile.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            opacity: 0.10;
-            filter: grayscale(100%);
+            width: 500px;
+            max-width: 75%;
+            opacity: 0.08;
             pointer-events: none;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 900px;
-            color: white;
+            padding: 55px 20px;
         }
 
         .hero-logo {
-            width: 110px;
-            height: 110px;
-            margin: 0 auto 22px;
-            border-radius: 50%;
-            overflow: hidden;
-            background: white;
-            border: 4px solid rgba(255,255,255,0.9);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.20);
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
         }
 
-        .hero-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 12px;
         }
 
-        .hero-content h1 {
-            font-size: 52px;
-            margin-bottom: 18px;
-            line-height: 1.15;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
-        }
-
-        .hero-content p {
-            font-size: 19px;
-            max-width: 730px;
-            margin: 0 auto 30px;
-            color: #f3f8f6;
-        }
-
-        .hero-btn {
-            display: inline-block;
-            padding: 14px 30px;
-            background: white;
-            color: #0b6b4f;
-            border-radius: 7px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .hero-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
         }
 
         /* =========================
-           COMMON
+           SECTIONS
         ========================= */
 
-        .section {
-            max-width: 1120px;
+        .container {
+            max-width: 1100px;
             margin: auto;
-            padding: 80px 25px;
+            padding: 60px 20px;
+        }
+
+        .section {
+            margin-bottom: 60px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 35px;
-            color: #0b6b4f;
+            color: #14532d;
+            font-size: 30px;
             margin-bottom: 12px;
         }
 
-        .section-title p {
-            max-width: 720px;
-            margin: auto;
-            color: #666;
+        .section-intro {
+            max-width: 760px;
+            margin: 0 auto 30px;
+            text-align: center;
+            color: #64748b;
+        }
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 28px 22px;
+            border-radius: 15px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+            border: 1px solid #e5e7eb;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #14532d;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 15px;
         }
 
         /* =========================
            WELCOME
         ========================= */
 
-        .welcome {
-            background: white;
-        }
-
-        .welcome-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .welcome-text h2 {
-            color: #0b6b4f;
-            font-size: 34px;
-            margin-bottom: 18px;
-        }
-
-        .welcome-text p {
-            color: #555;
-            margin-bottom: 16px;
-        }
-
-        .welcome-image {
-            min-height: 350px;
-            border-radius: 16px;
-
-            background:
-                linear-gradient(
-                    rgba(0,0,0,0.10),
-                    rgba(0,0,0,0.10)
-                ),
-                url("school-photo.jpg");
-
-            background-size: cover;
-            background-position: center;
-
-            box-shadow: 0 8px 30px rgba(0,0,0,0.10);
-        }
-
-        /* =========================
-           MISSION
-        ========================= */
-
-        .mission {
-            background: #eef6f2;
-        }
-
-        .mission-box {
-            max-width: 850px;
-            margin: auto;
-            background: white;
-            padding: 42px;
-            border-radius: 15px;
+        .welcome-box {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 22px rgba(0,0,0,0.08);
             text-align: center;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
         }
 
-        .mission-box p {
-            color: #555;
-            font-size: 17px;
-        }
-
-        /* =========================
-           ACTIVITIES
-        ========================= */
-
-        .activities {
-            background: white;
-        }
-
-        .activity-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .activity-card {
-            padding: 35px 25px;
-            border-radius: 14px;
-            background: #f8faf9;
-            text-align: center;
-            border: 1px solid #e4ebe7;
-            transition: 0.3s;
-        }
-
-        .activity-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-        }
-
-        .activity-icon {
-            width: 65px;
-            height: 65px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            background: #0b6b4f;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-        }
-
-        .activity-card h3 {
-            color: #0b6b4f;
-            margin-bottom: 10px;
-        }
-
-        .activity-card p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        /* =========================
-           UPDATES
-        ========================= */
-
-        .updates {
-            background: #eef6f2;
-        }
-
-        .update-list {
-            max-width: 850px;
-            margin: auto;
-        }
-
-        .update-item {
-            background: white;
-            padding: 25px;
+        .welcome-box h3 {
+            color: #14532d;
+            font-size: 25px;
             margin-bottom: 15px;
-            border-radius: 10px;
-            border-left: 5px solid #0b6b4f;
         }
 
-        .update-item h3 {
-            color: #0b6b4f;
-            margin-bottom: 7px;
-        }
-
-        .update-item p {
-            color: #666;
-        }
-
-        /* =========================
-           GET INVOLVED
-        ========================= */
-
-        .involved {
-            background: white;
-            text-align: center;
-        }
-
-        .involved-box {
+        .welcome-box p {
             max-width: 800px;
             margin: auto;
-        }
-
-        .involved-box h2 {
-            color: #0b6b4f;
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .involved-box p {
-            color: #666;
-            margin-bottom: 25px;
-        }
-
-        .involved-btn {
-            display: inline-block;
-            background: #0b6b4f;
-            color: white;
-            padding: 13px 28px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
+            color: #475569;
         }
 
         /* =========================
-           CONTACT
+           CTA
         ========================= */
 
-        .contact {
-            background: #eef6f2;
+        .cta {
+            background: #14532d;
+            color: white;
+            padding: 45px 25px;
+            border-radius: 18px;
             text-align: center;
         }
 
-        .contact-box {
-            max-width: 750px;
-            margin: auto;
+        .cta h2 {
+            margin-bottom: 12px;
+            font-size: 30px;
         }
 
-        .contact-box h2 {
-            color: #0b6b4f;
-            font-size: 35px;
-            margin-bottom: 15px;
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 22px;
+            opacity: 0.92;
         }
 
-        .contact-box p {
-            color: #666;
-            margin-bottom: 25px;
-        }
-
-        .contact-btn {
+        .cta a {
             display: inline-block;
-            background: #0b6b4f;
-            color: white;
-            padding: 13px 30px;
-            border-radius: 6px;
+            background: white;
+            color: #14532d;
             text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 8px;
             font-weight: bold;
+        }
+
+        .cta a:hover {
+            background: #e8f5e9;
         }
 
         /* =========================
@@ -478,83 +289,61 @@
         ========================= */
 
         footer {
-            background: #073f30;
-            color: white;
-            padding: 60px 25px 25px;
+            background: #102a1b;
+            color: #dbeafe;
+            margin-top: 20px;
         }
 
-        .footer-container {
-            max-width: 1120px;
+        .footer-inner {
+            max-width: 1200px;
             margin: auto;
+            padding: 45px 20px 25px;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
-            gap: 50px;
+            gap: 35px;
         }
 
-        .footer-column h3 {
-            margin-bottom: 20px;
-            font-size: 19px;
+        footer h3 {
+            color: white;
+            margin-bottom: 12px;
         }
 
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-        }
-
-        .footer-logo img {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: white;
-        }
-
-        .footer-column p {
-            color: #d5e2dd;
+        footer p {
+            color: #cbd5e1;
             font-size: 14px;
         }
 
-        .footer-column a {
-            display: block;
-            color: #d5e2dd;
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 7px;
+        }
+
+        footer a {
+            color: #cbd5e1;
             text-decoration: none;
-            margin-bottom: 9px;
             font-size: 14px;
         }
 
-        .footer-column a:hover {
+        footer a:hover {
             color: white;
         }
 
         .copyright {
-            max-width: 1120px;
-            margin: 45px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.15);
             text-align: center;
-            color: #cbd8d3;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding: 18px 20px;
+            color: #94a3b8;
             font-size: 13px;
         }
 
         /* =========================
-           MOBILE
+           RESPONSIVE
         ========================= */
 
-        @media (max-width: 1050px) {
-
-            nav {
-                gap: 0;
-            }
-
-            nav a {
-                font-size: 12px;
-                padding: 8px 6px;
-            }
-        }
-
-        @media (max-width: 850px) {
+        @media (max-width: 900px) {
 
             .menu-btn {
                 display: block;
@@ -562,184 +351,202 @@
 
             nav {
                 display: none;
-                position: absolute;
-                top: 72px;
-                left: 0;
                 width: 100%;
-                background: white;
-                flex-direction: column;
-                align-items: stretch;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.10);
-                max-height: calc(100vh - 72px);
-                overflow-y: auto;
             }
 
-            nav.active {
-                display: flex;
+            nav.show {
+                display: block;
+            }
+
+            .header-inner {
+                flex-wrap: wrap;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: stretch;
+                padding-top: 10px;
             }
 
             nav a {
                 width: 100%;
-                padding: 14px 20px;
-                border-bottom: 1px solid #eeeeee;
-                font-size: 15px;
             }
 
-            nav a.verify-link {
-                border-radius: 0;
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .hero {
-                min-height: 620px;
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
             }
 
-            .hero-content h1 {
-                font-size: 42px;
-            }
-
-            .welcome-content {
-                grid-template-columns: 1fr;
-            }
-
-            .welcome-image {
-                order: -1;
-            }
-
-            .activity-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
 
-            .navbar {
-                padding: 9px 15px;
+            .brand-text h1 {
+                font-size: 17px;
             }
 
-            .logo {
-                width: 44px;
-                height: 44px;
+            .brand-text p {
+                font-size: 10px;
             }
 
-            .school-name {
-                font-size: 15px;
-            }
-
-            .school-name small {
-                font-size: 9px;
+            .brand img {
+                width: 50px;
+                height: 50px;
             }
 
             .hero {
-                min-height: 590px;
-                padding: 60px 18px;
-            }
-
-            .hero-watermark {
-                width: 90vw;
-                height: 90vw;
+                min-height: 430px;
             }
 
             .hero-logo {
-                width: 90px;
-                height: 90px;
+                width: 145px;
+                height: 145px;
             }
 
-            .hero-content h1 {
-                font-size: 32px;
+            .hero h2 {
+                font-size: 31px;
             }
 
-            .hero-content p {
-                font-size: 16px;
+            .hero p {
+                font-size: 15px;
             }
 
-            .section {
-                padding: 60px 20px;
+            .watermark {
+                width: 330px;
             }
 
-            .section-title h2,
-            .welcome-text h2,
-            .involved-box h2,
-            .contact-box h2 {
-                font-size: 29px;
+            .container {
+                padding: 45px 15px;
             }
 
-            .mission-box {
-                padding: 28px 20px;
+            .section-title {
+                font-size: 26px;
             }
 
-            .welcome-image {
-                min-height: 250px;
+            .cards {
+                grid-template-columns: 1fr;
             }
+
+            .welcome-box {
+                padding: 25px 18px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
         }
 
     </style>
 </head>
 
+
 <body>
 
     <!-- =========================
          HEADER
-    ========================== -->
+    ========================= -->
 
     <header>
 
-        <div class="navbar">
+        <div class="header-inner">
 
-            <div class="logo-area">
+            <a href="index.html" class="brand">
 
-                <div class="logo">
-                    <img src="profile.jpg"
-                         alt="Rohingya Education School Logo">
+                <img
+                    src="logo.png"
+                    alt="Rohingya Education School Logo"
+                >
+
+                <div class="brand-text">
+
+                    <h1>Rohingya Education School</h1>
+
+                    <p>Education • Language • Community</p>
+
                 </div>
 
-                <div class="school-name">
-                    Rohingya Education School
-                    <small>Education • Language • Community</small>
-                </div>
+            </a>
 
-            </div>
 
-            <div class="menu-btn"
-                 onclick="toggleMenu()"
-                 aria-label="Open Menu">
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open menu"
+            >
                 ☰
-            </div>
+            </button>
 
-            <nav id="navMenu">
 
-                <a href="index.html">Home</a>
+            <nav id="mainNav">
 
-                <a href="about.html">About</a>
+                <ul>
 
-                <a href="activities.html">Activities</a>
+                    <li>
+                        <a href="index.html" class="active">
+                            Home
+                        </a>
+                    </li>
 
-                <a href="updates.html">Updates</a>
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
 
-                <a href="courses.html">Courses</a>
+                    <li>
+                        <a href="activities.html">
+                            Activities
+                        </a>
+                    </li>
 
-                <a href="education.html">Education</a>
+                    <li>
+                        <a href="updates.html">
+                            Updates
+                        </a>
+                    </li>
 
-                <a href="teachers-students.html">
-                    Teachers & Students
-                </a>
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                        </a>
+                    </li>
 
-                <a href="get-involved.html">
-                    Get Involved
-                </a>
+                    <li>
+                        <a href="education.html">
+                            Education
+                        </a>
+                    </li>
 
-                <a href="verify.html"
-                   class="verify-link">
-                    Verify Certificate
-                </a>
+                    <li>
+                        <a href="teachers-students.html">
+                            Teachers & Students
+                        </a>
+                    </li>
 
-                <a href="contact.html">
-                    Contact
-                </a>
+                    <li>
+                        <a href="get-involved.html">
+                            Get Involved
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="verify.html">
+                            Verify Certificate
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
 
             </nav>
 
@@ -750,433 +557,413 @@
 
     <!-- =========================
          HERO
-    ========================== -->
+    ========================= -->
 
-    <section class="hero" id="home">
+    <section class="hero">
 
-        <!-- Large Watermark Logo -->
-
-        <div class="hero-watermark"></div>
+        <img
+            src="logo.png"
+            class="watermark"
+            alt=""
+        >
 
         <div class="hero-content">
 
-            <div class="hero-logo">
+            <img
+                src="logo.png"
+                class="hero-logo"
+                alt="Rohingya Education School Logo"
+            >
 
-                <img src="profile.jpg"
-                     alt="Rohingya Education School Logo">
-
-            </div>
-
-            <h1>
+            <h2>
                 Rohingya Education School
-            </h1>
+            </h2>
 
             <p>
-                Supporting education, language, learning,
-                culture and community development for a brighter future.
+                Education • Language • Community
             </p>
 
-            <a href="about.html"
-               class="hero-btn">
-                Learn More
-            </a>
-
         </div>
 
     </section>
 
 
     <!-- =========================
-         WELCOME
-    ========================== -->
+         MAIN CONTENT
+    ========================= -->
 
-    <section class="welcome"
-             id="about">
-
-        <div class="section">
-
-            <div class="welcome-content">
-
-                <div class="welcome-text">
-
-                    <h2>
-                        Welcome to Rohingya Education School
-                    </h2>
-
-                    <p>
-                        Rohingya Education School is committed to
-                        supporting education and creating meaningful
-                        learning opportunities for children, young
-                        people and communities.
-                    </p>
-
-                    <p>
-                        Our goal is to encourage learning, support the
-                        Rohingya language and culture, and help learners
-                        develop knowledge and skills for the future.
-                    </p>
-
-                    <p>
-                        Through education and community participation,
-                        we aim to create a positive environment where
-                        learners can grow with confidence.
-                    </p>
-
-                </div>
-
-                <div class="welcome-image"></div>
-
-            </div>
-
-        </div>
-
-    </section>
+    <main class="container">
 
 
-    <!-- =========================
-         MISSION
-    ========================== -->
+        <!-- WELCOME -->
 
-    <section class="mission">
+        <section class="section">
 
-        <div class="section">
+            <div class="welcome-box">
 
-            <div class="section-title">
-
-                <h2>
-                    Our Mission
-                </h2>
+                <h3>
+                    Welcome to Rohingya Education School
+                </h3>
 
                 <p>
-                    Building opportunities through education,
-                    learning and community participation.
+                    Rohingya Education School is committed to
+                    supporting learning, language development,
+                    education and community participation.
+                    Our aim is to create a supportive learning
+                    environment where students can learn,
+                    develop their skills and grow together.
                 </p>
 
             </div>
 
-            <div class="mission-box">
-
-                <p>
-                    Our mission is to support accessible and meaningful
-                    education while promoting the Rohingya language,
-                    knowledge, culture and community values. We aim to
-                    encourage learners to develop confidence, skills and
-                    opportunities for the future.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =========================
-         ACTIVITIES
-    ========================== -->
+        <!-- MISSION -->
 
-    <section class="activities">
+        <section class="section">
 
-        <div class="section">
+            <h2 class="section-title">
+                Our Mission
+            </h2>
 
-            <div class="section-title">
+            <p class="section-intro">
+                We focus on creating meaningful learning
+                opportunities and supporting students in
+                their educational development.
+            </p>
 
-                <h2>
-                    Our Activities
-                </h2>
 
-                <p>
-                    We work through different educational and
-                    community activities.
-                </p>
+            <div class="cards">
 
-            </div>
-
-            <div class="activity-grid">
-
-                <div class="activity-card">
-
-                    <div class="activity-icon">
-                        🎓
-                    </div>
+                <div class="card">
 
                     <h3>
-                        Education
+                        Quality Learning
                     </h3>
 
                     <p>
-                        Supporting learning opportunities and
-                        educational activities for the community.
+                        Supporting students with useful
+                        knowledge, skills and learning
+                        opportunities.
                     </p>
 
                 </div>
 
 
-                <div class="activity-card">
+                <div class="card">
 
-                    <div class="activity-icon">
-                        🌱
-                    </div>
+                    <h3>
+                        Language Development
+                    </h3>
+
+                    <p>
+                        Encouraging language practice,
+                        literacy and communication skills.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Community
+                    </h3>
+
+                    <p>
+                        Building a positive learning community
+                        through cooperation and participation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIVITIES -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                School Activities
+            </h2>
+
+            <p class="section-intro">
+                Learning can happen through classroom study,
+                practice, creative activities and community
+                participation.
+            </p>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>
+                        Educational Learning
+                    </h3>
+
+                    <p>
+                        Academic learning and educational
+                        practice for students.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Language Practice
+                    </h3>
+
+                    <p>
+                        Developing reading, writing,
+                        speaking and communication skills.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Creative Activities
+                    </h3>
+
+                    <p>
+                        Encouraging creativity, teamwork
+                        and active participation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LATEST UPDATES -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Latest Updates
+            </h2>
+
+            <p class="section-intro">
+                Information about school activities,
+                learning opportunities and announcements
+                will be shared here.
+            </p>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>
+                        School Updates
+                    </h3>
+
+                    <p>
+                        Important school information and
+                        announcements.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        Learning Information
+                    </h3>
+
+                    <p>
+                        Updates about educational learning
+                        and study opportunities.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
 
                     <h3>
                         Community Activities
                     </h3>
 
                     <p>
-                        Encouraging participation and cooperation
-                        through community-based activities.
-                    </p>
-
-                </div>
-
-
-                <div class="activity-card">
-
-                    <div class="activity-icon">
-                        🗣️
-                    </div>
-
-                    <h3>
-                        Language & Culture
-                    </h3>
-
-                    <p>
-                        Promoting and preserving Rohingya language,
-                        culture and community heritage.
+                        Information about learning and
+                        community participation.
                     </p>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =========================
-         LATEST UPDATES
-    ========================== -->
+        <!-- GET INVOLVED -->
 
-    <section class="updates">
+        <section class="section">
 
-        <div class="section">
-
-            <div class="section-title">
-
-                <h2>
-                    Latest Updates
-                </h2>
-
-                <p>
-                    Stay informed about our latest activities
-                    and announcements.
-                </p>
-
-            </div>
-
-            <div class="update-list">
-
-                <div class="update-item">
-
-                    <h3>
-                        Welcome to Rohingya Education School
-                    </h3>
-
-                    <p>
-                        We are working to develop educational
-                        opportunities and useful resources for
-                        the community.
-                    </p>
-
-                </div>
-
-
-                <div class="update-item">
-
-                    <h3>
-                        Educational Activities
-                    </h3>
-
-                    <p>
-                        New educational and community activities
-                        will be announced here.
-                    </p>
-
-                </div>
-
-
-                <div class="update-item">
-
-                    <h3>
-                        Community Updates
-                    </h3>
-
-                    <p>
-                        Follow this section for important news
-                        and announcements.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         GET INVOLVED
-    ========================== -->
-
-    <section class="involved">
-
-        <div class="section">
-
-            <div class="involved-box">
+            <div class="cta">
 
                 <h2>
                     Get Involved
                 </h2>
 
                 <p>
-                    Support education and community development
-                    by participating in our activities and initiatives.
+                    Join and support our learning community
+                    through educational participation,
+                    learning support and community involvement.
                 </p>
 
-                <a href="get-involved.html"
-                   class="involved-btn">
-                    Get Involved
+                <a href="get-involved.html">
+                    Learn More
                 </a>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================== -->
+        <!-- CONTACT -->
 
-    <section class="contact">
+        <section class="section">
 
-        <div class="section">
+            <h2 class="section-title">
+                Contact Us
+            </h2>
 
-            <div class="contact-box">
+            <p class="section-intro">
+                For general enquiries and information,
+                please visit our Contact page.
+            </p>
 
-                <h2>
-                    Contact Us
-                </h2>
+            <div style="text-align:center;">
 
-                <p>
-                    Have a question or want to learn more about
-                    Rohingya Education School? Get in touch with us.
-                </p>
-
-                <a href="contact.html"
-                   class="contact-btn">
-                    Contact Us
+                <a
+                    href="contact.html"
+                    style="
+                        display:inline-block;
+                        background:#14532d;
+                        color:white;
+                        text-decoration:none;
+                        padding:12px 24px;
+                        border-radius:8px;
+                        font-weight:bold;
+                    "
+                >
+                    Contact School
                 </a>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
 
 
     <!-- =========================
          FOOTER
-    ========================== -->
+    ========================= -->
 
     <footer>
 
-        <div class="footer-container">
+        <div class="footer-inner">
 
-            <!-- ABOUT -->
 
-            <div class="footer-column">
+            <div>
 
-                <div class="footer-logo">
-
-                    <img src="profile.jpg"
-                         alt="Rohingya Education School Logo">
-
-                    <strong>
-                        Rohingya Education School
-                    </strong>
-
-                </div>
+                <h3>
+                    Rohingya Education School
+                </h3>
 
                 <p>
-                    Supporting education, learning, language,
-                    culture and community development.
+                    Education, language development and
+                    learning opportunities for the community.
                 </p>
 
             </div>
 
 
-            <!-- QUICK LINKS -->
-
-            <div class="footer-column">
+            <div>
 
                 <h3>
                     Quick Links
                 </h3>
 
-                <a href="index.html">
-                    Home
-                </a>
+                <ul>
 
-                <a href="about.html">
-                    About
-                </a>
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
 
-                <a href="activities.html">
-                    Activities
-                </a>
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
 
-                <a href="courses.html">
-                    Courses
-                </a>
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                        </a>
+                    </li>
 
-                <a href="education.html">
-                    Education
-                </a>
+                    <li>
+                        <a href="education.html">
+                            Education
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="verify.html">
+                            Verify Certificate
+                        </a>
+                    </li>
+
+                </ul>
 
             </div>
 
 
-            <!-- IMPORTANT LINKS -->
-
-            <div class="footer-column">
+            <div>
 
                 <h3>
                     Important
                 </h3>
 
-                <a href="teachers-students.html">
-                    Teachers & Students
-                </a>
+                <ul>
 
-                <a href="get-involved.html">
-                    Get Involved
-                </a>
+                    <li>
+                        <a href="teachers-students.html">
+                            Teachers & Students
+                        </a>
+                    </li>
 
-                <a href="verify.html">
-                    Certificate Verification
-                </a>
+                    <li>
+                        <a href="get-involved.html">
+                            Get Involved
+                        </a>
+                    </li>
 
-                <a href="updates.html">
-                    Latest Updates
-                </a>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
 
-                <a href="contact.html">
-                    Contact
-                </a>
+                </ul>
 
             </div>
 
@@ -1194,37 +981,40 @@
 
 
     <!-- =========================
-         JAVASCRIPT
-    ========================== -->
+         MOBILE MENU
+    ========================= -->
 
     <script>
 
         function toggleMenu() {
 
-            const menu =
-                document.getElementById("navMenu");
+            const nav =
+                document.getElementById("mainNav");
 
-            menu.classList.toggle("active");
+            nav.classList.toggle("show");
 
         }
 
 
-        /* Close mobile menu after clicking a link */
-
-        document.querySelectorAll("#navMenu a")
+        document
+            .querySelectorAll("#mainNav a")
             .forEach(function(link) {
 
-                link.addEventListener("click", function() {
+                link.addEventListener(
+                    "click",
+                    function() {
 
-                    document
-                        .getElementById("navMenu")
-                        .classList.remove("active");
+                        document
+                            .getElementById("mainNav")
+                            .classList.remove("show");
 
-                });
+                    }
+                );
 
             });
 
     </script>
 
 </body>
+
 </html>
