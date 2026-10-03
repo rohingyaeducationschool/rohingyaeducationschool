@@ -1,879 +1,1133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>Rohingya Education School</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <title>Rohingya Education School</title>
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+html {
+    scroll-behavior: smooth;
+}
 
-    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7f6;
+    color: #222;
+}
 
-        * {
-            box-sizing: border-box;
-        }
+/* ================= HEADER ================= */
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7f6;
-            color: #222;
-        }
+header {
+    background: #075E54;
+    color: white;
+    padding: 16px 20px;
+}
 
-        header {
-            background: #075E54;
-            color: white;
-            padding: 18px 25px;
-        }
+.header-content {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
 
-        .header-content {
-            max-width: 1100px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-        .logo {
-            width: 65px;
-            height: 65px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
+.logo {
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
 
-        .school-name h1 {
-            margin: 0;
-            font-size: 25px;
-        }
+.school-name h1 {
+    margin: 0;
+    font-size: 24px;
+}
 
-        .school-name p {
-            margin: 5px 0 0;
-            font-size: 14px;
-        }
+.school-name p {
+    margin: 4px 0 0;
+    font-size: 13px;
+}
 
-        nav {
-            background: #128C7E;
-            text-align: center;
-            padding: 14px 10px;
-        }
+.rohingya {
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 4px;
+    direction: rtl;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-        }
+/* ================= HEADER BUTTONS ================= */
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-        .bilingual {
-            display: block;
-            margin-top: 5px;
-            font-size: 20px;
-            font-weight: bold;
-            line-height: 1.4;
-        }
+.action-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.6);
+    padding: 9px 13px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
 
-        .nav-rohingya {
-            display: block;
-            font-size: 15px;
-            margin-top: 3px;
-            font-weight: normal;
-        }
+.action-btn:hover {
+    background: #128C7E;
+}
 
-        .hero {
-            background: white;
-            text-align: center;
-            padding: 70px 20px;
-        }
+/* ================= MENU ================= */
 
-        .hero h1 {
-            font-size: 42px;
-            color: #075E54;
-            margin: 15px 0;
-        }
+.menu-button {
+    font-size: 22px;
+    width: 45px;
+    height: 42px;
+}
 
-        .rohingya {
-            font-size: 28px;
-            font-weight: bold;
-        }
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 82px;
+    background: white;
+    width: 245px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.18);
+    z-index: 1000;
+    overflow: hidden;
+}
 
-        .hero p {
-            max-width: 700px;
-            margin: 20px auto;
-            font-size: 18px;
-            line-height: 1.7;
-        }
+.dropdown-menu a {
+    display: block;
+    padding: 14px 18px;
+    color: #075E54;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
 
-        .button {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 13px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            margin: 8px;
-            font-weight: bold;
-        }
+.dropdown-menu a:hover {
+    background: #f0f7f5;
+}
 
-        .button.dark {
-            background: #075E54;
-        }
+.dropdown-menu.show {
+    display: block;
+}
 
-        .section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 55px 20px;
-        }
+/* ================= LANGUAGE MENU ================= */
 
-        .section-title {
-            text-align: center;
-            color: #075E54;
-            font-size: 30px;
-            margin-bottom: 35px;
-        }
+.language-menu {
+    display: none;
+    position: absolute;
+    right: 75px;
+    top: 82px;
+    background: white;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.18);
+    z-index: 1000;
+    overflow: hidden;
+}
 
-        .about-text {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            line-height: 1.8;
-        }
+.language-menu button {
+    width: 100%;
+    padding: 13px;
+    background: white;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
+.language-menu button:hover {
+    background: #f0f7f5;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow:
-                0 3px 10px rgba(0,0,0,0.08);
-        }
+.language-menu.show {
+    display: block;
+}
 
-        .card h3 {
-            color: #075E54;
-        }
+/* ================= SEARCH ================= */
 
-        .icon {
-            font-size: 38px;
-        }
+.search-area {
+    display: none;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
 
-        .stats {
-            background: #075E54;
-            color: white;
-        }
+.search-area.show {
+    display: block;
+}
 
-        .stat-box {
-            text-align: center;
-        }
+.search-box {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    gap: 8px;
+}
 
-        .stat-box h2 {
-            font-size: 35px;
-            margin: 5px;
-        }
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
 
-        .verification {
-            background: white;
-            padding: 35px;
-            text-align: center;
-            border-radius: 15px;
-        }
+.search-box button {
+    background: #075E54;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 0 18px;
+}
 
-        .verification input {
-            width: 90%;
-            max-width: 450px;
-            padding: 14px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            margin: 10px;
-            font-size: 16px;
-        }
+/* ================= HERO ================= */
 
-        .social-icons {
-            margin: 25px 0;
-        }
+.hero {
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.94),
+            rgba(255,255,255,0.94)
+        );
+    text-align: center;
+    padding: 80px 20px;
+}
 
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            margin: 6px;
-            border-radius: 50%;
-            background: white;
-            text-decoration: none;
-            font-size: 27px;
-        }
+.hero h1 {
+    color: #075E54;
+    font-size: 44px;
+    margin: 0 0 12px;
+}
 
-        .facebook {
-            color: #1877F2;
-        }
+.hero .hero-rohingya {
+    font-size: 29px;
+    font-weight: bold;
+    direction: rtl;
+    margin-bottom: 22px;
+}
 
-        .youtube {
-            color: #FF0000;
-        }
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
 
-        .tiktok {
-            color: #000000;
-        }
+/* ================= SECTION ================= */
 
-        footer {
-            background: #064c44;
-            color: white;
-            padding: 35px 20px;
-            text-align: center;
-        }
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
 
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-        }
+.section-title {
+    text-align: center;
+    color: #075E54;
+    font-size: 30px;
+    margin: 0 0 35px;
+}
 
-        @media (max-width: 600px) {
+.bilingual {
+    display: block;
+    margin-top: 7px;
+    font-size: 19px;
+    line-height: 1.5;
+    direction: rtl;
+}
 
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
+/* ================= ABOUT ================= */
 
-            .hero h1 {
-                font-size: 32px;
-            }
+.about-text {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 1.8;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
 
-            .rohingya {
-                font-size: 22px;
-            }
+/* ================= CARDS ================= */
 
-            nav a {
-                display: inline-block;
-                margin: 6px;
-            }
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
 
-        }
+.card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
 
-    </style>
+.card h3 {
+    color: #075E54;
+}
 
+.card p {
+    line-height: 1.7;
+}
+
+.icon {
+    font-size: 40px;
+}
+
+/* ================= STATS ================= */
+
+.stats {
+    background: #075E54;
+    color: white;
+}
+
+.stats .section-title {
+    color: white;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-box h2 {
+    font-size: 38px;
+    margin: 5px;
+}
+
+.stat-box p {
+    font-size: 16px;
+}
+
+/* ================= VERIFICATION ================= */
+
+.verification {
+    background: white;
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.verification input {
+    width: 90%;
+    max-width: 450px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.button {
+    display: inline-block;
+    background: #075E54;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #128C7E;
+}
+
+/* ================= CONTACT ================= */
+
+.social-icons {
+    margin: 25px 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 5px;
+    border-radius: 50%;
+    background: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.facebook {
+    color: #1877F2;
+}
+
+.youtube {
+    color: #FF0000;
+}
+
+.tiktok {
+    color: #000000;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #064c44;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 7px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .header-content {
+        align-items: center;
+    }
+
+    .brand {
+        max-width: calc(100% - 105px);
+    }
+
+    .logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .school-name h1 {
+        font-size: 18px;
+    }
+
+    .school-name p {
+        font-size: 11px;
+    }
+
+    .school-name .rohingya {
+        font-size: 15px;
+    }
+
+    .header-actions {
+        gap: 5px;
+    }
+
+    .action-btn {
+        padding: 8px 9px;
+        font-size: 13px;
+    }
+
+    .dropdown-menu {
+        right: 12px;
+        top: 75px;
+        width: 230px;
+    }
+
+    .language-menu {
+        right: 55px;
+        top: 75px;
+    }
+
+    .hero {
+        padding: 60px 18px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .hero .hero-rohingya {
+        font-size: 21px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 45px 15px;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+
+    .bilingual {
+        font-size: 17px;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
-
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
-    <div class="header-content">
+<div class="header-content">
 
-        <img src="profile.jpg"
-             class="logo"
-             alt="School Logo">
+<div class="brand">
 
-        <div class="school-name">
+<img src="profile.jpg"
+     class="logo"
+     alt="School Logo">
 
-            <h1>
-                Rohingya Education School
-            </h1>
+<div class="school-name">
 
-            <div class="rohingya">
-                𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-            </div>
+<h1>Rohingya Education School</h1>
 
-            <p>
-                Education • Language • Knowledge • Community
-            </p>
+<div class="rohingya">
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
+𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
+𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+</div>
 
-        </div>
+<p>
+Education • Language • Knowledge • Community
+</p>
 
-    </div>
+</div>
+</div>
+
+<div class="header-actions">
+
+<button class="action-btn"
+        onclick="toggleLanguage()"
+        title="Language">
+<i class="fa-solid fa-globe"></i>
+</button>
+
+<button class="action-btn"
+        onclick="toggleSearch()"
+        title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
+
+<button class="action-btn menu-button"
+        onclick="toggleMenu()"
+        title="Menu">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+</div>
+
+</div>
+
+<!-- MENU -->
+
+<div id="menu" class="dropdown-menu">
+
+<a href="index.html">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+
+<a href="about.html">
+<i class="fa-solid fa-school"></i>
+About
+</a>
+
+<a href="#">
+<i class="fa-solid fa-book-open"></i>
+Education
+</a>
+
+<a href="#">
+<i class="fa-solid fa-graduation-cap"></i>
+Courses
+</a>
+
+<a href="verify.html">
+<i class="fa-solid fa-certificate"></i>
+Certificate Verification
+</a>
+
+<a href="contact.html">
+<i class="fa-solid fa-envelope"></i>
+Contact
+</a>
+
+</div>
+
+<!-- LANGUAGE -->
+
+<div id="languageMenu" class="language-menu">
+
+<button onclick="changeLanguage('English')">
+🇬🇧 English
+</button>
+
+<button onclick="changeLanguage('বাংলা')">
+🇧🇩 বাংলা
+</button>
+
+<button onclick="changeLanguage('Rohingya')">
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
+Rohingya
+</button>
+
+</div>
 
 </header>
 
+<!-- ================= SEARCH ================= -->
 
-<!-- NAVIGATION -->
+<div id="searchArea" class="search-area">
 
-<nav>
+<div class="search-box">
 
-    <a href="index.html">
-        Home
-    </a>
+<input type="search"
+       id="siteSearch"
+       placeholder="Search this website...">
 
-    <a href="about.html">
-        About
-        <span class="nav-rohingya">
-        </span>
-    </a>
+<button onclick="searchSite()">
+<i class="fa-solid fa-search"></i>
+</button>
 
-    <a href="#">
-        Education
-        <span class="nav-rohingya">
-        </span>
-    </a>
+</div>
 
-    <a href="#">
-        Courses
-        <span class="nav-rohingya">
-        </span>
-    </a>
-
-    <a href="verify.html">
-        Certificate Verification
-        <span class="nav-rohingya">
-        </span>
-    </a>
-
-    <a href="contact.html">
-        Contact
-    </a>
-
-</nav>
+</div>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
-    <h1>
-        Rohingya Education School
-    </h1>
+<h1>
+Rohingya Education School
+</h1>
 
-    <div class="rohingya">
+<div class="hero-rohingya">
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
+𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
+𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+</div>
 
-        𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
-        𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
-        𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-
-    </div>
-
-    <p>
-
-        Empowering students through quality education,
-        Rohingya language learning and knowledge.
-
-    </p>
-
-
-    <a class="button dark"
-       href="about.html">
-
-        Learn More
-
-    </a>
-
-
-    <a class="button"
-       href="contact.html">
-
-        Contact Us
-
-    </a>
+<p>
+Empowering students through quality education,
+Rohingya language learning and knowledge.
+</p>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section class="section">
 
-    <h2 class="section-title">
+<h2 class="section-title">
 
-        About Our School
+About Our School
 
-        <span class="bilingual">
-            𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴡𐴌 𐴁𐴝𐴁𐴡𐴃𐴠𐴤
-        </span>
+<span class="bilingual">
+𐴀𐴝𐴣𐴀𐴌𐴝𐴌
+𐴀𐴠𐴏𐴑𐴟𐴓𐴡𐴌
+𐴁𐴝𐴁𐴡𐴃𐴠𐴤
+</span>
 
-    </h2>
+</h2>
 
+<div class="about-text">
 
-    <div class="about-text">
+<p>
+Rohingya Education School is committed
+to providing quality education and
+creating a supportive learning
+environment for students.
+</p>
 
-        <p>
+<p>
+Our goal is to support learning,
+preserve the Rohingya language and
+Script, and help students build
+knowledge and skills for the future.
+</p>
 
-            Rohingya Education School is committed
-            to providing quality education and
-            creating a supportive learning
-            environment for students.
-
-        </p>
-
-
-        <p>
-
-            Our goal is to support learning,
-            preserve the Rohingya language and
-            Script, and help students build
-            knowledge and skills for the future.
-
-        </p>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- EDUCATION PROGRAMS -->
+<!-- ================= EDUCATION ================= -->
 
 <section class="section">
 
-    <h2 class="section-title">
+<h2 class="section-title">
 
-        Our Education Programs
+Our Education Programs
 
-        <span class="bilingual">
-            𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴡𐴕𐴧𐴝𐴤𐴌 𐴉𐴟𐴌𐴒𐴌𐴝𐴔
-        </span>
+<span class="bilingual">
+𐴀𐴝𐴣𐴀𐴌𐴝𐴌
+𐴉𐴡𐴕𐴧𐴝𐴤𐴌
+𐴉𐴟𐴌𐴒𐴌𐴝𐴔
+</span>
 
-    </h2>
+</h2>
 
+<div class="cards">
 
-    <div class="cards">
+<div class="card">
 
+<div class="icon">📚</div>
 
-        <div class="card">
+<h3>
+Rohingya Language
 
-            <div class="icon">
-                📚
-            </div>
+<span class="bilingual">
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
+𐴎𐴟𐴁𐴝𐴕
+</span>
+</h3>
 
-            <h3>
+<p>
+Learning the Rohingya language
+and Script.
+</p>
 
-                Rohingya Language
-
-                <span class="bilingual">
-                    𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴎𐴟𐴁𐴝𐴕
-                </span>
-
-            </h3>
-
-            <p>
-                Learning the Rohingya language
-                and Script.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card">
+<div class="card">
 
-            <div class="icon">
-                ✏️
-            </div>
+<div class="icon">✏️</div>
 
-            <h3>
+<h3>
+Basic Education
 
-                Basic Education
+<span class="bilingual">
+𐴐𐴟𐴤𐴌𐴟𐴌
+𐴉𐴡𐴕𐴧𐴝𐴤
+</span>
+</h3>
 
-                <span class="bilingual">
-                    𐴐𐴟𐴤𐴌𐴟𐴌 𐴉𐴡𐴕𐴧𐴝𐴤
-                </span>
+<p>
+Building essential reading
+and writing skills.
+</p>
 
-            </h3>
-
-            <p>
-                Building essential reading
-                and writing skills.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card">
+<div class="card">
 
-            <div class="icon">
-                🎓
-            </div>
+<div class="icon">🎓</div>
 
-            <h3>
+<h3>
+Courses
 
-                Courses
+<span class="bilingual">
+𐴑𐴟𐴌𐴏𐴢
+𐴀𐴡𐴑𐴧𐴡𐴓𐴢
+</span>
+</h3>
 
-                <span class="bilingual">
-                    𐴑𐴟𐴌𐴏𐴢 𐴀𐴡𐴑𐴧𐴡𐴓𐴢
-                </span>
+<p>
+Educational courses and
+learning programs.
+</p>
 
-            </h3>
-
-            <p>
-                Educational courses and
-                learning programs.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card">
+<div class="card">
 
-            <div class="icon">
-                💻
-            </div>
+<div class="icon">💻</div>
 
-            <h3>
-                Digital Learning
-            </h3>
+<h3>
+Digital Learning
+</h3>
 
-            <p>
-                Supporting modern and
-                digital education.
-            </p>
+<p>
+Supporting modern and
+digital education.
+</p>
 
-        </div>
+</div>
 
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- STATISTICS -->
+<!-- ================= STATISTICS ================= -->
 
 <section class="stats">
 
-    <div class="section">
+<div class="section">
 
-        <h2 class="section-title"
-            style="color:white;">
+<h2 class="section-title">
 
-            Our School at a Glance
+Our School at a Glance
 
-            <span class="bilingual">
-                𐴀𐴠𐴑 𐴕𐴡𐴎𐴡𐴌𐴠 𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-            </span>
+<span class="bilingual">
+𐴀𐴠𐴑
+𐴕𐴡𐴎𐴡𐴌𐴠
+𐴀𐴝𐴣𐴀𐴌𐴝𐴌
+𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+</span>
 
-        </h2>
+</h2>
 
+<div class="cards">
 
-        <div class="cards">
+<div class="stat-box">
+<h2>0</h2>
+<p>
+Students
+<span class="bilingual">
+𐴉𐴡𐴌𐴡𐴙𐴕𐴧𐴝𐴤
+𐴉𐴟𐴖𐴝𐴙𐴕
+</span>
+</p>
+</div>
 
+<div class="stat-box">
+<h2>0</h2>
+<p>
+Teachers
+<span class="bilingual">
+𐴔𐴝𐴐𐴄𐴡𐴌
+</span>
+</p>
+</div>
 
-            <div class="stat-box">
+<div class="stat-box">
+<h2>0</h2>
+<p>
+Courses
+<span class="bilingual">
+𐴑𐴟𐴌𐴏𐴢
+𐴀𐴡𐴑𐴧𐴡𐴓𐴢
+</span>
+</p>
+</div>
 
-                <h2>
-                    0
-                </h2>
+<div class="stat-box">
+<h2>0</h2>
+<p>
+Certificates
+<span class="bilingual">
+𐴐𐴡𐴕𐴡𐴊𐴢
+</span>
+</p>
+</div>
 
-                <p>
-                    Students
+</div>
 
-                    <span class="bilingual">
-                        𐴉𐴡𐴌𐴡𐴙𐴕𐴧𐴝𐴤 𐴉𐴟𐴖𐴝𐴙𐴕
-                    </span>
-
-                </p>
-
-            </div>
-
-
-            <div class="stat-box">
-
-                <h2>
-                    0
-                </h2>
-
-                <p>
-                    Teachers
-
-                    <span class="bilingual">
-                        𐴔𐴝𐴐𐴄𐴡𐴌
-                    </span>
-
-                </p>
-
-            </div>
-
-
-            <div class="stat-box">
-
-                <h2>
-                    0
-                </h2>
-
-                <p>
-                    Courses
-
-                    <span class="bilingual">
-                        𐴑𐴟𐴌𐴏𐴢 𐴀𐴡𐴑𐴧𐴡𐴓𐴢
-                    </span>
-
-                </p>
-
-            </div>
-
-
-            <div class="stat-box">
-
-                <h2>
-                    0
-                </h2>
-
-                <p>
-                    Certificates
-
-                    <span class="bilingual">
-                        𐴐𐴡𐴕𐴡𐴊𐴢
-                    </span>
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- CERTIFICATE VERIFICATION -->
+<!-- ================= VERIFICATION ================= -->
 
 <section class="section">
 
-    <h2 class="section-title">
+<h2 class="section-title">
 
-        Certificate Verification
+Certificate Verification
 
-        <span class="bilingual">
-            𐴐𐴡𐴕𐴡𐴊𐴢 𐴏𐴡𐴀𐴠𐴕𐴠 𐴏𐴠𐴑𐴒𐴡𐴌𐴡𐴕
-        </span>
+<span class="bilingual">
+𐴐𐴡𐴕𐴡𐴊𐴢
+𐴏𐴡𐴀𐴠𐴕𐴠
+𐴏𐴠𐴑𐴒𐴡𐴌𐴡𐴕
+</span>
 
-    </h2>
+</h2>
 
+<div class="verification">
 
-    <div class="verification">
+<p>
+Verify a certificate using
+its Certificate ID.
+</p>
 
-        <p>
-            Verify a certificate using
-            its Certificate ID.
-        </p>
+<input
+type="text"
+id="certificateID"
+placeholder="Enter Certificate ID">
 
+<br>
 
-        <input
-            type="text"
-            placeholder="Enter Certificate ID"
-        >
+<a class="button"
+href="verify.html">
+Verify Certificate
+</a>
 
-
-        <br>
-
-
-        <a class="button dark"
-           href="verify.html">
-
-            Verify Certificate
-
-        </a>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section class="section">
 
-    <h2 class="section-title">
+<h2 class="section-title">
 
-        Connect With Us
+Connect With Us
 
-        <span class="bilingual">
-            𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴟𐴣𐴖𐴝𐴃𐴞 𐴃𐴝𐴦𐴓𐴧𐴟𐴑 𐴒𐴡𐴌𐴡𐴤
-        </span>
+<span class="bilingual">
+𐴀𐴝𐴣𐴀𐴌𐴝𐴌
+𐴉𐴟𐴣𐴖𐴝𐴃𐴞
+𐴃𐴝𐴦𐴓𐴧𐴟𐴑
+𐴒𐴡𐴌𐴡𐴤
+</span>
 
-    </h2>
+</h2>
 
+<div class="cards">
 
-    <div class="cards">
+<div class="card">
 
+<div class="icon">📍</div>
 
-        <div class="card">
+<h3>
+Address
 
-            <div class="icon">
-                📍
-            </div>
+<span class="bilingual">
+𐴄𐴞𐴑𐴝𐴕𐴝
+</span>
+</h3>
 
-            <h3>
+<p>
+Boroitoli, Camp 4,
+Kutupalong, Ukhia
+</p>
 
-                Address
-
-                <span class="bilingual">
-                    𐴄𐴞𐴑𐴝𐴕𐴝
-                </span>
-
-            </h3>
-
-            <p>
-                Boroitoli, Camp 4,
-                Kutupalong, Ukhia
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card">
+<div class="card">
 
-            <div class="icon">
-                📧
-            </div>
+<div class="icon">📧</div>
 
-            <h3>
+<h3>
+Email
 
-                Email
+<span class="bilingual">
+𐴀𐴞𐴔𐴠𐴙𐴓𐴢
+</span>
+</h3>
 
-                <span class="bilingual">
-                    𐴀𐴞𐴔𐴠𐴙𐴓𐴢
-                </span>
+<p>
+rohingyaeducations@gmail.com
+</p>
 
-            </h3>
-
-            <p>
-                rohingyaeducations@gmail.com
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card">
+<div class="card">
 
-            <div class="icon">
-                📱
-            </div>
+<div class="icon">📱</div>
 
-            <h3>
+<h3>
+WhatsApp
 
-                WhatsApp
+<span class="bilingual">
+𐴖𐴝𐴄𐴏𐴧𐴝𐴉𐴢
+</span>
+</h3>
 
-                <span class="bilingual">
-                    𐴖𐴝𐴄𐴏𐴧𐴝𐴉𐴢
-                </span>
+<p>
+Contact us through WhatsApp.
+</p>
 
-            </h3>
+</div>
 
-            <p>
-                Contact us through WhatsApp.
-            </p>
-
-        </div>
-
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
+<h3>
 
-    <h3>
-        Rohingya Education School
+Rohingya Education School
 
-        <span class="bilingual">
-            𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-        </span>
+<span class="bilingual">
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
+𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
+𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+</span>
 
-    </h3>
+</h3>
 
+<p>
+Education • Language • Knowledge • Community
+</p>
 
-    <p>
-        Education • Language • Knowledge • Community
-    </p>
+<p>
 
+<a href="index.html">Home</a> |
 
-    <p>
+<a href="about.html">About</a> |
 
-        <a href="index.html">
-            Home
-        </a>
+<a href="verify.html">
+Certificate Verification
+</a> |
 
-        |
+<a href="contact.html">
+Contact
+</a>
 
-        <a href="about.html">
-            About
-            <span class="nav-rohingya">
-            </span>
-        </a>
-
-        |
-
-        <a href="verify.html">
-            Certificate Verification
-        </a>
-
-        |
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-    </p>
+</p>
 
 
-    <div class="social-icons">
+<div class="social-icons">
+
+<a href="https://www.facebook.com/share/19etkWCm1z/"
+target="_blank"
+class="facebook"
+aria-label="Facebook">
+
+<i class="fa-brands fa-facebook-f"></i>
+
+</a>
 
 
-        <a href="https://www.facebook.com/share/19etkWCm1z/"
-           target="_blank"
-           aria-label="Facebook"
-           class="facebook">
+<a href="https://youtube.com/@rohingyaeducationschool941?si=95gzgbQmte1bCif4"
+target="_blank"
+class="youtube"
+aria-label="YouTube">
 
-            <i class="fa-brands fa-facebook-f"></i>
+<i class="fa-brands fa-youtube"></i>
 
-        </a>
-
-
-        <a href="https://youtube.com/@rohingyaeducationschool941?si=95gzgbQmte1wCif4"
-           target="_blank"
-           aria-label="YouTube"
-           class="youtube">
-
-            <i class="fa-brands fa-youtube"></i>
-
-        </a>
+</a>
 
 
-        <a href="https://www.tiktok.com/@rohingyaeducationschool?_r=1&_t=ZS-9AC3xcZvBjw"
-           target="_blank"
-           aria-label="TikTok"
-           class="tiktok">
+<a href="https://www.tiktok.com/@rohingyaeducationschool"
+target="_blank"
+class="tiktok"
+aria-label="TikTok">
 
-            <i class="fa-brands fa-tiktok"></i>
+<i class="fa-brands fa-tiktok"></i>
 
-        </a>
+</a>
+
+</div>
 
 
-    </div>
-
-
-    <p>
-        © 2026 Rohingya Education School.
-        All rights reserved.
-    </p>
-
+<p>
+© 2026 Rohingya Education School.
+All rights reserved.
+</p>
 
 </footer>
 
 
-</body>
+<!-- ================= JAVASCRIPT ================= -->
 
+<script>
+
+function toggleMenu() {
+
+    document
+    .getElementById("menu")
+    .classList.toggle("show");
+
+    document
+    .getElementById("languageMenu")
+    .classList.remove("show");
+
+}
+
+function toggleLanguage() {
+
+    document
+    .getElementById("languageMenu")
+    .classList.toggle("show");
+
+    document
+    .getElementById("menu")
+    .classList.remove("show");
+
+}
+
+function toggleSearch() {
+
+    document
+    .getElementById("searchArea")
+    .classList.toggle("show");
+
+}
+
+function changeLanguage(language) {
+
+    alert(
+        "Language selected: " + language
+    );
+
+    document
+    .getElementById("languageMenu")
+    .classList.remove("show");
+
+}
+
+function searchSite() {
+
+    const query =
+        document
+        .getElementById("siteSearch")
+        .value
+        .trim()
+        .toLowerCase();
+
+    if (!query) {
+
+        alert("Please enter a search term.");
+
+        return;
+
+    }
+
+    const text =
+        document.body.innerText.toLowerCase();
+
+    if (text.includes(query)) {
+
+        alert(
+            "The search term was found on this page."
+        );
+
+    } else {
+
+        alert(
+            "No matching content was found."
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
 </html>
