@@ -6,7 +6,11 @@
 
     <title>Rohingya Education School</title>
 
+    <meta name="description"
+          content="Rohingya Education School - Education, learning, language, culture and community development.">
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -30,7 +34,7 @@
 
         header {
             width: 100%;
-            background: #ffffff;
+            background: rgba(255,255,255,0.98);
             box-shadow: 0 2px 12px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
@@ -38,62 +42,94 @@
         }
 
         .navbar {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: auto;
-            padding: 15px 25px;
+            padding: 10px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 20px;
         }
 
         .logo-area {
             display: flex;
             align-items: center;
             gap: 12px;
+            flex-shrink: 0;
         }
 
         .logo {
-            width: 48px;
-            height: 48px;
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
-            background: #0b6b4f;
+            overflow: hidden;
+            background: #ffffff;
+            border: 2px solid #0b6b4f;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .school-name {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             color: #0b6b4f;
+            line-height: 1.2;
+        }
+
+        .school-name small {
+            display: block;
+            color: #777;
+            font-size: 11px;
+            font-weight: normal;
+            margin-top: 3px;
         }
 
         nav {
             display: flex;
-            gap: 25px;
             align-items: center;
+            justify-content: flex-end;
+            gap: 4px;
         }
 
         nav a {
             text-decoration: none;
             color: #333;
-            font-size: 15px;
-            font-weight: 500;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 9px 8px;
+            border-radius: 5px;
             transition: 0.3s;
+            white-space: nowrap;
         }
 
         nav a:hover {
+            background: #eef6f2;
             color: #0b6b4f;
+        }
+
+        nav a.verify-link {
+            background: #0b6b4f;
+            color: white;
+        }
+
+        nav a.verify-link:hover {
+            background: #084f3b;
+            color: white;
         }
 
         .menu-btn {
             display: none;
-            font-size: 28px;
+            font-size: 29px;
             cursor: pointer;
             color: #0b6b4f;
+            user-select: none;
         }
 
         /* =========================
@@ -101,61 +137,104 @@
         ========================= */
 
         .hero {
-            min-height: 620px;
+            position: relative;
+            min-height: 680px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 80px 20px;
+            padding: 90px 20px;
+            overflow: hidden;
+
             background:
                 linear-gradient(
-                    rgba(4, 67, 48, 0.85),
-                    rgba(4, 67, 48, 0.85)
+                    rgba(4,67,48,0.78),
+                    rgba(4,67,48,0.78)
                 ),
-                url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80");
+                url("school-photo.jpg");
 
             background-size: cover;
             background-position: center;
         }
 
+        /* Large watermark logo */
+
+        .hero-watermark {
+            position: absolute;
+            width: min(650px, 85vw);
+            height: min(650px, 85vw);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("profile.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0.10;
+            filter: grayscale(100%);
+            pointer-events: none;
+        }
+
         .hero-content {
-            max-width: 850px;
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
             color: white;
+        }
+
+        .hero-logo {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            border: 4px solid rgba(255,255,255,0.9);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.20);
+        }
+
+        .hero-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .hero-content h1 {
             font-size: 52px;
-            margin-bottom: 20px;
-            line-height: 1.2;
+            margin-bottom: 18px;
+            line-height: 1.15;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
         }
 
         .hero-content p {
             font-size: 19px;
-            max-width: 700px;
-            margin: 0 auto 35px;
+            max-width: 730px;
+            margin: 0 auto 30px;
+            color: #f3f8f6;
         }
 
         .hero-btn {
             display: inline-block;
-            padding: 14px 28px;
+            padding: 14px 30px;
             background: white;
             color: #0b6b4f;
-            border-radius: 6px;
+            border-radius: 7px;
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .hero-btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
         /* =========================
-           COMMON SECTION
+           COMMON
         ========================= */
 
         .section {
-            max-width: 1100px;
+            max-width: 1120px;
             margin: auto;
             padding: 80px 25px;
         }
@@ -172,7 +251,7 @@
         }
 
         .section-title p {
-            max-width: 700px;
+            max-width: 720px;
             margin: auto;
             color: #666;
         }
@@ -200,21 +279,24 @@
 
         .welcome-text p {
             color: #555;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
 
         .welcome-image {
-            min-height: 320px;
-            border-radius: 15px;
+            min-height: 350px;
+            border-radius: 16px;
+
             background:
                 linear-gradient(
-                    rgba(0,0,0,0.15),
-                    rgba(0,0,0,0.15)
+                    rgba(0,0,0,0.10),
+                    rgba(0,0,0,0.10)
                 ),
-                url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80");
+                url("school-photo.jpg");
 
             background-size: cover;
             background-position: center;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,0.10);
         }
 
         /* =========================
@@ -229,7 +311,7 @@
             max-width: 850px;
             margin: auto;
             background: white;
-            padding: 40px;
+            padding: 42px;
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 5px 25px rgba(0,0,0,0.06);
@@ -402,7 +484,7 @@
         }
 
         .footer-container {
-            max-width: 1100px;
+            max-width: 1120px;
             margin: auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
@@ -412,6 +494,21 @@
         .footer-column h3 {
             margin-bottom: 20px;
             font-size: 19px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: white;
         }
 
         .footer-column p {
@@ -432,7 +529,7 @@
         }
 
         .copyright {
-            max-width: 1100px;
+            max-width: 1120px;
             margin: 45px auto 0;
             padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.15);
@@ -445,20 +542,19 @@
            MOBILE
         ========================= */
 
-        @media (max-width: 768px) {
+        @media (max-width: 1050px) {
 
-            .navbar {
-                padding: 12px 18px;
+            nav {
+                gap: 0;
             }
 
-            .school-name {
-                font-size: 16px;
+            nav a {
+                font-size: 12px;
+                padding: 8px 6px;
             }
+        }
 
-            .logo {
-                width: 42px;
-                height: 42px;
-            }
+        @media (max-width: 850px) {
 
             .menu-btn {
                 display: block;
@@ -472,8 +568,10 @@
                 width: 100%;
                 background: white;
                 flex-direction: column;
-                gap: 0;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+                align-items: stretch;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+                max-height: calc(100vh - 72px);
+                overflow-y: auto;
             }
 
             nav.active {
@@ -482,29 +580,21 @@
 
             nav a {
                 width: 100%;
-                padding: 15px 20px;
-                border-bottom: 1px solid #eee;
+                padding: 14px 20px;
+                border-bottom: 1px solid #eeeeee;
+                font-size: 15px;
+            }
+
+            nav a.verify-link {
+                border-radius: 0;
             }
 
             .hero {
-                min-height: 550px;
-                padding: 60px 20px;
+                min-height: 620px;
             }
 
             .hero-content h1 {
-                font-size: 36px;
-            }
-
-            .hero-content p {
-                font-size: 16px;
-            }
-
-            .section {
-                padding: 60px 20px;
-            }
-
-            .section-title h2 {
-                font-size: 29px;
+                font-size: 42px;
             }
 
             .welcome-content {
@@ -512,7 +602,6 @@
             }
 
             .welcome-image {
-                min-height: 250px;
                 order: -1;
             }
 
@@ -526,20 +615,68 @@
             }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 500px) {
+
+            .navbar {
+                padding: 9px 15px;
+            }
+
+            .logo {
+                width: 44px;
+                height: 44px;
+            }
 
             .school-name {
-                font-size: 14px;
+                font-size: 15px;
+            }
+
+            .school-name small {
+                font-size: 9px;
+            }
+
+            .hero {
+                min-height: 590px;
+                padding: 60px 18px;
+            }
+
+            .hero-watermark {
+                width: 90vw;
+                height: 90vw;
+            }
+
+            .hero-logo {
+                width: 90px;
+                height: 90px;
             }
 
             .hero-content h1 {
-                font-size: 30px;
+                font-size: 32px;
             }
 
             .hero-content p {
-                font-size: 15px;
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .section-title h2,
+            .welcome-text h2,
+            .involved-box h2,
+            .contact-box h2 {
+                font-size: 29px;
+            }
+
+            .mission-box {
+                padding: 28px 20px;
+            }
+
+            .welcome-image {
+                min-height: 250px;
             }
         }
+
     </style>
 </head>
 
@@ -556,30 +693,53 @@
             <div class="logo-area">
 
                 <div class="logo">
-                    RES
+                    <img src="profile.jpg"
+                         alt="Rohingya Education School Logo">
                 </div>
 
                 <div class="school-name">
                     Rohingya Education School
+                    <small>Education • Language • Community</small>
                 </div>
 
             </div>
 
-            <div class="menu-btn" onclick="toggleMenu()">
+            <div class="menu-btn"
+                 onclick="toggleMenu()"
+                 aria-label="Open Menu">
                 ☰
             </div>
 
             <nav id="navMenu">
 
-                <a href="#home">Home</a>
+                <a href="index.html">Home</a>
 
-                <a href="#about">About</a>
+                <a href="about.html">About</a>
 
-                <a href="#activities">Activities</a>
+                <a href="activities.html">Activities</a>
 
-                <a href="#updates">Updates</a>
+                <a href="updates.html">Updates</a>
 
-                <a href="#contact">Contact</a>
+                <a href="courses.html">Courses</a>
+
+                <a href="education.html">Education</a>
+
+                <a href="teachers-students.html">
+                    Teachers & Students
+                </a>
+
+                <a href="get-involved.html">
+                    Get Involved
+                </a>
+
+                <a href="verify.html"
+                   class="verify-link">
+                    Verify Certificate
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
 
             </nav>
 
@@ -594,18 +754,30 @@
 
     <section class="hero" id="home">
 
+        <!-- Large Watermark Logo -->
+
+        <div class="hero-watermark"></div>
+
         <div class="hero-content">
+
+            <div class="hero-logo">
+
+                <img src="profile.jpg"
+                     alt="Rohingya Education School Logo">
+
+            </div>
 
             <h1>
                 Rohingya Education School
             </h1>
 
             <p>
-                Supporting education, language, learning and community
-                development for a brighter future.
+                Supporting education, language, learning,
+                culture and community development for a brighter future.
             </p>
 
-            <a href="#about" class="hero-btn">
+            <a href="about.html"
+               class="hero-btn">
                 Learn More
             </a>
 
@@ -618,7 +790,8 @@
          WELCOME
     ========================== -->
 
-    <section class="welcome" id="about">
+    <section class="welcome"
+             id="about">
 
         <div class="section">
 
@@ -631,15 +804,22 @@
                     </h2>
 
                     <p>
-                        Rohingya Education School is committed to supporting
-                        education and creating opportunities for children,
-                        young people and communities.
+                        Rohingya Education School is committed to
+                        supporting education and creating meaningful
+                        learning opportunities for children, young
+                        people and communities.
                     </p>
 
                     <p>
-                        Our goal is to encourage learning, protect the
+                        Our goal is to encourage learning, support the
                         Rohingya language and culture, and help learners
                         develop knowledge and skills for the future.
+                    </p>
+
+                    <p>
+                        Through education and community participation,
+                        we aim to create a positive environment where
+                        learners can grow with confidence.
                     </p>
 
                 </div>
@@ -668,8 +848,8 @@
                 </h2>
 
                 <p>
-                    Building opportunities through education and community
-                    participation.
+                    Building opportunities through education,
+                    learning and community participation.
                 </p>
 
             </div>
@@ -695,7 +875,7 @@
          ACTIVITIES
     ========================== -->
 
-    <section class="activities" id="activities">
+    <section class="activities">
 
         <div class="section">
 
@@ -706,8 +886,8 @@
                 </h2>
 
                 <p>
-                    We work through different educational and community
-                    activities.
+                    We work through different educational and
+                    community activities.
                 </p>
 
             </div>
@@ -725,8 +905,8 @@
                     </h3>
 
                     <p>
-                        Supporting learning opportunities and educational
-                        activities for the community.
+                        Supporting learning opportunities and
+                        educational activities for the community.
                     </p>
 
                 </div>
@@ -743,8 +923,8 @@
                     </h3>
 
                     <p>
-                        Encouraging participation and cooperation through
-                        community-based activities.
+                        Encouraging participation and cooperation
+                        through community-based activities.
                     </p>
 
                 </div>
@@ -762,7 +942,7 @@
 
                     <p>
                         Promoting and preserving Rohingya language,
-                        culture and identity.
+                        culture and community heritage.
                     </p>
 
                 </div>
@@ -778,7 +958,7 @@
          LATEST UPDATES
     ========================== -->
 
-    <section class="updates" id="updates">
+    <section class="updates">
 
         <div class="section">
 
@@ -789,8 +969,8 @@
                 </h2>
 
                 <p>
-                    Stay informed about our latest activities and
-                    announcements.
+                    Stay informed about our latest activities
+                    and announcements.
                 </p>
 
             </div>
@@ -804,8 +984,9 @@
                     </h3>
 
                     <p>
-                        We are working to develop educational opportunities
-                        and useful resources for the community.
+                        We are working to develop educational
+                        opportunities and useful resources for
+                        the community.
                     </p>
 
                 </div>
@@ -818,8 +999,8 @@
                     </h3>
 
                     <p>
-                        New educational and community activities will be
-                        announced here.
+                        New educational and community activities
+                        will be announced here.
                     </p>
 
                 </div>
@@ -832,8 +1013,8 @@
                     </h3>
 
                     <p>
-                        Follow this section for important news and
-                        announcements.
+                        Follow this section for important news
+                        and announcements.
                     </p>
 
                 </div>
@@ -860,11 +1041,12 @@
                 </h2>
 
                 <p>
-                    Support education and community development by
-                    participating in our activities and initiatives.
+                    Support education and community development
+                    by participating in our activities and initiatives.
                 </p>
 
-                <a href="#contact" class="involved-btn">
+                <a href="get-involved.html"
+                   class="involved-btn">
                     Get Involved
                 </a>
 
@@ -879,7 +1061,7 @@
          CONTACT
     ========================== -->
 
-    <section class="contact" id="contact">
+    <section class="contact">
 
         <div class="section">
 
@@ -894,7 +1076,8 @@
                     Rohingya Education School? Get in touch with us.
                 </p>
 
-                <a href="contact.html" class="contact-btn">
+                <a href="contact.html"
+                   class="contact-btn">
                     Contact Us
                 </a>
 
@@ -913,19 +1096,30 @@
 
         <div class="footer-container">
 
+            <!-- ABOUT -->
+
             <div class="footer-column">
 
-                <h3>
-                    Rohingya Education School
-                </h3>
+                <div class="footer-logo">
+
+                    <img src="profile.jpg"
+                         alt="Rohingya Education School Logo">
+
+                    <strong>
+                        Rohingya Education School
+                    </strong>
+
+                </div>
 
                 <p>
-                    Supporting education, language and community
-                    development for a brighter future.
+                    Supporting education, learning, language,
+                    culture and community development.
                 </p>
 
             </div>
 
+
+            <!-- QUICK LINKS -->
 
             <div class="footer-column">
 
@@ -933,25 +1127,56 @@
                     Quick Links
                 </h3>
 
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#activities">Activities</a>
-                <a href="#updates">Updates</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="activities.html">
+                    Activities
+                </a>
+
+                <a href="courses.html">
+                    Courses
+                </a>
+
+                <a href="education.html">
+                    Education
+                </a>
 
             </div>
 
 
+            <!-- IMPORTANT LINKS -->
+
             <div class="footer-column">
 
                 <h3>
-                    Connect With Us
+                    Important
                 </h3>
 
-                <a href="#">Facebook</a>
-                <a href="#">YouTube</a>
-                <a href="#">TikTok</a>
-                <a href="#">Instagram</a>
+                <a href="teachers-students.html">
+                    Teachers & Students
+                </a>
+
+                <a href="get-involved.html">
+                    Get Involved
+                </a>
+
+                <a href="verify.html">
+                    Certificate Verification
+                </a>
+
+                <a href="updates.html">
+                    Latest Updates
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
 
             </div>
 
@@ -960,7 +1185,8 @@
 
         <div class="copyright">
 
-            © 2026 Rohingya Education School. All Rights Reserved.
+            © 2026 Rohingya Education School.
+            All rights reserved.
 
         </div>
 
@@ -975,23 +1201,28 @@
 
         function toggleMenu() {
 
-            const menu = document.getElementById("navMenu");
+            const menu =
+                document.getElementById("navMenu");
 
             menu.classList.toggle("active");
 
         }
 
-        document.querySelectorAll("#navMenu a").forEach(function(link) {
 
-            link.addEventListener("click", function() {
+        /* Close mobile menu after clicking a link */
 
-                document
-                    .getElementById("navMenu")
-                    .classList.remove("active");
+        document.querySelectorAll("#navMenu a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    document
+                        .getElementById("navMenu")
+                        .classList.remove("active");
+
+                });
 
             });
-
-        });
 
     </script>
 
