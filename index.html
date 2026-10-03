@@ -6,7 +6,6 @@
 
 <title>Rohingya Education School</title>
 
-<!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -18,7 +17,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Georgia, "Times New Roman", serif;
     background: #f5f7f6;
     color: #222;
 }
@@ -28,87 +27,162 @@ body {
 header {
     background: #075E54;
     color: white;
-    padding: 18px 20px;
+    padding: 12px 18px;
 }
 
-.header-content {
+.header-top {
     max-width: 1100px;
     margin: auto;
     display: flex;
     align-items: center;
-    gap: 18px;
+    justify-content: space-between;
 }
 
-/* LOGO */
+.school-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
 .logo {
-    width: 78px;
-    height: 78px;
+    width: 82px;
+    height: 82px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid white;
-    flex-shrink: 0;
-}
-
-/* SCHOOL NAME */
-
-.school-name {
-    min-width: 0;
 }
 
 .school-name h1 {
     margin: 0;
     font-size: 27px;
-    line-height: 1.25;
-    white-space: nowrap;
+    line-height: 1.2;
 }
 
 .school-name .rohingya {
-    font-size: 22px;
+    margin-top: 5px;
+    font-size: 21px;
     font-weight: bold;
-    line-height: 1.5;
-    margin-top: 3px;
-    white-space: nowrap;
+    direction: rtl;
 }
 
 .school-name p {
-    margin: 4px 0 0;
+    margin: 5px 0 0;
     font-size: 14px;
 }
 
-/* ================= NAVIGATION ================= */
+/* ================= LANGUAGE ================= */
 
-nav {
-    background: #128C7E;
-    text-align: center;
-    padding: 13px 10px;
+.language-bar {
+    max-width: 1100px;
+    margin: 0 auto 10px;
+    text-align: right;
+    font-family: Arial, sans-serif;
 }
 
-nav a {
+.language-bar button {
+    background: none;
+    border: none;
     color: white;
-    text-decoration: none;
-    margin: 0 11px;
-    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 4px 7px;
 }
 
-nav a:hover {
+.language-bar button:hover {
     text-decoration: underline;
 }
 
-.nav-rohingya {
-    display: block;
-    font-size: 15px;
-    margin-top: 3px;
+.language-bar button.active {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
-/* ================= BILINGUAL ================= */
+/* ================= MENU ================= */
 
-.bilingual {
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #075E54;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.icon-button:hover {
+    background: #e8f5f2;
+}
+
+/* ================= MENU PANEL ================= */
+
+.menu-panel {
+    display: none;
+    background: #128C7E;
+    padding: 15px 20px;
+}
+
+.menu-panel.show {
     display: block;
-    margin-top: 5px;
-    font-size: 20px;
+}
+
+.menu-panel a {
+    display: block;
+    max-width: 1100px;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    padding: 12px 5px;
+    font-size: 17px;
     font-weight: bold;
-    line-height: 1.4;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.menu-panel a:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* ================= SEARCH ================= */
+
+.search-panel {
+    display: none;
+    background: white;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-panel.show {
+    display: block;
+}
+
+.search-box {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    gap: 8px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 0 18px;
+    border: none;
+    border-radius: 8px;
+    background: #075E54;
+    color: white;
+    font-size: 18px;
 }
 
 /* ================= HERO ================= */
@@ -116,18 +190,20 @@ nav a:hover {
 .hero {
     background: white;
     text-align: center;
-    padding: 65px 20px;
+    padding: 70px 20px;
 }
 
 .hero h1 {
     font-size: 42px;
     color: #075E54;
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .hero .rohingya {
     font-size: 28px;
     font-weight: bold;
+    direction: rtl;
+    margin: 15px 0 25px;
 }
 
 .hero p {
@@ -135,27 +211,6 @@ nav a:hover {
     margin: 20px auto;
     font-size: 18px;
     line-height: 1.7;
-}
-
-/* BUTTON */
-
-.button {
-    display: inline-block;
-    background: #25D366;
-    color: white;
-    padding: 13px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    margin: 8px;
-    font-weight: bold;
-}
-
-.button.dark {
-    background: #075E54;
-}
-
-.button:hover {
-    opacity: 0.9;
 }
 
 /* ================= SECTION ================= */
@@ -173,7 +228,13 @@ nav a:hover {
     margin-bottom: 35px;
 }
 
-/* ================= ABOUT ================= */
+.bilingual {
+    display: block;
+    margin-top: 7px;
+    font-size: 20px;
+    direction: rtl;
+    font-weight: bold;
+}
 
 .about-text {
     background: white;
@@ -186,7 +247,8 @@ nav a:hover {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -206,7 +268,7 @@ nav a:hover {
     font-size: 38px;
 }
 
-/* ================= STATISTICS ================= */
+/* ================= STATS ================= */
 
 .stats {
     background: #075E54;
@@ -243,6 +305,17 @@ nav a:hover {
     border-radius: 8px;
     margin: 10px;
     font-size: 16px;
+}
+
+.verify-button {
+    display: inline-block;
+    background: #075E54;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 8px;
+    font-weight: bold;
 }
 
 /* ================= SOCIAL ================= */
@@ -291,57 +364,52 @@ footer a {
     margin: 0 8px;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
-
 /* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
 
     header {
-        padding: 15px 12px;
+        padding: 10px 12px;
     }
 
-    .header-content {
-        flex-direction: row;
-        text-align: left;
-        gap: 12px;
+    .language-bar {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .school-left {
+        gap: 10px;
     }
 
     .logo {
-        width: 68px;
-        height: 68px;
+        width: 72px;
+        height: 72px;
     }
 
     .school-name h1 {
         font-size: 20px;
-        white-space: normal;
     }
 
     .school-name .rohingya {
-        font-size: 16px;
-        white-space: normal;
-        line-height: 1.4;
+        font-size: 17px;
     }
 
     .school-name p {
         font-size: 11px;
-        line-height: 1.4;
     }
 
-    nav {
-        padding: 10px 5px;
+    .header-actions {
+        gap: 5px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 5px 6px;
-        font-size: 14px;
+    .icon-button {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
     }
 
     .hero {
-        padding: 45px 15px;
+        padding: 55px 18px;
     }
 
     .hero h1 {
@@ -349,25 +417,16 @@ footer a:hover {
     }
 
     .hero .rohingya {
-        font-size: 21px;
+        font-size: 22px;
     }
 
     .hero p {
-        font-size: 16px;
-    }
-
-    .section {
-        padding: 40px 15px;
+        font-size: 17px;
     }
 
     .section-title {
-        font-size: 25px;
+        font-size: 27px;
     }
-
-    .bilingual {
-        font-size: 18px;
-    }
-
 }
 
 </style>
@@ -375,36 +434,75 @@ footer a:hover {
 
 <body>
 
-
 <!-- ================= HEADER ================= -->
 
 <header>
 
-    <div class="header-content">
+    <!-- LANGUAGE SWITCHER -->
+    <div class="language-bar">
 
-        <img
-            src="profile.jpg"
-            class="logo"
-            alt="Rohingya Education School Logo"
-        >
+        <button
+            id="englishBtn"
+            class="active"
+            onclick="changeLanguage('en')">
+            English
+        </button>
 
-        <div class="school-name">
+        |
 
-            <!-- ENGLISH NAME -->
-            <h1>
-                Rohingya Education School
-            </h1>
+        <button
+            id="rohingyaBtn"
+            onclick="changeLanguage('rh')">
+            Rohingya
+        </button>
 
-            <!-- ROHINGYA SCRIPT — SECOND LINE -->
-            <div class="rohingya">
-                𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
-                𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
-                𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+    </div>
+
+    <div class="header-top">
+
+        <div class="school-left">
+
+            <img src="profile.jpg"
+                 class="logo"
+                 alt="School Logo">
+
+            <div class="school-name">
+
+                <h1>
+                    Rohingya Education School
+                </h1>
+
+                <div class="rohingya">
+                    𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
+                    𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
+                    𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+                </div>
+
+                <p>
+                    Education • Language • Knowledge • Community
+                </p>
+
             </div>
 
-            <p>
-                Education • Language • Knowledge • Community
-            </p>
+        </div>
+
+        <!-- SEARCH + MENU -->
+
+        <div class="header-actions">
+
+            <button
+                class="icon-button"
+                onclick="toggleSearch()"
+                aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <button
+                class="icon-button"
+                onclick="toggleMenu()"
+                aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
         </div>
 
@@ -412,10 +510,9 @@ footer a:hover {
 
 </header>
 
+<!-- ================= MENU ================= -->
 
-<!-- ================= NAVIGATION ================= -->
-
-<nav>
+<div id="menuPanel" class="menu-panel">
 
     <a href="index.html">
         Home
@@ -425,11 +522,11 @@ footer a:hover {
         About
     </a>
 
-    <a href="#">
+    <a href="education.html">
         Education
     </a>
 
-    <a href="#">
+    <a href="courses.html">
         Courses
     </a>
 
@@ -441,8 +538,26 @@ footer a:hover {
         Contact
     </a>
 
-</nav>
+</div>
 
+<!-- ================= SEARCH ================= -->
+
+<div id="searchPanel" class="search-panel">
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search">
+
+        <button onclick="performSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+    </div>
+
+</div>
 
 <!-- ================= HERO ================= -->
 
@@ -453,27 +568,17 @@ footer a:hover {
     </h1>
 
     <div class="rohingya">
-
         𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
         𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
         𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-
     </div>
 
-    <p>
+    <p id="heroText">
         Empowering students through quality education,
         Rohingya language learning and knowledge.
     </p>
 
-    <a
-        class="button"
-        href="contact.html"
-    >
-        Contact Us
-    </a>
-
 </section>
-
 
 <!-- ================= ABOUT ================= -->
 
@@ -511,8 +616,7 @@ footer a:hover {
 
 </section>
 
-
-<!-- ================= EDUCATION PROGRAMS ================= -->
+<!-- ================= EDUCATION ================= -->
 
 <section class="section">
 
@@ -530,22 +634,17 @@ footer a:hover {
 
     <div class="cards">
 
-
         <div class="card">
 
-            <div class="icon">
-                📚
-            </div>
+            <div class="icon">📚</div>
 
             <h3>
-
                 Rohingya Language
 
                 <span class="bilingual">
                     𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
                     𐴎𐴟𐴁𐴝𐴕
                 </span>
-
             </h3>
 
             <p>
@@ -555,22 +654,17 @@ footer a:hover {
 
         </div>
 
-
         <div class="card">
 
-            <div class="icon">
-                ✏️
-            </div>
+            <div class="icon">✏️</div>
 
             <h3>
-
                 Basic Education
 
                 <span class="bilingual">
                     𐴐𐴟𐴤𐴌𐴟𐴌
                     𐴉𐴡𐴕𐴧𐴝𐴤
                 </span>
-
             </h3>
 
             <p>
@@ -580,22 +674,17 @@ footer a:hover {
 
         </div>
 
-
         <div class="card">
 
-            <div class="icon">
-                🎓
-            </div>
+            <div class="icon">🎓</div>
 
             <h3>
-
                 Courses
 
                 <span class="bilingual">
                     𐴑𐴟𐴌𐴏𐴢
                     𐴀𐴡𐴑𐴧𐴡𐴓𐴢
                 </span>
-
             </h3>
 
             <p>
@@ -605,12 +694,9 @@ footer a:hover {
 
         </div>
 
-
         <div class="card">
 
-            <div class="icon">
-                💻
-            </div>
+            <div class="icon">💻</div>
 
             <h3>
                 Digital Learning
@@ -627,112 +713,68 @@ footer a:hover {
 
 </section>
 
-
 <!-- ================= STATISTICS ================= -->
 
 <section class="stats">
 
     <div class="section">
 
-        <h2
-            class="section-title"
-            style="color:white;"
-        >
+        <h2 class="section-title">
 
             Our School at a Glance
 
             <span class="bilingual">
-
                 𐴀𐴠𐴑
                 𐴕𐴡𐴎𐴡𐴌𐴠
                 𐴀𐴝𐴣𐴀𐴌𐴝𐴌
                 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-
             </span>
 
         </h2>
 
-
         <div class="cards">
 
-
             <div class="stat-box">
-
-                <h2>
-                    0
-                </h2>
-
+                <h2>0</h2>
                 <p>
-
                     Students
-
                     <span class="bilingual">
                         𐴉𐴡𐴌𐴡𐴙𐴕𐴧𐴝𐴤
                         𐴉𐴟𐴖𐴝𐴙𐴕
                     </span>
-
                 </p>
-
             </div>
 
-
             <div class="stat-box">
-
-                <h2>
-                    0
-                </h2>
-
+                <h2>0</h2>
                 <p>
-
                     Teachers
-
                     <span class="bilingual">
                         𐴔𐴝𐴐𐴄𐴡𐴌
                     </span>
-
                 </p>
-
             </div>
 
-
             <div class="stat-box">
-
-                <h2>
-                    0
-                </h2>
-
+                <h2>0</h2>
                 <p>
-
                     Courses
-
                     <span class="bilingual">
                         𐴑𐴟𐴌𐴏𐴢
                         𐴀𐴡𐴑𐴧𐴡𐴓𐴢
                     </span>
-
                 </p>
-
             </div>
 
-
             <div class="stat-box">
-
-                <h2>
-                    0
-                </h2>
-
+                <h2>0</h2>
                 <p>
-
                     Certificates
-
                     <span class="bilingual">
                         𐴐𐴡𐴕𐴡𐴊𐴢
                     </span>
-
                 </p>
-
             </div>
-
 
         </div>
 
@@ -740,8 +782,7 @@ footer a:hover {
 
 </section>
 
-
-<!-- ================= CERTIFICATE VERIFICATION ================= -->
+<!-- ================= VERIFICATION ================= -->
 
 <section class="section">
 
@@ -750,15 +791,12 @@ footer a:hover {
         Certificate Verification
 
         <span class="bilingual">
-
             𐴐𐴡𐴕𐴡𐴊𐴢
             𐴏𐴡𐴀𐴠𐴕𐴠
             𐴏𐴠𐴑𐴒𐴡𐴌𐴡𐴕
-
         </span>
 
     </h2>
-
 
     <div class="verification">
 
@@ -769,23 +807,19 @@ footer a:hover {
 
         <input
             type="text"
-            id="certificateID"
-            placeholder="Enter Certificate ID"
-        >
+            placeholder="Enter Certificate ID">
 
         <br>
 
         <a
-            class="button dark"
-            href="verify.html"
-        >
+            class="verify-button"
+            href="verify.html">
             Verify Certificate
         </a>
 
     </div>
 
 </section>
-
 
 <!-- ================= CONTACT ================= -->
 
@@ -796,34 +830,26 @@ footer a:hover {
         Connect With Us
 
         <span class="bilingual">
-
             𐴀𐴝𐴣𐴀𐴌𐴝𐴌
             𐴉𐴟𐴣𐴖𐴝𐴃𐴞
             𐴃𐴝𐴦𐴓𐴧𐴟𐴑
             𐴒𐴡𐴌𐴡𐴤
-
         </span>
 
     </h2>
 
-
     <div class="cards">
-
 
         <div class="card">
 
-            <div class="icon">
-                📍
-            </div>
+            <div class="icon">📍</div>
 
             <h3>
-
                 Address
 
                 <span class="bilingual">
                     𐴄𐴞𐴑𐴝𐴕𐴝
                 </span>
-
             </h3>
 
             <p>
@@ -833,21 +859,16 @@ footer a:hover {
 
         </div>
 
-
         <div class="card">
 
-            <div class="icon">
-                📧
-            </div>
+            <div class="icon">📧</div>
 
             <h3>
-
                 Email
 
                 <span class="bilingual">
                     𐴀𐴞𐴔𐴠𐴙𐴓𐴢
                 </span>
-
             </h3>
 
             <p>
@@ -856,21 +877,16 @@ footer a:hover {
 
         </div>
 
-
         <div class="card">
 
-            <div class="icon">
-                📱
-            </div>
+            <div class="icon">📱</div>
 
             <h3>
-
                 WhatsApp
 
                 <span class="bilingual">
                     𐴖𐴝𐴄𐴏𐴧𐴝𐴉𐴢
                 </span>
-
             </h3>
 
             <p>
@@ -879,96 +895,52 @@ footer a:hover {
 
         </div>
 
-
     </div>
 
 </section>
-
 
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
     <h3>
-
         Rohingya Education School
 
         <span class="bilingual">
-
             𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
             𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
             𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-
         </span>
-
     </h3>
-
 
     <p>
         Education • Language • Knowledge • Community
     </p>
-
-
-    <p>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        |
-
-        <a href="about.html">
-            About
-        </a>
-
-        |
-
-        <a href="verify.html">
-            Certificate Verification
-        </a>
-
-        |
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-    </p>
-
 
     <div class="social-icons">
 
         <a
             href="https://www.facebook.com/share/19etkWCm1z/"
             target="_blank"
-            aria-label="Facebook"
-            class="facebook"
-        >
+            class="facebook">
             <i class="fa-brands fa-facebook-f"></i>
         </a>
-
 
         <a
             href="https://youtube.com/@rohingyaeducationschool941?si=95gzgbQmte1wCif4"
             target="_blank"
-            aria-label="YouTube"
-            class="youtube"
-        >
+            class="youtube">
             <i class="fa-brands fa-youtube"></i>
         </a>
-
 
         <a
             href="https://www.tiktok.com/@rohingyaeducationschool"
             target="_blank"
-            aria-label="TikTok"
-            class="tiktok"
-        >
+            class="tiktok">
             <i class="fa-brands fa-tiktok"></i>
         </a>
 
     </div>
-
 
     <p>
         © 2026 Rohingya Education School.
@@ -976,6 +948,110 @@ footer a:hover {
     </p>
 
 </footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* MENU */
+
+function toggleMenu() {
+
+    const menu =
+        document.getElementById("menuPanel");
+
+    menu.classList.toggle("show");
+
+}
+
+
+/* SEARCH */
+
+function toggleSearch() {
+
+    const search =
+        document.getElementById("searchPanel");
+
+    search.classList.toggle("show");
+
+}
+
+
+/* SEARCH */
+
+function performSearch() {
+
+    const text =
+        document.getElementById("searchInput")
+        .value
+        .trim()
+        .toLowerCase();
+
+    if (!text) {
+        return;
+    }
+
+    const pages = {
+
+        "home": "index.html",
+        "about": "about.html",
+        "education": "education.html",
+        "courses": "courses.html",
+        "certificate": "verify.html",
+        "verification": "verify.html",
+        "contact": "contact.html"
+
+    };
+
+    for (const key in pages) {
+
+        if (text.includes(key)) {
+
+            window.location.href =
+                pages[key];
+
+            return;
+
+        }
+
+    }
+
+    alert("No matching page found.");
+
+}
+
+
+/* LANGUAGE SWITCHER */
+
+function changeLanguage(language) {
+
+    const english =
+        document.getElementById("englishBtn");
+
+    const rohingya =
+        document.getElementById("rohingyaBtn");
+
+    if (language === "en") {
+
+        english.classList.add("active");
+        rohingya.classList.remove("active");
+
+        document.documentElement.lang = "en";
+
+    }
+
+    if (language === "rh") {
+
+        rohingya.classList.add("active");
+        english.classList.remove("active");
+
+        document.documentElement.lang = "rh";
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
