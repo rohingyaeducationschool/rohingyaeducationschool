@@ -1,6 +1,18 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Rohingya Education School</title><link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rohingya Education School</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
 
 /* =========================
    GLOBAL
@@ -66,12 +78,12 @@ button{
 header{
     background:#075E54;
     color:white;
-    min-height:96px;
+    min-height:102px;
     position:relative;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:10px 75px 10px 125px;
+    padding:10px 75px 10px 135px;
     box-shadow:0 2px 10px rgba(0,0,0,.15);
     z-index:50;
 }
@@ -81,7 +93,7 @@ header{
 
 .logo{
     position:absolute;
-    left:68px;
+    left:74px;
     top:50%;
     transform:translateY(-50%);
     width:62px;
@@ -114,7 +126,7 @@ header{
 }
 
 .menu-button{
-    left:10px;
+    left:8px;
 }
 
 .search-button{
@@ -132,7 +144,7 @@ header{
 
 .school-title{
     text-align:center;
-    max-width:calc(100% - 165px);
+    max-width:calc(100% - 175px);
     overflow:hidden;
 }
 
@@ -690,18 +702,18 @@ footer{
 @media(max-width:700px){
 
     header{
-        min-height:88px;
-        padding:8px 52px 8px 112px;
+        min-height:94px;
+        padding:8px 52px 8px 120px;
     }
 
     .logo{
         width:52px;
         height:52px;
-        left:58px;
+        left:64px;
     }
 
     .school-title{
-        max-width:calc(100% - 55px);
+        max-width:calc(100% - 60px);
     }
 
     .school-title h1{
@@ -750,6 +762,11 @@ footer{
     }
 
 }
+
+
+/* =========================
+   SMALL SCREEN
+========================= */
 
 @media(max-width:420px){
 
@@ -814,39 +831,82 @@ footer{
 
 }
 
-</style></head><body><!-- =========================
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
      TOP LANGUAGE BAR
-========================= --><div class="top-bar"><select class="language-select"
+========================= -->
+
+<div class="top-bar">
+
+<select class="language-select"
 id="languageSelect"
 onchange="changeLanguage()">
 
 <option value="en">🌐 English</option>
-<option value="rh">🌐 Rohingya</option></select></div><!-- =========================
+<option value="rh">🌐 Rohingya</option>
+
+</select>
+
+</div>
+
+
+<!-- =========================
      HEADER
-========================= --><header><button class="menu-button"
+========================= -->
+
+<header>
+
+<button class="menu-button"
 onclick="openMenu()"
 aria-label="Open Menu">
 
 <i class="fa-solid fa-bars"></i>
 
-</button><img src="profile.jpg"
+</button>
+
+<img src="profile.jpg"
 class="logo"
 alt="Rohingya Education School">
 
-<div class="school-title"><h1>
-Rohingya Education School
-</h1><span class="rohingya-title">𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+<div class="school-title">
 
-</span></div><button class="search-button"
+<h1>
+Rohingya Education School
+</h1>
+
+<span class="rohingya-title">
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+</span>
+
+</div>
+
+<button class="search-button"
 onclick="toggleSearch()"
 aria-label="Search">
 
 <i class="fa-solid fa-magnifying-glass"></i>
 
-</button></header><!-- =========================
+</button>
+
+</header>
+
+
+<!-- =========================
      SEARCH
-========================= --><div class="search-area"
-     id="searchArea"><div class="search-input-wrap"><input type="text"
+========================= -->
+
+<div class="search-area"
+id="searchArea">
+
+<div class="search-input-wrap">
+
+<input type="text"
 class="search-input"
 id="searchInput"
 placeholder="Search..."
@@ -854,239 +914,634 @@ onkeyup="searchPage()">
 
 <i class="fa-solid fa-magnifying-glass"></i>
 
-</div></div><!-- =========================
+</div>
+
+</div>
+
+
+<!-- =========================
      OVERLAY
-========================= --><div class="overlay"
-     id="overlay"
-     onclick="closeMenu()">
-</div><!-- =========================
+========================= -->
+
+<div class="overlay"
+id="overlay"
+onclick="closeMenu()">
+</div>
+
+
+<!-- =========================
      SIDE MENU
-========================= --><div class="side-menu"
-     id="sideMenu"><div class="menu-top"><div class="menu-brand"><img src="profile.jpg"
+========================= -->
+
+<div class="side-menu"
+id="sideMenu">
+
+<div class="menu-top">
+
+<div class="menu-brand">
+
+<img src="profile.jpg"
 alt="School Logo">
 
 <strong>
 Rohingya Education School
-</strong></div><button class="close-menu"
+</strong>
+
+</div>
+
+<button class="close-menu"
 onclick="closeMenu()">
 
 <i class="fa-solid fa-xmark"></i>
 
-</button></div><div class="menu-links"><a href="index.html"><i class="fa-solid fa-house"></i>
+</button>
+
+</div>
+
+
+<div class="menu-links">
+
+<a href="index.html">
+
+<i class="fa-solid fa-house"></i>
 
 <span>Home</span>
 
-</a><a href="about.html"><i class="fa-solid fa-circle-info"></i>
+</a>
+
+
+<a href="about.html">
+
+<i class="fa-solid fa-circle-info"></i>
 
 <span>About</span>
 
-</a><a href="education.html"><i class="fa-solid fa-graduation-cap"></i>
+</a>
+
+
+<a href="education.html">
+
+<i class="fa-solid fa-graduation-cap"></i>
 
 <span>Education</span>
 
-</a><a href="courses.html"><i class="fa-solid fa-book-open"></i>
+</a>
+
+
+<a href="courses.html">
+
+<i class="fa-solid fa-book-open"></i>
 
 <span>Courses</span>
 
-</a><a href="verify.html"><i class="fa-solid fa-certificate"></i>
+</a>
+
+
+<a href="verify.html">
+
+<i class="fa-solid fa-certificate"></i>
 
 <span>Certificate Verification</span>
 
-</a><a href="contact.html"><i class="fa-solid fa-envelope"></i>
+</a>
+
+
+<a href="contact.html">
+
+<i class="fa-solid fa-envelope"></i>
 
 <span>Contact</span>
 
-</a></div></div><!-- =========================
+</a>
+
+</div>
+
+</div>
+
+
+<!-- =========================
      HERO
-========================= --><section class="hero"><div class="hero-content"><h1>
+========================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
 Rohingya Education School
-</h1><div class="hero-rohingya">𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
+</h1>
+
+<div class="hero-rohingya">
+
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
 
-</div><p>Empowering students through quality education,
-Rohingya language learning and knowledge.
+</div>
 
-</p><div class="hero-buttons"><a class="button green"
+<p>
+Empowering students through quality education,
+Rohingya language learning and knowledge.
+</p>
+
+<div class="hero-buttons">
+
+<a class="button green"
 href="about.html">
 
 <i class="fa-solid fa-circle-info"></i>
 
 Learn More
 
-</a><a class="button white"
+</a>
+
+
+<a class="button white"
 href="contact.html">
 
 <i class="fa-solid fa-envelope"></i>
 
 Contact Us
 
-</a></div></div></section><!-- =========================
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
      ABOUT
-========================= --><section class="section"><h2 class="section-title">About Our School
+========================= -->
 
-<span class="bilingual">𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴡𐴌 𐴁𐴝𐴁𐴡𐴃𐴠𐴤
+<section class="section">
 
-</span></h2><div class="about-box"><p>Rohingya Education School is committed
+<h2 class="section-title">
+
+About Our School
+
+<span class="bilingual">
+𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴡𐴌 𐴁𐴝𐴁𐴡𐴃𐴠𐴤
+</span>
+
+</h2>
+
+
+<div class="about-box">
+
+<p>
+Rohingya Education School is committed
 to providing quality education and
 creating a supportive learning
 environment for students.
+</p>
 
-</p><p>Our goal is to support learning,
+<p>
+Our goal is to support learning,
 preserve the Rohingya language and
 Script, and help students build
 knowledge and skills for the future.
+</p>
 
-</p></div></section><!-- =========================
+</div>
+
+</section>
+
+
+<!-- =========================
      EDUCATION PROGRAMS
-========================= --><section class="section"><h2 class="section-title">Our Education Programs
+========================= -->
 
-<span class="bilingual">𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴡𐴕𐴧𐴝𐴤𐴌 𐴉𐴟𐴌𐴒𐴌𐴝𐴔
+<section class="section">
 
-</span></h2><div class="cards"><div class="card"><div class="card-icon">
+<h2 class="section-title">
+
+Our Education Programs
+
+<span class="bilingual">
+𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴡𐴕𐴧𐴝𐴤𐴌 𐴉𐴟𐴌𐴒𐴌𐴝𐴔
+</span>
+
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="card-icon">
 <i class="fa-solid fa-language"></i>
-</div><h3>Rohingya Language
+</div>
 
-<span class="bilingual">𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴎𐴟𐴁𐴝𐴕
+<h3>
 
-</span></h3><p>Learning the Rohingya language
+Rohingya Language
+
+<span class="bilingual">
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴎𐴟𐴁𐴝𐴕
+</span>
+
+</h3>
+
+<p>
+Learning the Rohingya language
 and Script.
+</p>
 
-</p></div><div class="card"><div class="card-icon">
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
 <i class="fa-solid fa-pen"></i>
-</div><h3>Basic Education
+</div>
 
-<span class="bilingual">𐴐𐴟𐴤𐴌𐴟𐴌 𐴉𐴡𐴕𐴧𐴝𐴤
+<h3>
 
-</span></h3><p>Building essential reading
+Basic Education
+
+<span class="bilingual">
+𐴐𐴟𐴤𐴌𐴟𐴌 𐴉𐴡𐴕𐴧𐴝𐴤
+</span>
+
+</h3>
+
+<p>
+Building essential reading
 and writing skills.
+</p>
 
-</p></div><div class="card"><div class="card-icon">
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
 <i class="fa-solid fa-graduation-cap"></i>
-</div><h3>Courses
+</div>
 
-<span class="bilingual">𐴑𐴟𐴌𐴏𐴢 𐴀𐴡𐴑𐴧𐴡𐴓𐴢
+<h3>
 
-</span></h3><p>Educational courses and
+Courses
+
+<span class="bilingual">
+𐴑𐴟𐴌𐴏𐴢 𐴀𐴡𐴑𐴧𐴡𐴓𐴢
+</span>
+
+</h3>
+
+<p>
+Educational courses and
 learning programs.
+</p>
 
-</p></div><div class="card"><div class="card-icon">
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
 <i class="fa-solid fa-laptop"></i>
-</div><h3>Digital Learning
+</div>
 
-</h3><p>Supporting modern and
+<h3>
+Digital Learning
+</h3>
+
+<p>
+Supporting modern and
 digital education.
+</p>
 
-</p></div></div></section><!-- =========================
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
      STATISTICS
-========================= --><section class="stats-section"><div class="section"><h2 class="section-title">Our School at a Glance
+========================= -->
 
-<span class="bilingual">𐴀𐴠𐴑 𐴕𐴡𐴎𐴡𐴌𐴠 𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+<section class="stats-section">
 
-</span></h2><div class="stats-grid"><div class="stat-box"><i class="fa-solid fa-user-graduate"></i>
+<div class="section">
 
-<h2>0</h2><p>Students</p></div><div class="stat-box"><i class="fa-solid fa-chalkboard-user"></i>
+<h2 class="section-title">
 
-<h2>0</h2><p>Teachers</p></div><div class="stat-box"><i class="fa-solid fa-book"></i>
+Our School at a Glance
 
-<h2>0</h2><p>Courses</p></div><div class="stat-box"><i class="fa-solid fa-certificate"></i>
+<span class="bilingual">
+𐴀𐴠𐴑 𐴕𐴡𐴎𐴡𐴌𐴠 𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+</span>
 
-<h2>0</h2><p>Certificates</p></div></div></div></section><!-- =========================
+</h2>
+
+
+<div class="stats-grid">
+
+
+<div class="stat-box">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<h2>0</h2>
+
+<p>Students</p>
+
+</div>
+
+
+<div class="stat-box">
+
+<i class="fa-solid fa-chalkboard-user"></i>
+
+<h2>0</h2>
+
+<p>Teachers</p>
+
+</div>
+
+
+<div class="stat-box">
+
+<i class="fa-solid fa-book"></i>
+
+<h2>0</h2>
+
+<p>Courses</p>
+
+</div>
+
+
+<div class="stat-box">
+
+<i class="fa-solid fa-certificate"></i>
+
+<h2>0</h2>
+
+<p>Certificates</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
      CERTIFICATE VERIFICATION
-========================= --><section class="section"><h2 class="section-title">Certificate Verification
+========================= -->
 
-<span class="bilingual">𐴐𐴡𐴕𐴡𐴊𐴢 𐴏𐴡𐴀𐴠𐴕𐴠 𐴏𐴠𐴑𐴒𐴡𐴌𐴡𐴕
+<section class="section">
 
-</span></h2><div class="verification"><div class="verification-icon"><i class="fa-solid fa-certificate"></i>
+<h2 class="section-title">
 
-</div><p>Verify a certificate using
+Certificate Verification
+
+<span class="bilingual">
+𐴐𐴡𐴕𐴡𐴊𐴢 𐴏𐴡𐴀𐴠𐴕𐴠 𐴏𐴠𐴑𐴒𐴡𐴌𐴡𐴕
+</span>
+
+</h2>
+
+
+<div class="verification">
+
+<div class="verification-icon">
+
+<i class="fa-solid fa-certificate"></i>
+
+</div>
+
+<p>
+Verify a certificate using
 its Certificate ID.
+</p>
 
-</p><a class="button verify-button"
+<a class="button verify-button"
 href="verify.html">
 
 <i class="fa-solid fa-magnifying-glass"></i>
 
 Verify Certificate
 
-</a></div></section><!-- =========================
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
      CONTACT
-========================= --><section class="section"id=contact"><h2 class="section-title">Connect With Us
+========================= -->
 
-<span class="bilingual">𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴟𐴣𐴖𐴝𐴃𐴞 𐴃𐴝𐴦𐴓𐴧𐴟𐴑 𐴒𐴡𐴌𐴡𐴤
+<section class="section" id="contact">
 
-</span></h2><div class="cards"><div class="card contact-card"><div class="card-icon"><i class="fa-solid fa-location-dot"></i>
+<h2 class="section-title">
 
-</div><h3>Address</h3><div class="contact-line"><i class="fa-solid fa-location-dot"></i>
+Connect With Us
+
+<span class="bilingual">
+𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴟𐴣𐴖𐴝𐴃𐴞 𐴃𐴝𐴦𐴓𐴧𐴟𐴑 𐴒𐴡𐴌𐴡𐴤
+</span>
+
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card contact-card">
+
+<div class="card-icon">
+
+<i class="fa-solid fa-location-dot"></i>
+
+</div>
+
+<h3>
+Address
+</h3>
+
+<div class="contact-line">
+
+<i class="fa-solid fa-location-dot"></i>
 
 <span>
 Boroitoli, Camp 4,
 Kutupalong, Ukhia
-</span></div></div><div class="card contact-card"><div class="card-icon"><i class="fa-solid fa-envelope"></i>
+</span>
 
-</div><h3>Email</h3><div class="contact-line"><i class="fa-solid fa-envelope"></i>
+</div>
+
+</div>
+
+
+<div class="card contact-card">
+
+<div class="card-icon">
+
+<i class="fa-solid fa-envelope"></i>
+
+</div>
+
+<h3>
+Email
+</h3>
+
+<div class="contact-line">
+
+<i class="fa-solid fa-envelope"></i>
 
 <span>
 rohingyaeducations@gmail.com
-</span></div></div><div class="card contact-card"><div class="card-icon"><i class="fa-brands fa-whatsapp"></i>
+</span>
 
-</div><h3>WhatsApp</h3><div class="contact-line"><i class="fa-brands fa-whatsapp"></i>
+</div>
+
+</div>
+
+
+<div class="card contact-card">
+
+<div class="card-icon">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</div>
+
+<h3>
+WhatsApp
+</h3>
+
+<div class="contact-line">
+
+<i class="fa-brands fa-whatsapp"></i>
 
 <span>
 Contact us through WhatsApp.
-</span></div></div></div></section><!-- =========================
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
      FOOTER
-========================= --><footer><div class="footer-name">Rohingya Education School
+========================= -->
 
-<span class="footer-rohingya">𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+<footer>
 
-</span></div><p class="footer-description">Education • Language • Knowledge • Community
+<div class="footer-name">
 
-</p><div class="footer-links"><a href="index.html">
+Rohingya Education School
+
+<span class="footer-rohingya">
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+</span>
+
+</div>
+
+
+<p class="footer-description">
+Education • Language • Knowledge • Community
+</p>
+
+
+<div class="footer-links">
+
+<a href="index.html">
 Home
-</a>|
+</a>
+
+|
 
 <a href="about.html">
 About
-</a>|
+</a>
+
+|
 
 <a href="verify.html">
 Certificate Verification
-</a>|
+</a>
+
+|
 
 <a href="contact.html">
 Contact
-</a></div><div class="social-icons"><a href="https://www.facebook.com/share/19etkWCm1z/"
+</a>
+
+</div>
+
+
+<div class="social-icons">
+
+
+<a href="https://www.facebook.com/share/19etkWCm1z/"
 target="_blank"
 class="facebook"
 aria-label="Facebook">
 
 <i class="fa-brands fa-facebook-f"></i>
 
-</a><a href="https://youtube.com/@rohingyaeducationschool941?si=95gzgbQmte1wCif4"
+</a>
+
+
+<a href="https://youtube.com/@rohingyaeducationschool941?si=95gzgbQmte1wCif4"
 target="_blank"
 class="youtube"
 aria-label="YouTube">
 
 <i class="fa-brands fa-youtube"></i>
 
-</a><a href="https://www.tiktok.com/@rohingyaeducationschool?_r=1&_t=ZS-9AC3xcZvBjw"
+</a>
+
+
+<a href="https://www.tiktok.com/@rohingyaeducationschool?_r=1&_t=ZS-9AC3xcZvBjw"
 target="_blank"
 class="tiktok"
 aria-label="TikTok">
 
 <i class="fa-brands fa-tiktok"></i>
 
-</a></div><div class="copyright">© 2026 Rohingya Education School.
-All rights reserved.
+</a>
 
-</div></footer><!-- =========================
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Rohingya Education School. All rights reserved.
+
+</div>
+
+</footer>
+
+
+<!-- =========================
      JAVASCRIPT
-========================= --><script>
+========================= -->
 
-/* =========================
-   MENU
-========================= */
+<script>
 
 function openMenu(){
 
@@ -1110,10 +1565,6 @@ function closeMenu(){
 }
 
 
-/* =========================
-   SEARCH
-========================= */
-
 function toggleSearch(){
 
     const searchArea =
@@ -1123,9 +1574,7 @@ function toggleSearch(){
 
     if(searchArea.classList.contains("active")){
 
-        document
-        .getElementById("searchInput")
-        .focus();
+        document.getElementById("searchInput").focus();
 
     }
 
@@ -1134,28 +1583,35 @@ function toggleSearch(){
 
 function searchPage(){
 
-    const value =
-    document
-    .getElementById("searchInput")
+    const input =
+    document.getElementById("searchInput")
     .value
     .toLowerCase()
     .trim();
 
     const sections =
-    document.querySelectorAll(".section");
+    document.querySelectorAll("section");
 
     sections.forEach(function(section){
+
+        if(input === ""){
+
+            section.style.display = "";
+
+            return;
+
+        }
 
         const text =
         section.innerText.toLowerCase();
 
-        if(value === "" || text.includes(value)){
+        if(text.includes(input)){
 
-            section.style.display="";
+            section.style.display = "";
 
         }else{
 
-            section.style.display="none";
+            section.style.display = "none";
 
         }
 
@@ -1164,25 +1620,24 @@ function searchPage(){
 }
 
 
-/* =========================
-   LANGUAGE
-========================= */
-
 function changeLanguage(){
 
     const language =
-    document
-    .getElementById("languageSelect")
-    .value;
+    document.getElementById("languageSelect").value;
 
     if(language === "rh"){
 
-        alert(
-        "Rohingya language version will be available here."
-        );
+        alert("Rohingya language version is coming soon.");
+
+        document.getElementById("languageSelect").value = "en";
 
     }
 
 }
 
-</script></body></html>
+</script>
+
+
+</body>
+
+</html>
