@@ -63,13 +63,27 @@ body.rtl .search-button{
     left:12px;
 }
 
+/* RTL logo position */
+
 body.rtl .logo{
     left:auto;
     right:74px;
 }
 
+/* Keep header title centered */
+
 body.rtl header{
-    padding:10px 155px 10px 90px;
+    padding:10px 120px;
+}
+
+body.rtl .school-title{
+    text-align:center;
+    margin:0 auto;
+}
+
+body.rtl .school-title h1,
+body.rtl .school-title .rohingya-title{
+    text-align:center;
 }
 
 body.rtl .search-input{
@@ -109,11 +123,12 @@ body.rtl .contact-link{
     font-size:12px;
     outline:none;
     cursor:pointer;
-    max-width:150px;
+    direction:ltr;
 }
 
 .language-select option{
     color:#222;
+    background:white;
 }
 
 
@@ -131,11 +146,10 @@ header{
     justify-content:center;
 
     /*
-      Left side = menu + logo
-      Right side = search
-      Extra space prevents title from touching logo
+      Left/right space is reserved for
+      logo and menu/search buttons.
     */
-    padding:10px 90px 10px 155px;
+    padding:10px 120px;
 
     box-shadow:0 2px 10px rgba(0,0,0,.15);
     z-index:50;
@@ -157,14 +171,15 @@ header{
 
     object-fit:cover;
     border-radius:50%;
+
     border:2px solid rgba(255,255,255,.9);
 
-    z-index:2;
+    z-index:3;
 }
 
 
 /* =========================
-   MENU + SEARCH BUTTONS
+   MENU + SEARCH BUTTON
 ========================= */
 
 .menu-button,
@@ -213,103 +228,51 @@ header{
 ========================= */
 
 .school-title{
-
-    /*
-      Important:
-      The title has its own area between
-      the logo/menu and search button.
-    */
-
     width:100%;
+    max-width:700px;
 
-    max-width:850px;
-
-    min-width:0;
+    margin:0 auto;
 
     text-align:center;
-
-    padding:0 8px;
 
     overflow:visible;
 
     position:relative;
-    z-index:3;
+    z-index:2;
 }
 
-
-/*
-   Main school name
-   ALWAYS one line
-*/
-
 .school-title h1{
-
-    font-size:clamp(13px, 2.5vw, 23px);
-
+    font-size:23px;
     line-height:1.2;
 
     margin:0;
 
     font-weight:700;
 
+    /*
+      Always keep school name in one line.
+    */
     white-space:nowrap;
 
-    overflow:visible;
-
-    text-overflow:clip;
-
+    text-align:center;
 }
 
-
-/*
-   Rohingya Script school name
-*/
-
 .school-title .rohingya-title{
-
     display:block;
 
-    margin-top:5px;
+    margin-top:4px;
 
-    font-size:clamp(12px, 2.2vw, 21px);
-
+    font-size:21px;
     line-height:1.2;
 
     font-weight:700;
 
     direction:rtl;
-
     unicode-bidi:plaintext;
 
     white-space:nowrap;
 
-    overflow:visible;
-}
-
-
-/* =========================
-   RTL HEADER
-========================= */
-
-body.rtl header{
-    padding:10px 155px 10px 90px;
-}
-
-body.rtl .school-title{
-    direction:rtl;
     text-align:center;
-}
-
-body.rtl .school-title h1{
-    direction:rtl;
-    unicode-bidi:plaintext;
-    white-space:nowrap;
-}
-
-body.rtl .school-title .rohingya-title{
-    direction:rtl;
-    unicode-bidi:plaintext;
-    white-space:nowrap;
 }
 
 
@@ -319,10 +282,15 @@ body.rtl .school-title .rohingya-title{
 
 .search-area{
     display:none;
+
     background:white;
+
     padding:12px 18px;
+
     box-shadow:0 3px 12px rgba(0,0,0,.12);
+
     position:relative;
+
     z-index:40;
 }
 
@@ -338,10 +306,14 @@ body.rtl .school-title .rohingya-title{
 
 .search-input{
     width:100%;
+
     padding:12px 45px 12px 16px;
+
     border:1px solid #ddd;
     border-radius:25px;
+
     font-size:15px;
+
     outline:none;
 }
 
@@ -351,9 +323,12 @@ body.rtl .school-title .rohingya-title{
 
 .search-input-wrap i{
     position:absolute;
+
     right:17px;
     top:50%;
+
     transform:translateY(-50%);
+
     color:#075E54;
 }
 
@@ -365,8 +340,11 @@ body.rtl .school-title .rohingya-title{
 .overlay{
     position:fixed;
     inset:0;
+
     background:rgba(0,0,0,.45);
+
     z-index:90;
+
     display:none;
 }
 
@@ -376,14 +354,21 @@ body.rtl .school-title .rohingya-title{
 
 .side-menu{
     position:fixed;
+
     left:-310px;
     top:0;
+
     width:285px;
     height:100vh;
+
     background:white;
+
     z-index:100;
+
     box-shadow:5px 0 25px rgba(0,0,0,.20);
+
     transition:.3s ease;
+
     overflow-y:auto;
 }
 
@@ -394,23 +379,32 @@ body.rtl .school-title .rohingya-title{
 .menu-top{
     background:#075E54;
     color:white;
+
     padding:22px 18px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 }
 
 .menu-brand{
     display:flex;
+
     align-items:center;
+
     gap:10px;
 }
 
 .menu-brand img{
     width:45px;
     height:45px;
+
     border-radius:50%;
+
     border:2px solid white;
+
     object-fit:cover;
 }
 
@@ -420,9 +414,13 @@ body.rtl .school-title .rohingya-title{
 
 .close-menu{
     background:transparent;
+
     border:0;
+
     color:white;
+
     font-size:22px;
+
     cursor:pointer;
 }
 
@@ -432,23 +430,33 @@ body.rtl .school-title .rohingya-title{
 
 .menu-links a{
     display:flex;
+
     align-items:center;
+
     gap:13px;
+
     padding:14px 20px;
+
     color:#333;
+
     font-size:15px;
+
     border-bottom:1px solid #eee;
+
     transition:.2s;
 }
 
 .menu-links a i{
     width:22px;
+
     text-align:center;
+
     color:#075E54;
 }
 
 .menu-links a:hover{
     background:#f0f8f6;
+
     padding-left:25px;
 }
 
@@ -468,6 +476,7 @@ body.rtl .school-title .rohingya-title{
         );
 
     color:white;
+
     text-align:center;
 
     padding:82px 20px 88px;
@@ -477,12 +486,14 @@ body.rtl .school-title .rohingya-title{
 
 .hero::before{
     content:"";
+
     position:absolute;
 
     width:280px;
     height:280px;
 
     border:1px solid rgba(255,255,255,.12);
+
     border-radius:50%;
 
     top:-140px;
@@ -491,12 +502,14 @@ body.rtl .school-title .rohingya-title{
 
 .hero::after{
     content:"";
+
     position:absolute;
 
     width:220px;
     height:220px;
 
     border:1px solid rgba(255,255,255,.10);
+
     border-radius:50%;
 
     bottom:-120px;
@@ -505,23 +518,29 @@ body.rtl .school-title .rohingya-title{
 
 .hero-content{
     position:relative;
+
     z-index:2;
 
     max-width:850px;
+
     margin:auto;
 }
 
 .hero h1{
     font-size:44px;
+
     line-height:1.2;
+
     margin-bottom:14px;
 }
 
 .hero-rohingya{
     font-size:27px;
+
     font-weight:bold;
 
     direction:rtl;
+
     unicode-bidi:plaintext;
 
     margin-bottom:22px;
@@ -529,9 +548,11 @@ body.rtl .school-title .rohingya-title{
 
 .hero p{
     max-width:720px;
+
     margin:0 auto 25px;
 
     font-size:18px;
+
     line-height:1.8;
 
     color:rgba(255,255,255,.94);
@@ -539,14 +560,19 @@ body.rtl .school-title .rohingya-title{
 
 .hero-buttons{
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     gap:10px;
 }
 
 .button{
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
 
     gap:8px;
@@ -572,6 +598,7 @@ body.rtl .school-title .rohingya-title{
 
 .button:hover{
     transform:translateY(-2px);
+
     box-shadow:0 7px 18px rgba(0,0,0,.15);
 }
 
@@ -582,15 +609,19 @@ body.rtl .school-title .rohingya-title{
 
 .section{
     max-width:1120px;
+
     margin:auto;
+
     padding:65px 20px;
 }
 
 .section-title{
     text-align:center;
+
     color:#075E54;
 
     font-size:30px;
+
     line-height:1.3;
 
     margin-bottom:35px;
@@ -602,9 +633,11 @@ body.rtl .school-title .rohingya-title{
     margin-top:7px;
 
     font-size:19px;
+
     font-weight:bold;
 
     direction:rtl;
+
     unicode-bidi:plaintext;
 }
 
@@ -686,7 +719,9 @@ body.rtl .school-title .rohingya-title{
     color:#075E54;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     font-size:27px;
@@ -710,11 +745,12 @@ body.rtl .school-title .rohingya-title{
 
 
 /* =========================
-   CONTACT CARDS
+   CONTACT
 ========================= */
 
 .contact-card{
     text-align:center;
+
     cursor:pointer;
 }
 
@@ -726,6 +762,7 @@ body.rtl .school-title .rohingya-title{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     gap:9px;
@@ -756,6 +793,7 @@ body.rtl .school-title .rohingya-title{
 
 .stats-section{
     background:#075E54;
+
     color:white;
 }
 
@@ -786,16 +824,19 @@ body.rtl .school-title .rohingya-title{
 
 .stat-box i{
     font-size:24px;
+
     margin-bottom:8px;
 }
 
 .stat-box h2{
     font-size:34px;
+
     margin:2px 0;
 }
 
 .stat-box p{
     font-size:14px;
+
     opacity:.9;
 }
 
@@ -829,7 +870,9 @@ body.rtl .school-title .rohingya-title{
     color:#075E54;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     font-size:30px;
@@ -845,6 +888,7 @@ body.rtl .school-title .rohingya-title{
 
 .verify-button{
     background:#075E54;
+
     color:white;
 }
 
@@ -865,6 +909,7 @@ footer{
 
 .footer-name{
     font-size:21px;
+
     font-weight:bold;
 }
 
@@ -876,6 +921,7 @@ footer{
     margin-top:5px;
 
     direction:rtl;
+
     unicode-bidi:plaintext;
 }
 
@@ -920,6 +966,7 @@ footer{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     font-size:20px;
@@ -958,16 +1005,11 @@ footer{
         min-height:94px;
 
         /*
-          Keep enough space for:
-          menu + logo + title + search
+          Space for logo on left
+          and search on right.
         */
-        padding:8px 55px 8px 125px;
+        padding:8px 58px 8px 125px;
     }
-
-    body.rtl header{
-        padding:8px 125px 8px 55px;
-    }
-
 
     .logo{
         width:52px;
@@ -977,47 +1019,26 @@ footer{
     }
 
     body.rtl .logo{
-        left:auto;
         right:64px;
+        left:auto;
     }
 
-
     .school-title{
-
         width:100%;
         max-width:100%;
 
-        padding:0 3px;
-
-        overflow:visible;
+        margin:0 auto;
     }
-
 
     .school-title h1{
-
-        /*
-          Automatically becomes smaller
-          on narrow screens but stays ONE line.
-        */
-        font-size:clamp(11px, 3.5vw, 16px);
-
-        white-space:nowrap;
-
-        overflow:visible;
+        font-size:16px;
     }
-
 
     .school-title .rohingya-title{
-
-        font-size:clamp(10px, 3.2vw, 15px);
+        font-size:15px;
 
         margin-top:3px;
-
-        white-space:nowrap;
-
-        overflow:visible;
     }
-
 
     .hero{
         padding:58px 17px 65px;
@@ -1035,7 +1056,6 @@ footer{
         font-size:15px;
     }
 
-
     .section{
         padding:48px 15px;
     }
@@ -1048,11 +1068,9 @@ footer{
         font-size:17px;
     }
 
-
     .about-box{
         padding:23px;
     }
-
 
     .stats-grid{
         grid-template-columns:repeat(2,1fr);
@@ -1067,49 +1085,37 @@ footer{
 
 @media(max-width:420px){
 
-    header{
-        min-height:90px;
-
-        padding:8px 48px 8px 112px;
-    }
-
-    body.rtl header{
-        padding:8px 112px 8px 48px;
-    }
-
+    /*
+      Keep logo visible but smaller.
+    */
 
     .logo{
         width:46px;
         height:46px;
 
-        left:58px;
+        left:56px;
     }
 
     body.rtl .logo{
+        right:56px;
         left:auto;
-        right:58px;
     }
 
+    header{
+        padding:8px 50px 8px 110px;
+    }
 
     .school-title{
         max-width:100%;
-        padding:0;
     }
-
 
     .school-title h1{
-        font-size:clamp(10px, 3.4vw, 14px);
-
-        white-space:nowrap;
+        font-size:14px;
     }
-
 
     .school-title .rohingya-title{
-        font-size:clamp(9px, 3.1vw, 13px);
-
-        white-space:nowrap;
+        font-size:13px;
     }
-
 
     .menu-button,
     .search-button{
@@ -1126,20 +1132,18 @@ footer{
     }
 
     body.rtl .menu-button{
-        left:auto;
         right:7px;
+        left:auto;
     }
 
     body.rtl .search-button{
-        right:auto;
         left:7px;
+        right:auto;
     }
-
 
     .hero h1{
         font-size:27px;
     }
-
 
     .stats-grid{
         gap:10px;
@@ -1158,59 +1162,28 @@ footer{
 
 @media(max-width:350px){
 
-    /*
-      On extremely small phones,
-      hide the logo so the school name
-      never overlaps anything.
-    */
-
     .logo{
-        display:none;
+        width:42px;
+        height:42px;
+
+        left:48px;
     }
 
+    body.rtl .logo{
+        right:48px;
+        left:auto;
+    }
 
     header{
-        padding:8px 48px;
+        padding:8px 46px 8px 95px;
     }
-
-    body.rtl header{
-        padding:8px 48px;
-    }
-
-
-    .school-title{
-        max-width:100%;
-        padding:0;
-    }
-
 
     .school-title h1{
         font-size:12px;
-        white-space:nowrap;
     }
 
     .school-title .rohingya-title{
         font-size:11px;
-        white-space:nowrap;
-    }
-
-
-    .menu-button{
-        left:7px;
-    }
-
-    .search-button{
-        right:7px;
-    }
-
-    body.rtl .menu-button{
-        left:auto;
-        right:7px;
-    }
-
-    body.rtl .search-button{
-        right:auto;
-        left:7px;
     }
 
 }
@@ -1218,7 +1191,6 @@ footer{
 </style>
 
 </head>
-
 
 <body>
 
@@ -1279,9 +1251,7 @@ Rohingya Education School
 </h1>
 
 <span class="rohingya-title">
-𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
-𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
-𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
 </span>
 
 </div>
@@ -1343,7 +1313,6 @@ onclick="closeMenu()">
 class="side-menu"
 id="sideMenu">
 
-
 <div class="menu-top">
 
 <div class="menu-brand">
@@ -1371,7 +1340,6 @@ onclick="closeMenu()">
 
 
 <div class="menu-links">
-
 
 <a href="index.html">
 
@@ -1440,7 +1408,6 @@ Contact
 
 </a>
 
-
 </div>
 
 </div>
@@ -1453,7 +1420,6 @@ Contact
 <section class="hero">
 
 <div class="hero-content">
-
 
 <h1 data-i18n="schoolName">
 Rohingya Education School
@@ -1470,13 +1436,14 @@ Rohingya Education School
 
 
 <p data-i18n="heroText">
+
 Empowering students through quality education,
 Rohingya language learning and knowledge.
+
 </p>
 
 
 <div class="hero-buttons">
-
 
 <a
 class="button green"
@@ -1503,7 +1470,6 @@ Contact Us
 
 </a>
 
-
 </div>
 
 </div>
@@ -1517,7 +1483,6 @@ Contact Us
 
 <section class="section">
 
-
 <h2 class="section-title">
 
 <span data-i18n="aboutSchool">
@@ -1525,9 +1490,7 @@ About Our School
 </span>
 
 <span class="bilingual">
-𐴀𐴝𐴣𐴀𐴌𐴝𐴌
-𐴀𐴠𐴏𐴑𐴟𐴓𐴡𐴌
-𐴁𐴝𐴁𐴡𐴃𐴠𐴤
+𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴡𐴌 𐴁𐴝𐴁𐴡𐴃𐴠𐴤
 </span>
 
 </h2>
@@ -1536,18 +1499,22 @@ About Our School
 <div class="about-box">
 
 <p data-i18n="aboutText1">
+
 Rohingya Education School is committed
 to providing quality education and
 creating a supportive learning
 environment for students.
+
 </p>
 
 
 <p data-i18n="aboutText2">
+
 Our goal is to support learning,
 preserve the Rohingya language and
 Script, and help students build
 knowledge and skills for the future.
+
 </p>
 
 </div>
@@ -1561,7 +1528,6 @@ knowledge and skills for the future.
 
 <section class="section">
 
-
 <h2 class="section-title">
 
 <span data-i18n="programs">
@@ -1569,9 +1535,7 @@ Our Education Programs
 </span>
 
 <span class="bilingual">
-𐴀𐴝𐴣𐴀𐴌𐴝𐴌
-𐴉𐴡𐴕𐴧𐴝𐴤𐴌
-𐴉𐴟𐴌𐴒𐴌𐴝𐴔
+𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴡𐴕𐴧𐴝𐴤𐴌 𐴉𐴟𐴌𐴒𐴌𐴝𐴔
 </span>
 
 </h2>
@@ -1583,7 +1547,9 @@ Our Education Programs
 <div class="card">
 
 <div class="card-icon">
+
 <i class="fa-solid fa-language"></i>
+
 </div>
 
 
@@ -1594,8 +1560,7 @@ Rohingya Language
 </span>
 
 <span class="bilingual">
-𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
-𐴎𐴟𐴁𐴝𐴕
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴎𐴟𐴁𐴝𐴕
 </span>
 
 </h3>
@@ -1612,7 +1577,9 @@ and Script.
 <div class="card">
 
 <div class="card-icon">
+
 <i class="fa-solid fa-pen"></i>
+
 </div>
 
 
@@ -1623,8 +1590,7 @@ Basic Education
 </span>
 
 <span class="bilingual">
-𐴐𐴟𐴤𐴌𐴟𐴌
-𐴉𐴡𐴕𐴧𐴝𐴤
+𐴐𐴟𐴤𐴌𐴟𐴌 𐴉𐴡𐴕𐴧𐴝𐴤
 </span>
 
 </h3>
@@ -1641,7 +1607,9 @@ and writing skills.
 <div class="card">
 
 <div class="card-icon">
+
 <i class="fa-solid fa-graduation-cap"></i>
+
 </div>
 
 
@@ -1652,8 +1620,7 @@ Courses
 </span>
 
 <span class="bilingual">
-𐴑𐴟𐴌𐴏𐴢
-𐴀𐴡𐴑𐴧𐴡𐴓𐴢
+𐴑𐴟𐴌𐴏𐴢 𐴀𐴡𐴑𐴧𐴡𐴓𐴢
 </span>
 
 </h3>
@@ -1670,7 +1637,9 @@ learning programs.
 <div class="card">
 
 <div class="card-icon">
+
 <i class="fa-solid fa-laptop"></i>
+
 </div>
 
 
@@ -1700,7 +1669,6 @@ digital education.
 
 <div class="section">
 
-
 <h2 class="section-title">
 
 <span data-i18n="glance">
@@ -1708,10 +1676,7 @@ Our School at a Glance
 </span>
 
 <span class="bilingual">
-𐴀𐴠𐴑
-𐴕𐴡𐴎𐴡𐴌𐴠
-𐴀𐴝𐴣𐴀𐴌𐴝𐴌
-𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+𐴀𐴠𐴑 𐴕𐴡𐴎𐴡𐴌𐴠 𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
 </span>
 
 </h2>
@@ -1785,7 +1750,6 @@ Certificates
 
 <section class="section">
 
-
 <h2 class="section-title">
 
 <span data-i18n="verification">
@@ -1793,16 +1757,13 @@ Certificate Verification
 </span>
 
 <span class="bilingual">
-𐴐𐴡𐴕𐴡𐴊𐴢
-𐴏𐴡𐴀𐴠𐴕𐴠
-𐴏𐴠𐴑𐴒𐴡𐴌𐴡𐴕
+𐴐𐴡𐴕𐴡𐴊𐴢 𐴏𐴡𐴀𐴠𐴕𐴠 𐴏𐴠𐴑𐴒𐴡𐴌𐴡𐴕
 </span>
 
 </h2>
 
 
 <div class="verification">
-
 
 <div class="verification-icon">
 
@@ -1812,8 +1773,10 @@ Certificate Verification
 
 
 <p data-i18n="verifyText">
+
 Verify a certificate using
 its Certificate ID.
+
 </p>
 
 
@@ -1829,7 +1792,6 @@ Verify Certificate
 
 </a>
 
-
 </div>
 
 </section>
@@ -1843,7 +1805,6 @@ Verify Certificate
 class="section"
 id="contact">
 
-
 <h2 class="section-title">
 
 <span data-i18n="connect">
@@ -1851,10 +1812,7 @@ Connect With Us
 </span>
 
 <span class="bilingual">
-𐴀𐴝𐴣𐴀𐴌𐴝𐴌
-𐴉𐴟𐴣𐴖𐴝𐴃𐴞
-𐴃𐴝𐴦𐴓𐴧𐴟𐴑
-𐴒𐴡𐴌𐴡𐴤
+𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴟𐴣𐴖𐴝𐴃𐴞 𐴃𐴝𐴦𐴓𐴧𐴟𐴑 𐴒𐴡𐴌𐴡𐴤
 </span>
 
 </h2>
@@ -1867,9 +1825,10 @@ Connect With Us
 
 <div class="card contact-card">
 
-
 <div class="card-icon">
+
 <i class="fa-solid fa-location-dot"></i>
+
 </div>
 
 
@@ -1886,12 +1845,13 @@ target="_blank">
 <i class="fa-solid fa-location-dot"></i>
 
 <span>
+
 Boroitoli, Camp 4,<br>
 Kutupalong, Ukhia
+
 </span>
 
 </a>
-
 
 </div>
 
@@ -1900,9 +1860,10 @@ Kutupalong, Ukhia
 
 <div class="card contact-card">
 
-
 <div class="card-icon">
+
 <i class="fa-solid fa-envelope"></i>
+
 </div>
 
 
@@ -1923,7 +1884,6 @@ rohingyaeducations@gmail.com
 
 </a>
 
-
 </div>
 
 
@@ -1931,9 +1891,10 @@ rohingyaeducations@gmail.com
 
 <div class="card contact-card">
 
-
 <div class="card-icon">
+
 <i class="fa-brands fa-whatsapp"></i>
+
 </div>
 
 
@@ -1955,7 +1916,6 @@ Contact on WhatsApp
 
 </a>
 
-
 </div>
 
 
@@ -1970,7 +1930,6 @@ Contact on WhatsApp
 
 <footer>
 
-
 <div
 class="footer-name"
 data-i18n="schoolName">
@@ -1982,9 +1941,7 @@ Rohingya Education School
 
 <span class="footer-rohingya">
 
-𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
-𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
-𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
 
 </span>
 
@@ -2001,57 +1958,40 @@ Rohingya language learning and knowledge.
 
 <div class="footer-links">
 
-
 <a
 href="index.html"
 data-i18n="home">
-
 Home
-
 </a>
-
 
 <a
 href="about.html"
 data-i18n="about">
-
 About
-
 </a>
-
 
 <a
 href="education.html"
 data-i18n="education">
-
 Education
-
 </a>
-
 
 <a
 href="courses.html"
 data-i18n="courses">
-
 Courses
-
 </a>
-
 
 <a
 href="verify.html"
 data-i18n="verification">
-
 Certificate Verification
-
 </a>
-
 
 </div>
 
 
 <div class="social-icons">
-
 
 <a
 href="#"
@@ -2082,7 +2022,6 @@ aria-label="TikTok">
 
 </a>
 
-
 </div>
 
 
@@ -2091,7 +2030,6 @@ aria-label="TikTok">
 © 2026 Rohingya Education School. All rights reserved.
 
 </div>
-
 
 </footer>
 
@@ -2103,11 +2041,6 @@ aria-label="TikTok">
 ========================= */
 
 const translations = {
-
-
-/* =========================
-   ENGLISH
-========================= */
 
 en: {
 
@@ -2181,10 +2114,6 @@ search:"Search..."
 },
 
 
-/* =========================
-   BANGLA
-========================= */
-
 bn: {
 
 schoolName:"রোহিঙ্গা এডুকেশন স্কুল",
@@ -2257,10 +2186,6 @@ search:"অনুসন্ধান করুন..."
 },
 
 
-/* =========================
-   ARABIC
-========================= */
-
 ar: {
 
 schoolName:"مدرسة تعليم الروهينغا",
@@ -2332,10 +2257,6 @@ search:"بحث..."
 
 },
 
-
-/* =========================
-   MYANMAR / BURMESE
-========================= */
 
 my: {
 
@@ -2410,7 +2331,7 @@ search:"ရှာဖွေရန်..."
 
 
 /* =========================
-   ROHINGYA SCRIPT
+   ROHINGYA
 ========================= */
 
 rh: {
@@ -2418,23 +2339,18 @@ rh: {
 schoolName:
 "𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢",
 
-home:
-"𐴀𐴠𐴏𐴟",
+home:"𐴀𐴠𐴏𐴟",
 
-about:
-"𐴀𐴝𐴣𐴀𐴌𐴝𐴌",
+about:"𐴀𐴝𐴣𐴀𐴌𐴝𐴌",
 
-education:
-"𐴉𐴡𐴕𐴧𐴝𐴤",
+education:"𐴉𐴡𐴕𐴧𐴝𐴤",
 
-courses:
-"𐴑𐴟𐴌𐴏𐴢",
+courses:"𐴑𐴟𐴌𐴏𐴢",
 
 verification:
 "𐴐𐴡𐴕𐴡𐴊𐴢 𐴏𐴡𐴀𐴠𐴕𐴠",
 
-contact:
-"𐴃𐴝𐴦𐴓𐴧𐴟𐴑",
+contact:"𐴃𐴝𐴦𐴓𐴧𐴟𐴑",
 
 learnMore:
 "𐴃𐴝𐴌𐴡𐴤 𐴏𐴠𐴕",
@@ -2481,14 +2397,11 @@ coursesText:
 glance:
 "𐴀𐴠𐴑 𐴕𐴡𐴎𐴡𐴌𐴠 𐴀𐴝𐴣𐴀𐴌𐴝𐴌",
 
-students:
-"𐴑𐴧𐴝𐴓𐴧𐴡𐴕",
+students:"𐴑𐴧𐴝𐴓𐴧𐴡𐴕",
 
-teachers:
-"𐴏𐴟𐴌𐴟𐴌",
+teachers:"𐴏𐴟𐴌𐴟𐴌",
 
-certificates:
-"𐴐𐴡𐴕𐴡𐴊𐴢",
+certificates:"𐴐𐴡𐴕𐴡𐴊𐴢",
 
 verifyText:
 "𐴐𐴡𐴕𐴡𐴊𐴢 𐴃𐴠𐴌𐴌 𐴌𐴟𐴒𐴧𐴠𐴕 𐴏𐴡𐴀𐴠𐴕𐴠 𐴒𐴡𐴌𐴡𐴤.",
@@ -2499,14 +2412,11 @@ verifyCertificate:
 connect:
 "𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴟𐴣𐴖𐴝𐴃𐴞 𐴃𐴝𐴦𐴓𐴧𐴟𐴑 𐴒𐴡𐴌𐴡𐴤",
 
-address:
-"𐴀𐴃𐴌𐴡𐴤",
+address:"𐴀𐴃𐴌𐴡𐴤",
 
-gmail:
-"Gmail",
+gmail:"Gmail",
 
-whatsapp:
-"WhatsApp",
+whatsapp:"WhatsApp",
 
 contactWhatsApp:
 "𐴅𐴧𐴡𐴓𐴧𐴢𐴕𐴠 𐴃𐴝𐴦𐴓𐴧𐴟𐴑 𐴒𐴡𐴌𐴡𐴤",
@@ -2514,8 +2424,7 @@ contactWhatsApp:
 footerDescription:
 "𐴀𐴡𐴕𐴧𐴡𐴓𐴢𐴌 𐴁𐴝𐴁𐴡𐴃𐴠𐴤 𐴉𐴡𐴕𐴧𐴝𐴤 𐴀𐴌 𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴎𐴟𐴁𐴝𐴕.",
 
-search:
-"𐴑𐴡𐴌𐴌𐴡𐴤..."
+search:"𐴑𐴡𐴌𐴌𐴡𐴤..."
 
 }
 
@@ -2529,9 +2438,7 @@ search:
 function changeLanguage(){
 
     const language =
-        document.getElementById(
-            "languageSelect"
-        ).value;
+        document.getElementById("languageSelect").value;
 
     const selected =
         translations[language];
@@ -2539,20 +2446,15 @@ function changeLanguage(){
     if(!selected) return;
 
 
-    /*
-      Change all translated text
-    */
+    /* Change translated text */
 
-    document
-    .querySelectorAll("[data-i18n]")
+    document.querySelectorAll("[data-i18n]")
     .forEach(function(element){
 
         const key =
-            element.getAttribute(
-                "data-i18n"
-            );
+            element.getAttribute("data-i18n");
 
-        if(selected[key]){
+        if(selected[key] !== undefined){
 
             element.textContent =
                 selected[key];
@@ -2562,58 +2464,39 @@ function changeLanguage(){
     });
 
 
-    /*
-      Search placeholder
-    */
+    /* Search placeholder */
 
     const searchInput =
-        document.getElementById(
-            "searchInput"
-        );
+        document.getElementById("searchInput");
 
-    if(
-        searchInput &&
-        selected.search
-    ){
+    if(searchInput){
 
         searchInput.placeholder =
-            selected.search;
+            selected.search || "Search...";
 
     }
 
 
-    /*
-      RTL:
-      Rohingya + Arabic
-    */
+    /* =========================
+       RTL
+    ========================= */
 
-    if(
-        language === "rh" ||
-        language === "ar"
-    ){
+    if(language === "rh" || language === "ar"){
 
-        document.body.classList.add(
-            "rtl"
-        );
+        document.body.classList.add("rtl");
 
-        document.documentElement.dir =
-            "rtl";
+        document.documentElement.dir="rtl";
 
     }else{
 
-        document.body.classList.remove(
-            "rtl"
-        );
+        document.body.classList.remove("rtl");
 
-        document.documentElement.dir =
-            "ltr";
+        document.documentElement.dir="ltr";
 
     }
 
 
-    /*
-      Language information
-    */
+    /* Language attribute */
 
     if(language === "rh"){
 
@@ -2632,9 +2515,7 @@ function changeLanguage(){
     }
 
 
-    /*
-      Save language
-    */
+    /* Save selected language */
 
     localStorage.setItem(
         "selectedLanguage",
@@ -2657,15 +2538,15 @@ function(){
             "selectedLanguage"
         );
 
-    if(
-        saved &&
-        translations[saved]
-    ){
+    if(saved &&
+       translations[saved]){
 
-        document.getElementById(
-            "languageSelect"
-        ).value =
-            saved;
+        const selector =
+            document.getElementById(
+                "languageSelect"
+            );
+
+        selector.value=saved;
 
         changeLanguage();
 
@@ -2682,15 +2563,11 @@ function openMenu(){
 
     document.getElementById(
         "sideMenu"
-    ).classList.add(
-        "active"
-    );
+    ).classList.add("active");
 
     document.getElementById(
         "overlay"
-    ).classList.add(
-        "active"
-    );
+    ).classList.add("active");
 
 }
 
@@ -2699,21 +2576,17 @@ function closeMenu(){
 
     document.getElementById(
         "sideMenu"
-    ).classList.remove(
-        "active"
-    );
+    ).classList.remove("active");
 
     document.getElementById(
         "overlay"
-    ).classList.remove(
-        "active"
-    );
+    ).classList.remove("active");
 
 }
 
 
 /* =========================
-   SEARCH
+   SEARCH TOGGLE
 ========================= */
 
 function toggleSearch(){
@@ -2723,16 +2596,10 @@ function toggleSearch(){
             "searchArea"
         );
 
-    area.classList.toggle(
-        "active"
-    );
+    area.classList.toggle("active");
 
 
-    if(
-        area.classList.contains(
-            "active"
-        )
-    ){
+    if(area.classList.contains("active")){
 
         document.getElementById(
             "searchInput"
@@ -2743,14 +2610,16 @@ function toggleSearch(){
 }
 
 
+/* =========================
+   SEARCH
+========================= */
+
 function searchPage(){
 
     const input =
         document.getElementById(
             "searchInput"
-        ).value
-        .toLowerCase()
-        .trim();
+        ).value.toLowerCase().trim();
 
 
     const sections =
@@ -2761,44 +2630,34 @@ function searchPage(){
 
     if(!input){
 
-        sections.forEach(
-            function(section){
+        sections.forEach(function(section){
 
-                section.style.display =
-                    "";
+            section.style.display="";
 
-            }
-        );
+        });
 
         return;
 
     }
 
 
-    sections.forEach(
-        function(section){
+    sections.forEach(function(section){
 
-            const text =
-                section.innerText
-                .toLowerCase();
+        const text =
+            section.innerText.toLowerCase();
 
 
-            if(
-                text.includes(input)
-            ){
+        if(text.includes(input)){
 
-                section.style.display =
-                    "";
+            section.style.display="";
 
-            }else{
+        }else{
 
-                section.style.display =
-                    "none";
-
-            }
+            section.style.display="none";
 
         }
-    );
+
+    });
 
 }
 
