@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Get Involved - Rohingya Education School</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7f6;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Header */
+
+        header {
+            background: #ffffff;
+            padding: 15px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box {
+            width: 45px;
+            height: 45px;
+
+            background: #176b4d;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            color: #176b4d;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #176b4d;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Hero */
+
+        .page-hero {
+            min-height: 300px;
+
+            background:
+                linear-gradient(
+                    rgba(0,70,45,0.72),
+                    rgba(0,70,45,0.72)
+                ),
+                url("school-photo.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-size: 46px;
+            margin-bottom: 10px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+        }
+
+        /* Container */
+
+        .container {
+            width: 88%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Intro */
+
+        .intro {
+            text-align: center;
+            padding: 60px 0 35px;
+        }
+
+        .intro h2 {
+            color: #176b4d;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+            color: #555;
+        }
+
+        /* Involvement Cards */
+
+        .involvement {
+            padding: 20px 0 70px;
+        }
+
+        .involvement-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .involvement-card {
+            background: white;
+            padding: 30px 25px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .involvement-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .involvement-icon {
+            width: 65px;
+            height: 65px;
+
+            background: #e5f3ed;
+            color: #176b4d;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+        }
+
+        .involvement-card h3 {
+            color: #176b4d;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .involvement-card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: #176b4d;
+            color: white;
+
+            padding: 60px 20px;
+
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 800px;
+            margin: auto auto 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+
+            background: white;
+            color: #176b4d;
+
+            padding: 12px 25px;
+
+            border-radius: 7px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background: #eaf2ef;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #123d30;
+            color: white;
+
+            padding: 45px 6% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr;
+
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #d5dfdc;
+        }
+
+        footer a {
+            display: block;
+
+            color: #d5dfdc;
+
+            text-decoration: none;
+
+            margin-bottom: 8px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top:
+                1px solid rgba(255,255,255,0.2);
+
+            margin-top: 30px;
+
+            padding-top: 20px;
+
+            text-align: center;
+
+            color: #cbd6d2;
+
+            font-size: 14px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 850px) {
+
+            nav {
+                display: none;
+
+                position: absolute;
+
+                top: 75px;
+                left: 0;
+
+                width: 100%;
+
+                background: white;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 20px 6%;
+
+                box-shadow:
+                    0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .involvement-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .page-hero {
+                min-height: 230px;
+            }
+
+            .page-hero h1 {
+                font-size: 35px;
+            }
+
+            .involvement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo h2 {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-box">
+                RES
+            </div>
+
+            <h2>
+                Rohingya Education School
+            </h2>
+
+        </div>
+
+
+        <div
+            class="menu-btn"
+            onclick="toggleMenu()">
+
+            ☰
+
+        </div>
+
+
+        <nav id="navMenu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="activities.html">
+                Activities
+            </a>
+
+            <a href="updates.html">
+                Updates
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="teachers-students.html">
+                Teachers & Students
+            </a>
+
+            <a href="get-involved.html"
+               class="active">
+                Get Involved
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Hero -->
+
+    <section class="page-hero">
+
+        <div>
+
+            <h1>
+                Get Involved
+            </h1>
+
+            <p>
+                Be part of our educational community
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Introduction -->
+
+    <section class="intro">
+
+        <div class="container">
+
+            <h2>
+                How You Can Get Involved
+            </h2>
+
+            <p>
+                Education grows stronger when students, teachers,
+                families and community members work together.
+                There are different ways to support learning and
+                educational activities.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Cards -->
+
+    <section class="involvement">
+
+        <div class="container">
+
+            <div class="involvement-grid">
+
+
+                <!-- Volunteer -->
+
+                <div class="involvement-card">
+
+                    <div class="involvement-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Volunteer
+                    </h3>
+
+                    <p>
+                        Support educational activities, student
+                        learning and community programs by
+                        volunteering your time and skills.
+                    </p>
+
+                </div>
+
+
+                <!-- Support Education -->
+
+                <div class="involvement-card">
+
+                    <div class="involvement-icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        Support Education
+                    </h3>
+
+                    <p>
+                        Help create learning opportunities and
+                        support access to educational materials
+                        for students.
+                    </p>
+
+                </div>
+
+
+                <!-- Community -->
+
+                <div class="involvement-card">
+
+                    <div class="involvement-icon">
+                        🏘️
+                    </div>
+
+                    <h3>
+                        Community Participation
+                    </h3>
+
+                    <p>
+                        Take part in educational and community
+                        activities and help strengthen cooperation
+                        within the community.
+                    </p>
+
+                </div>
+
+
+                <!-- Teachers -->
+
+                <div class="involvement-card">
+
+                    <div class="involvement-icon">
+                        👩‍🏫
+                    </div>
+
+                    <h3>
+                        Teacher Support
+                    </h3>
+
+                    <p>
+                        Teachers and educators can contribute
+                        knowledge, experience and ideas to improve
+                        learning activities.
+                    </p>
+
+                </div>
+
+
+                <!-- Learning Materials -->
+
+                <div class="involvement-card">
+
+                    <div class="involvement-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        Learning Materials
+                    </h3>
+
+                    <p>
+                        Educational books, resources and learning
+                        materials can help students and teachers
+                        in their educational journey.
+                    </p>
+
+                </div>
+
+
+                <!-- Partnership -->
+
+                <div class="involvement-card">
+
+                    <div class="involvement-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Work Together
+                    </h3>
+
+                    <p>
+                        Individuals and organizations can work
+                        together to support educational programs
+                        and community learning.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <h2>
+            Together We Can Support Learning
+        </h2>
+
+        <p>
+            If you would like to support Rohingya Education School,
+            please contact us to learn more about opportunities
+            for participation and collaboration.
+        </p>
+
+        <a
+            href="contact.html"
+            class="cta-button">
+
+            Contact Us
+
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h3>
+                    Rohingya Education School
+                </h3>
+
+                <p>
+                    Supporting education, language, culture
+                    and community learning.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="activities.html">
+                    Activities
+                </a>
+
+                <a href="updates.html">
+                    Updates
+                </a>
+
+                <a href="courses.html">
+                    Courses
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Connect
+                </h3>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    YouTube
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Rohingya Education School.
+            All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navMenu")
+                .classList
+                .toggle("show");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
