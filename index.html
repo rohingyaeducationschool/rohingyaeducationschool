@@ -1,276 +1,325 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Rohingya Education School</title>
+    <title>Rohingya Education School</title>
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <style>
+    <style>
 
-        * {
-            box-sizing: border-box;
-        }
+        * {
+            box-sizing: border-box;
+        }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7f6;
-            color: #222;
-        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7f6;
+            color: #222;
+        }
 
-        header {
-            background: #075E54;
-            color: white;
-            padding: 18px 25px;
-        }
+        /* =========================
+           HEADER
+        ========================= */
 
-        .header-content {
-            max-width: 1100px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+        header {
+            background: #075E54;
+            color: white;
+            padding: 18px 25px;
+        }
 
-        .logo {
-            width: 65px;
-            height: 65px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-        .school-name h1 {
-            margin: 0;
-            font-size: 25px;
-        }
+        .logo {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
 
-        .school-name p {
-            margin: 5px 0 0;
-            font-size: 14px;
-        }
+        .school-name h1 {
+            margin: 0;
+            font-size: 25px;
+        }
 
-        nav {
-            background: #128C7E;
-            text-align: center;
-            padding: 14px 10px;
-        }
+        .school-name p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-        }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+        /* =========================
+           NAVIGATION
+        ========================= */
 
-        .bilingual {
-            display: block;
-            margin-top: 5px;
-            font-size: 20px;
-            font-weight: bold;
-            line-height: 1.4;
-        }
+        nav {
+            background: #128C7E;
+            text-align: center;
+            padding: 14px 10px;
+        }
 
-        .nav-rohingya {
-            display: block;
-            font-size: 15px;
-            margin-top: 3px;
-            font-weight: normal;
-        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
 
-        .hero {
-            background: white;
-            text-align: center;
-            padding: 70px 20px;
-        }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-        .hero h1 {
-            font-size: 42px;
-            color: #075E54;
-            margin: 15px 0;
-        }
 
-        .rohingya {
-            font-size: 28px;
-            font-weight: bold;
-        }
+        /* =========================
+           HERO
+        ========================= */
 
-        .hero p {
-            max-width: 700px;
-            margin: 20px auto;
-            font-size: 18px;
-            line-height: 1.7;
-        }
+        .hero {
+            background: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
 
-        .button {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 13px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            margin: 8px;
-            font-weight: bold;
-        }
+        .hero h1 {
+            font-size: 42px;
+            color: #075E54;
+            margin: 15px 0;
+        }
 
-        .button.dark {
-            background: #075E54;
-        }
+        .rohingya {
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-        .section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 55px 20px;
-        }
+        .hero p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 18px;
+            line-height: 1.7;
+        }
 
-        .section-title {
-            text-align: center;
-            color: #075E54;
-            font-size: 30px;
-            margin-bottom: 35px;
-        }
 
-        .about-text {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            line-height: 1.8;
-        }
+        /* =========================
+           BUTTON
+        ========================= */
 
-        .cards {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
+        .button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin: 8px;
+            font-weight: bold;
+        }
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow:
-                0 3px 10px rgba(0,0,0,0.08);
-        }
+        .button.dark {
+            background: #075E54;
+        }
 
-        .card h3 {
-            color: #075E54;
-        }
 
-        .icon {
-            font-size: 38px;
-        }
+        /* =========================
+           SECTIONS
+        ========================= */
 
-        .stats {
-            background: #075E54;
-            color: white;
-        }
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 20px;
+        }
 
-        .stat-box {
-            text-align: center;
-        }
+        .section-title {
+            text-align: center;
+            color: #075E54;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
 
-        .stat-box h2 {
-            font-size: 35px;
-            margin: 5px;
-        }
 
-        .verification {
-            background: white;
-            padding: 35px;
-            text-align: center;
-            border-radius: 15px;
-        }
+        /* =========================
+           ABOUT
+        ========================= */
 
-        .verification input {
-            width: 90%;
-            max-width: 450px;
-            padding: 14px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            margin: 10px;
-            font-size: 16px;
-        }
+        .about-text {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            line-height: 1.8;
+        }
 
-        .social-icons {
-            margin: 25px 0;
-        }
 
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            margin: 6px;
-            border-radius: 50%;
-            background: white;
-            text-decoration: none;
-            font-size: 27px;
-        }
+        /* =========================
+           CARDS
+        ========================= */
 
-        .facebook {
-            color: #1877F2;
-        }
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
 
-        .youtube {
-            color: #FF0000;
-        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow:
+                0 3px 10px rgba(0,0,0,0.08);
+        }
 
-        .tiktok {
-            color: #000000;
-        }
+        .card h3 {
+            color: #075E54;
+        }
 
-        footer {
-            background: #064c44;
-            color: white;
-            padding: 35px 20px;
-            text-align: center;
-        }
+        .icon {
+            font-size: 38px;
+        }
 
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-        }
 
-        @media (max-width: 600px) {
+        /* =========================
+           STATISTICS
+        ========================= */
 
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
+        .stats {
+            background: #075E54;
+            color: white;
+        }
 
-            .hero h1 {
-                font-size: 32px;
-            }
+        .stat-box {
+            text-align: center;
+        }
 
-            .rohingya {
-                font-size: 22px;
-            }
+        .stat-box h2 {
+            font-size: 35px;
+            margin: 5px;
+        }
 
-            nav a {
-                display: inline-block;
-                margin: 6px;
-            }
 
-        }
+        /* =========================
+           CERTIFICATE VERIFICATION
+        ========================= */
 
-    </style>
+        .verification {
+            background: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .verification input {
+            width: 90%;
+            max-width: 450px;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           SOCIAL MEDIA
+        ========================= */
+
+        .social-icons {
+            margin: 25px 0;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 50px;
+            height: 50px;
+
+            margin: 6px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            text-decoration: none;
+
+            font-size: 27px;
+        }
+
+        .facebook {
+            color: #1877F2;
+        }
+
+        .youtube {
+            color: #FF0000;
+        }
+
+        .tiktok {
+            color: #000000;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #064c44;
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .rohingya {
+                font-size: 22px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -278,601 +327,548 @@
 <body>
 
 
-<!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-<header>
+    <header>
 
-    <div class="header-content">
+        <div class="header-content">
 
-        <img src="profile.jpg"
-             class="logo"
-             alt="School Logo">
+            <img src="profile.jpg"
+                 class="logo"
+                 alt="School Logo">
 
-        <div class="school-name">
+            <div class="school-name">
 
-            <h1>
-                Rohingya Education School
-            </h1>
+                <h1>
+                    Rohingya Education School
+                </h1>
 
-            <div class="rohingya">
-                𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-            </div>
+                <p>
+                    Education • Language • Knowledge • Community
+                </p>
 
-            <p>
-                Education • Language • Knowledge • Community
-            </p>
+            </div>
 
-        </div>
+        </div>
 
-    </div>
+    </header>
 
-</header>
 
 
-<!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
-<nav>
+    <nav>
 
-    <a href="index.html">
-        Home
-    </a>
+        <a href="index.html">
+            Home
+        </a>
 
-    <a href="about.html">
-        About
-        <span class="nav-rohingya">
-        </span>
-    </a>
+        <a href="about.html">
+            About
+        </a>
 
-    <a href="#">
-        Education
-        <span class="nav-rohingya">
-        </span>
-    </a>
+        <a href="#">
+            Education
+        </a>
 
-    <a href="#">
-        Courses
-        <span class="nav-rohingya">
-        </span>
-    </a>
+        <a href="#">
+            Courses
+        </a>
 
-    <a href="verify.html">
-        Certificate Verification
-        <span class="nav-rohingya">
-        </span>
-    </a>
+        <a href="verify.html">
+            Certificate Verification
+        </a>
 
-    <a href="contact.html">
-        Contact
-    </a>
+        <a href="contact.html">
+            Contact
+        </a>
 
-</nav>
+    </nav>
 
 
-<!-- HERO -->
 
-<section class="hero">
+    <!-- =========================
+         HERO
+    ========================= -->
 
-    <h1>
-        Rohingya Education School
-    </h1>
+    <section class="hero">
 
-    <div class="rohingya">
+        <h1>
+            Rohingya Education School
+        </h1>
 
-        𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
-        𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
-        𐴀𐴠𐴏𐴑𐴟𐴓𐴢
+        <div class="rohingya">
 
-    </div>
+            𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝
+            𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕
+            𐴀𐴠𐴏𐴑𐴟𐴓
 
-    <p>
+        </div>
 
-        Empowering students through quality education,
-        Rohingya language learning and knowledge.
+        <p>
 
-    </p>
+            Empowering students through quality education,
+            Rohingya language learning and knowledge.
 
+        </p>
 
-    <a class="button dark"
-       href="about.html">
 
-        Learn More
+        <a class="button dark"
+           href="about.html">
 
-    </a>
+            Learn More
 
+        </a>
 
-    <a class="button"
-       href="contact.html">
 
-        Contact Us
+        <a class="button"
+           href="contact.html">
 
-    </a>
+            Contact Us
 
-</section>
+        </a>
 
+    </section>
 
-<!-- ABOUT -->
 
-<section class="section">
 
-    <h2 class="section-title">
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
-        About Our School
+    <section class="section">
 
-        <span class="bilingual">
-            𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴡𐴌 𐴁𐴝𐴁𐴡𐴃𐴠𐴤
-        </span>
+        <h2 class="section-title">
+            About Our School
+        </h2>
 
-    </h2>
 
+        <div class="about-text">
 
-    <div class="about-text">
+            <p>
 
-        <p>
+                Rohingya Education School is committed
+                to providing quality education and
+                creating a supportive learning
+                environment for students.
 
-            Rohingya Education School is committed
-            to providing quality education and
-            creating a supportive learning
-            environment for students.
+            </p>
 
-        </p>
 
+            <p>
 
-        <p>
+                Our goal is to support learning,
+                preserve the Rohingya language and
+                Script, and help students build
+                knowledge and skills for the future.
 
-            Our goal is to support learning,
-            preserve the Rohingya language and
-            Script, and help students build
-            knowledge and skills for the future.
+            </p>
 
-        </p>
+        </div>
 
-    </div>
+    </section>
 
-</section>
 
 
-<!-- EDUCATION PROGRAMS -->
+    <!-- =========================
+         EDUCATION PROGRAMS
+    ========================= -->
 
-<section class="section">
+    <section class="section">
 
-    <h2 class="section-title">
+        <h2 class="section-title">
+            Our Education Programs
+        </h2>
 
-        Our Education Programs
 
-        <span class="bilingual">
-            𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴡𐴕𐴧𐴝𐴤𐴌 𐴉𐴟𐴌𐴒𐴌𐴝𐴔
-        </span>
+        <div class="cards">
 
-    </h2>
 
+            <div class="card">
 
-    <div class="cards">
+                <div class="icon">
+                    📚
+                </div>
 
+                <h3>
+                    Rohingya Language
+                </h3>
 
-        <div class="card">
+                <p>
+                    Learning the Rohingya language
+                    and Script.
+                </p>
 
-            <div class="icon">
-                📚
-            </div>
+            </div>
 
-            <h3>
 
-                Rohingya Language
 
-                <span class="bilingual">
-                    𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴎𐴟𐴁𐴝𐴕
-                </span>
+            <div class="card">
 
-            </h3>
+                <div class="icon">
+                    ✏️
+                </div>
 
-            <p>
-                Learning the Rohingya language
-                and Script.
-            </p>
+                <h3>
+                    Basic Education
+                </h3>
 
-        </div>
+                <p>
+                    Building essential reading
+                    and writing skills.
+                </p>
 
+            </div>
 
-        <div class="card">
 
-            <div class="icon">
-                ✏️
-            </div>
 
-            <h3>
+            <div class="card">
 
-                Basic Education
+                <div class="icon">
+                    🎓
+                </div>
 
-                <span class="bilingual">
-                    𐴐𐴟𐴤𐴌𐴟𐴌 𐴉𐴡𐴕𐴧𐴝𐴤
-                </span>
+                <h3>
+                    Courses
+                </h3>
 
-            </h3>
+                <p>
+                    Educational courses and
+                    learning programs.
+                </p>
 
-            <p>
-                Building essential reading
-                and writing skills.
-            </p>
+            </div>
 
-        </div>
 
 
-        <div class="card">
+            <div class="card">
 
-            <div class="icon">
-                🎓
-            </div>
+                <div class="icon">
+                    💻
+                </div>
 
-            <h3>
+                <h3>
+                    Digital Learning
+                </h3>
 
-                Courses
+                <p>
+                    Supporting modern and
+                    digital education.
+                </p>
 
-                <span class="bilingual">
-                    𐴑𐴟𐴌𐴏𐴢 𐴀𐴡𐴑𐴧𐴡𐴓𐴢
-                </span>
+            </div>
 
-            </h3>
 
-            <p>
-                Educational courses and
-                learning programs.
-            </p>
+        </div>
 
-        </div>
+    </section>
 
 
-        <div class="card">
 
-            <div class="icon">
-                💻
-            </div>
+    <!-- =========================
+         STATISTICS
+    ========================= -->
 
-            <h3>
-                Digital Learning
-            </h3>
+    <section class="stats">
 
-            <p>
-                Supporting modern and
-                digital education.
-            </p>
+        <div class="section">
 
-        </div>
+            <h2 class="section-title"
+                style="color:white;">
 
+                Our School at a Glance
 
-    </div>
+            </h2>
 
-</section>
 
+            <div class="cards">
 
-<!-- STATISTICS -->
 
-<section class="stats">
+                <div class="stat-box">
 
-    <div class="section">
+                    <h2>
+                        0
+                    </h2>
 
-        <h2 class="section-title"
-            style="color:white;">
+                    <p>
+                        Students
+                    </p>
 
-            Our School at a Glance
+                </div>
 
-            <span class="bilingual">
-                𐴀𐴠𐴑 𐴕𐴡𐴎𐴡𐴌𐴠 𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-            </span>
 
-        </h2>
 
+                <div class="stat-box">
 
-        <div class="cards">
+                    <h2>
+                        0
+                    </h2>
 
+                    <p>
+                        Teachers
+                    </p>
 
-            <div class="stat-box">
+                </div>
 
-                <h2>
-                    0
-                </h2>
 
-                <p>
-                    Students
 
-                    <span class="bilingual">
-                        𐴉𐴡𐴌𐴡𐴙𐴕𐴧𐴝𐴤 𐴉𐴟𐴖𐴝𐴙𐴕
-                    </span>
+                <div class="stat-box">
 
-                </p>
+                    <h2>
+                        0
+                    </h2>
 
-            </div>
+                    <p>
+                        Courses
+                    </p>
 
+                </div>
 
-            <div class="stat-box">
 
-                <h2>
-                    0
-                </h2>
 
-                <p>
-                    Teachers
+                <div class="stat-box">
 
-                    <span class="bilingual">
-                        𐴔𐴝𐴐𐴄𐴡𐴌
-                    </span>
+                    <h2>
+                        0
+                    </h2>
 
-                </p>
+                    <p>
+                        Certificates
+                    </p>
 
-            </div>
+                </div>
 
 
-            <div class="stat-box">
+            </div>
 
-                <h2>
-                    0
-                </h2>
+        </div>
 
-                <p>
-                    Courses
+    </section>
 
-                    <span class="bilingual">
-                        𐴑𐴟𐴌𐴏𐴢 𐴀𐴡𐴑𐴧𐴡𐴓𐴢
-                    </span>
 
-                </p>
 
-            </div>
+    <!-- =========================
+         CERTIFICATE VERIFICATION
+    ========================= -->
 
+    <section class="section">
 
-            <div class="stat-box">
+        <h2 class="section-title">
+            Certificate Verification
+        </h2>
 
-                <h2>
-                    0
-                </h2>
 
-                <p>
-                    Certificates
+        <div class="verification">
 
-                    <span class="bilingual">
-                        𐴐𐴡𐴕𐴡𐴊𐴢
-                    </span>
+            <p>
+                Verify a certificate using
+                its Certificate ID.
+            </p>
 
-                </p>
 
-            </div>
+            <input
+                type="text"
+                placeholder="Enter Certificate ID"
+            >
 
 
-        </div>
+            <br>
 
-    </div>
 
-</section>
+            <a class="button dark"
+               href="verify.html">
 
+                Verify Certificate
 
-<!-- CERTIFICATE VERIFICATION -->
+            </a>
 
-<section class="section">
+        </div>
 
-    <h2 class="section-title">
+    </section>
 
-        Certificate Verification
 
-        <span class="bilingual">
-            𐴐𐴡𐴕𐴡𐴊𐴢 𐴏𐴡𐴀𐴠𐴕𐴠 𐴏𐴠𐴑𐴒𐴡𐴌𐴡𐴕
-        </span>
 
-    </h2>
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
+    <section class="section">
 
-    <div class="verification">
+        <h2 class="section-title">
+            Connect With Us
+        </h2>
 
-        <p>
-            Verify a certificate using
-            its Certificate ID.
-        </p>
 
+        <div class="cards">
 
-        <input
-            type="text"
-            placeholder="Enter Certificate ID"
-        >
 
+            <div class="card">
 
-        <br>
+                <div class="icon">
+                    📍
+                </div>
 
+                <h3>
+                    Address
+                </h3>
 
-        <a class="button dark"
-           href="verify.html">
+                <p>
+                    Boroitoli, Camp 4,
+                    Kutupalong, Ukhia
+                </p>
 
-            Verify Certificate
+            </div>
 
-        </a>
 
-    </div>
 
-</section>
+            <div class="card">
 
+                <div class="icon">
+                    📧
+                </div>
 
-<!-- CONTACT -->
+                <h3>
+                    Email
+                </h3>
 
-<section class="section">
+                <p>
+                    rohingyaeducations@gmail.com
+                </p>
 
-    <h2 class="section-title">
+            </div>
 
-        Connect With Us
 
-        <span class="bilingual">
-            𐴀𐴝𐴣𐴀𐴌𐴝𐴌 𐴉𐴟𐴣𐴖𐴝𐴃𐴞 𐴃𐴝𐴦𐴓𐴧𐴟𐴑 𐴒𐴡𐴌𐴡𐴤
-        </span>
 
-    </h2>
+            <div class="card">
 
+                <div class="icon">
+                    📱
+                </div>
 
-    <div class="cards">
+                <h3>
+                    WhatsApp
+                </h3>
 
+                <p>
+                    Contact us through WhatsApp.
+                </p>
 
-        <div class="card">
+            </div>
 
-            <div class="icon">
-                📍
-            </div>
 
-            <h3>
+        </div>
 
-                Address
+    </section>
 
-                <span class="bilingual">
-                    𐴄𐴞𐴑𐴝𐴕𐴝
-                </span>
 
-            </h3>
 
-            <p>
-                Boroitoli, Camp 4,
-                Kutupalong, Ukhia
-            </p>
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-        </div>
+    <footer>
 
 
-        <div class="card">
+        <h3>
+            Rohingya Education School
+        </h3>
 
-            <div class="icon">
-                📧
-            </div>
 
-            <h3>
+        <p>
+            Education • Language • Knowledge • Community
+        </p>
 
-                Email
 
-                <span class="bilingual">
-                    𐴀𐴞𐴔𐴠𐴙𐴓𐴢
-                </span>
 
-            </h3>
+        <!-- FOOTER LINKS -->
 
-            <p>
-                rohingyaeducations@gmail.com
-            </p>
+        <p>
 
-        </div>
+            <a href="index.html">
+                Home
+            </a>
 
+            |
 
-        <div class="card">
+            <a href="about.html">
+                About
+            </a>
 
-            <div class="icon">
-                📱
-            </div>
+            |
 
-            <h3>
+            <a href="verify.html">
+                Certificate Verification
+            </a>
 
-                WhatsApp
+            |
 
-                <span class="bilingual">
-                    𐴖𐴝𐴄𐴏𐴧𐴝𐴉𐴢
-                </span>
+            <a href="contact.html">
+                Contact
+            </a>
 
-            </h3>
+        </p>
 
-            <p>
-                Contact us through WhatsApp.
-            </p>
 
-        </div>
 
+        <!-- SOCIAL MEDIA -->
 
-    </div>
+        <div class="social-icons">
 
-</section>
 
+            <!-- FACEBOOK -->
 
-<!-- FOOTER -->
+            <a href="https://www.facebook.com/share/19etkWCm1z/"
+               target="_blank"
+               aria-label="Facebook"
+               class="facebook">
 
-<footer>
+                <i class="fa-brands fa-facebook-f"></i>
 
+            </a>
 
-    <h3>
-        Rohingya Education School
 
-        <span class="bilingual">
-            𐴌𐴟𐴇𐴝𐴥𐴙𐴚𐴒𐴙𐴝 𐴀𐴠𐴅𐴟𐴑𐴠𐴤𐴐𐴠𐴥𐴕 𐴀𐴠𐴏𐴑𐴟𐴓𐴢
-        </span>
 
-    </h3>
+            <!-- YOUTUBE -->
 
+            <a href="#"
+               target="_blank"
+               aria-label="YouTube"
+               class="youtube">
 
-    <p>
-        Education • Language • Knowledge • Community
-    </p>
+                <i class="fa-brands fa-youtube"></i>
 
+            </a>
 
-    <p>
 
-        <a href="index.html">
-            Home
-        </a>
 
-        |
+            <!-- TIKTOK -->
 
-        <a href="about.html">
-            About
-            <span class="nav-rohingya">
-            </span>
-        </a>
+            <a href="#"
+               target="_blank"
+               aria-label="TikTok"
+               class="tiktok">
 
-        |
+                <i class="fa-brands fa-tiktok"></i>
 
-        <a href="verify.html">
-            Certificate Verification
-        </a>
+            </a>
 
-        |
 
-        <a href="contact.html">
-            Contact
-        </a>
+        </div>
 
-    </p>
 
 
-    <div class="social-icons">
+        <p>
+            © 2026 Rohingya Education School.
+            All rights reserved.
+        </p>
 
 
-        <a href="https://www.facebook.com/share/19etkWCm1z/"
-           target="_blank"
-           aria-label="Facebook"
-           class="facebook">
+    </footer>
 
-            <i class="fa-brands fa-facebook-f"></i>
-
-        </a>
-
-
-        <a href="https://youtube.com/@rohingyaeducationschool941?si=95gzgbQmte1wCif4"
-           target="_blank"
-           aria-label="YouTube"
-           class="youtube">
-
-            <i class="fa-brands fa-youtube"></i>
-
-        </a>
-
-
-        <a href="https://www.tiktok.com/@rohingyaeducationschool?_r=1&_t=ZS-9AC3xcZvBjw"
-           target="_blank"
-           aria-label="TikTok"
-           class="tiktok">
-
-            <i class="fa-brands fa-tiktok"></i>
-
-        </a>
-
-
-    </div>
-
-
-    <p>
-        © 2026 Rohingya Education School.
-        All rights reserved.
-    </p>
-
-
-</footer>
 
 
 </body>
