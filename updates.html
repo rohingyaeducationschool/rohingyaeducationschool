@@ -8,6 +8,7 @@
     <title>Updates - Rohingya Education School</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -31,6 +32,7 @@
         }
 
         /* HEADER */
+
         header {
             background: #ffffff;
             box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -72,6 +74,7 @@
         }
 
         /* NAVIGATION */
+
         nav ul {
             list-style: none;
             display: flex;
@@ -106,26 +109,29 @@
         }
 
         /* HERO */
+
         .hero {
             position: relative;
-            min-height: 390px;
+            min-height: 480px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             overflow: hidden;
             background:
-                linear-gradient(rgba(8,45,25,0.82), rgba(8,45,25,0.82)),
-                url("school-photo.jpg") center/cover no-repeat;
+                linear-gradient(
+                    rgba(8,45,25,0.96),
+                    rgba(8,45,25,0.96)
+                );
             color: white;
         }
 
         .watermark {
             position: absolute;
-            width: 420px;
-            height: 420px;
-            object-fit: contain;
+            width: 500px;
+            max-width: 75%;
             opacity: 0.10;
+            object-fit: contain;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -136,17 +142,18 @@
             position: relative;
             z-index: 2;
             max-width: 850px;
-            padding: 40px 20px;
+            padding: 55px 20px;
         }
 
-        .small-logo {
-            width: 82px;
-            height: 82px;
+        .hero-logo {
+            width: 180px;
+            height: 180px;
             object-fit: contain;
             border-radius: 50%;
-            background: white;
-            padding: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
+            filter: drop-shadow(
+                0 8px 18px rgba(0,0,0,0.25)
+            );
         }
 
         .hero h2 {
@@ -162,6 +169,7 @@
         }
 
         /* MAIN */
+
         main {
             max-width: 1100px;
             margin: auto;
@@ -187,7 +195,22 @@
             margin-bottom: 12px;
         }
 
+        /* NOTICE */
+
+        .notice {
+            border-left: 5px solid #14532d;
+            background: #f3f8f4;
+            padding: 22px 25px;
+            border-radius: 8px;
+        }
+
+        .notice h3 {
+            color: #14532d;
+            margin-bottom: 8px;
+        }
+
         /* UPDATE CARDS */
+
         .updates {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -207,14 +230,8 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
-        .date {
-            display: inline-block;
-            background: #e8f5e9;
-            color: #14532d;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
+        .update-icon {
+            font-size: 30px;
             margin-bottom: 12px;
         }
 
@@ -228,20 +245,8 @@
             margin-bottom: 0;
         }
 
-        /* NOTICE */
-        .notice {
-            border-left: 5px solid #14532d;
-            background: #f3f8f4;
-            padding: 22px 25px;
-            border-radius: 8px;
-        }
-
-        .notice h3 {
-            color: #14532d;
-            margin-bottom: 8px;
-        }
-
         /* CTA */
+
         .cta {
             text-align: center;
             background: #14532d;
@@ -271,6 +276,7 @@
         }
 
         /* FOOTER */
+
         footer {
             background: #102a1b;
             color: #d9e8dd;
@@ -322,6 +328,7 @@
         }
 
         /* MOBILE */
+
         @media (max-width: 900px) {
 
             .menu-btn {
@@ -356,7 +363,7 @@
             }
 
             .hero {
-                min-height: 350px;
+                min-height: 400px;
             }
 
             .hero h2 {
@@ -400,14 +407,13 @@
                 font-size: 28px;
             }
 
-            .small-logo {
-                width: 70px;
-                height: 70px;
+            .hero-logo {
+                width: 140px;
+                height: 140px;
             }
 
             .watermark {
                 width: 300px;
-                height: 300px;
             }
 
             main {
@@ -422,44 +428,65 @@
                 font-size: 24px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
     <!-- HEADER -->
+
     <header>
 
         <div class="header-container">
 
             <a href="index.html" class="brand">
 
-                <img src="profile.jpg"
-                     alt="Rohingya Education School Logo">
+                <img
+                    src="profile.jpg"
+                    alt="Rohingya Education School Logo"
+                >
 
                 <div class="brand-text">
+
                     <h1>Rohingya Education School</h1>
-                    <p>Education • Language • Community</p>
+
+                    <p>
+                        Education • Language • Community
+                    </p>
+
                 </div>
 
             </a>
 
-            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
 
             <nav id="mainNav">
 
                 <ul>
 
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.html">
+                            Home
+                        </a>
                     </li>
 
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.html">
+                            About
+                        </a>
                     </li>
 
                     <li>
-                        <a href="activities.html">Activities</a>
+                        <a href="activities.html">
+                            Activities
+                        </a>
                     </li>
 
                     <li>
@@ -469,11 +496,15 @@
                     </li>
 
                     <li>
-                        <a href="courses.html">Courses</a>
+                        <a href="courses.html">
+                            Courses
+                        </a>
                     </li>
 
                     <li>
-                        <a href="education.html">Education</a>
+                        <a href="education.html">
+                            Education
+                        </a>
                     </li>
 
                     <li>
@@ -495,7 +526,9 @@
                     </li>
 
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.html">
+                            Contact
+                        </a>
                     </li>
 
                 </ul>
@@ -508,19 +541,26 @@
 
 
     <!-- HERO -->
+
     <section class="hero">
 
-        <img src="profile.jpg"
-             alt=""
-             class="watermark">
+        <img
+            src="logo.png"
+            alt=""
+            class="watermark"
+        >
 
         <div class="hero-content">
 
-            <img src="profile.jpg"
-                 alt="Rohingya Education School Logo"
-                 class="small-logo">
+            <img
+                src="profile.jpg"
+                alt="Rohingya Education School Logo"
+                class="hero-logo"
+            >
 
-            <h2>Latest Updates</h2>
+            <h2>
+                Latest Updates
+            </h2>
 
             <p>
                 News, announcements and important information
@@ -533,12 +573,16 @@
 
 
     <!-- MAIN -->
+
     <main>
 
         <!-- INTRO -->
+
         <section class="section">
 
-            <h2>School Updates</h2>
+            <h2>
+                School Updates
+            </h2>
 
             <p>
                 This page is used to share important announcements,
@@ -550,11 +594,14 @@
 
 
         <!-- IMPORTANT NOTICE -->
+
         <section class="section">
 
             <div class="notice">
 
-                <h3>Important Information</h3>
+                <h3>
+                    Important Information
+                </h3>
 
                 <p>
                     New school announcements and important information
@@ -566,18 +613,25 @@
         </section>
 
 
-        <!-- UPDATE LIST -->
+        <!-- RECENT UPDATES -->
+
         <section class="section">
 
-            <h2>Recent Updates</h2>
+            <h2>
+                Recent Updates
+            </h2>
 
             <div class="updates">
 
                 <article class="update-card">
 
-                    <span class="date">School Update</span>
+                    <div class="update-icon">
+                        📚
+                    </div>
 
-                    <h3>Educational Activities</h3>
+                    <h3>
+                        Educational Activities
+                    </h3>
 
                     <p>
                         Information about educational activities,
@@ -590,9 +644,13 @@
 
                 <article class="update-card">
 
-                    <span class="date">School News</span>
+                    <div class="update-icon">
+                        📢
+                    </div>
 
-                    <h3>School Announcements</h3>
+                    <h3>
+                        School Announcements
+                    </h3>
 
                     <p>
                         Important announcements for students,
@@ -605,9 +663,13 @@
 
                 <article class="update-card">
 
-                    <span class="date">Courses</span>
+                    <div class="update-icon">
+                        🎓
+                    </div>
 
-                    <h3>Course Information</h3>
+                    <h3>
+                        Course Information
+                    </h3>
 
                     <p>
                         Updates about courses and learning programs
@@ -619,9 +681,13 @@
 
                 <article class="update-card">
 
-                    <span class="date">Community</span>
+                    <div class="update-icon">
+                        🤝
+                    </div>
 
-                    <h3>Community Activities</h3>
+                    <h3>
+                        Community Activities
+                    </h3>
 
                     <p>
                         Information about community participation
@@ -636,9 +702,12 @@
 
 
         <!-- FUTURE UPDATES -->
+
         <section class="section">
 
-            <h2>More Updates Coming</h2>
+            <h2>
+                More Updates Coming
+            </h2>
 
             <p>
                 As the school continues its educational work,
@@ -651,16 +720,22 @@
 
 
         <!-- CTA -->
+
         <section class="section cta">
 
-            <h2>Explore School Activities</h2>
+            <h2>
+                Explore School Activities
+            </h2>
 
             <p>
                 Learn more about the activities and learning
                 opportunities at our school.
             </p>
 
-            <a href="activities.html" class="btn">
+            <a
+                href="activities.html"
+                class="btn"
+            >
                 View Activities
             </a>
 
@@ -670,13 +745,16 @@
 
 
     <!-- FOOTER -->
+
     <footer>
 
         <div class="footer-container">
 
             <div>
 
-                <h3>Rohingya Education School</h3>
+                <h3>
+                    Rohingya Education School
+                </h3>
 
                 <p>
                     Education • Language • Community
@@ -692,28 +770,40 @@
 
             <div>
 
-                <h3>Quick Links</h3>
+                <h3>
+                    Quick Links
+                </h3>
 
                 <ul>
 
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.html">
+                            Home
+                        </a>
                     </li>
 
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.html">
+                            About
+                        </a>
                     </li>
 
                     <li>
-                        <a href="activities.html">Activities</a>
+                        <a href="activities.html">
+                            Activities
+                        </a>
                     </li>
 
                     <li>
-                        <a href="courses.html">Courses</a>
+                        <a href="courses.html">
+                            Courses
+                        </a>
                     </li>
 
                     <li>
-                        <a href="education.html">Education</a>
+                        <a href="education.html">
+                            Education
+                        </a>
                     </li>
 
                 </ul>
@@ -723,7 +813,9 @@
 
             <div>
 
-                <h3>Important</h3>
+                <h3>
+                    Important
+                </h3>
 
                 <ul>
 
